@@ -39,13 +39,6 @@ console['log'] = (...args: any[]) => {
 }
 
 // @ts-ignore
-function writeFile(path: string, content: string) {
-    let paths = Packages.java.nio.file.Paths.get(dist, path)
-    paths.toFile().getParentFile().mkdirs()
-    Packages.java.nio.file.Files.write(paths, new JavaString(content).getBytes("UTF-8"))
-}
-
-// @ts-ignore
 function start(root: com.sun.javadoc.RootDoc) {
     console.log('start generate java d.ts...')
     for (const classes of root.classes()) {

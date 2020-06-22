@@ -27,8 +27,11 @@ interface JavaAdapter {
     // function super(type: any);
 }
 
+// @ts-ignore
 let Packages: any
+// @ts-ignore
 let Java: JavaAdapter
+// @ts-ignore
 const JavaString = Java.type('java.lang.String')
 console = {} as any
 console['log'] = (...args: any[]) => {
@@ -43,6 +46,7 @@ function writeFile(path: string, content: string) {
 
 let dist = 'javadoc'
 
+//@ts-ignore
 function start(root: com.sun.javadoc.RootDoc) {
     console.log('start generate java d.ts...')
     let options = root.options()
