@@ -1,6 +1,6 @@
 {
     "name": "@javatypes/spring-jdbc",
-    "version": "5.2.6.RELEASE",
+    "version": "0.0.1",
     "description": "java spring-jdbc types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",

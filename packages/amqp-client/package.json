@@ -1,6 +1,6 @@
 {
     "name": "@javatypes/amqp-client",
-    "version": "5.9.0",
+    "version": "0.0.1",
     "description": "java amqp-client types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",

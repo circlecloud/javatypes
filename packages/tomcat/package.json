@@ -1,6 +1,6 @@
 {
     "name": "@javatypes/tomcat",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "java tomcat types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",
