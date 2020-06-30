@@ -119,7 +119,8 @@ ${classes.isInterface() ? buildInterfaceName(classes, options) : buildClassesNam
 
 function buildBaiscClassName(classes: com.sun.javadoc.ClassDoc) {
     let className = classes.toString()
-    return className.startsWith(classes.qualifiedTypeName()) ? className.substring(`${classes.qualifiedTypeName()}`.lastIndexOf('.') + 1, className.length) : classes.simpleTypeName()
+    let classTypeName = className.startsWith(classes.qualifiedTypeName()) ? className.substring(classes.qualifiedTypeName().lastIndexOf('.') + 1, className.length) : classes.simpleTypeName()
+    return classTypeName.replace('extends <any>', 'extends object')
 }
 
 function buildInterfaceName(classes: com.sun.javadoc.ClassDoc, options: Options) {

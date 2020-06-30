@@ -1,7 +1,7 @@
 {
-    "name": "@javatypes/spring-data-redis",
-    "version": "2.1.18.RELEASE",
-    "description": "java spring-data-redis types",
+    "name": "@javatypes/tomcat-websocket",
+    "version": "9.0.35",
+    "description": "java tomcat-websocket types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",
     "license": "MIT",

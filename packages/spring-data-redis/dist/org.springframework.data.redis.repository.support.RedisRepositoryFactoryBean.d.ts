@@ -16,7 +16,7 @@ declare namespace org {
                          * @since 1.7
                          */
                         // @ts-ignore
-                        class RedisRepositoryFactoryBean<T extends <any>, S, ID> extends java.lang.Object {
+                        class RedisRepositoryFactoryBean<T extends object, S, ID> extends java.lang.Object {
                             /**
                              * Creates a new {@link RedisRepositoryFactoryBean} for the given repository interface.
                              * @param repositoryInterface must not be {#literal null}.
