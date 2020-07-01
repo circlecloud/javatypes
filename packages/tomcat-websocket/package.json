@@ -1,6 +1,6 @@
 {
     "name": "@javatypes/tomcat-websocket",
-    "version": "9.0.35",
+    "version": "0.0.2",
     "description": "java tomcat-websocket types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",

@@ -1,6 +1,6 @@
 {
     "name": "@javatypes/spring-data-redis",
-    "version": "2.1.18.RELEASE",
+    "version": "0.0.2",
     "description": "java spring-data-redis types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",
