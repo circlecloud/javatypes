@@ -15,48 +15,48 @@ declare namespace org {
                              * Normal string encoding.
                              */
                             // @ts-ignore
-                            readonly RAW: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static readonly RAW: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             /**
                              * 64 bit signed interval String representing an integer.
                              */
                             // @ts-ignore
-                            readonly INT: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static readonly INT: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             /**
                              * Space saving representation for small lists, hashes and sorted sets.
                              */
                             // @ts-ignore
-                            readonly ZIPLIST: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static readonly ZIPLIST: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             /**
                              * Encoding for large lists.
                              */
                             // @ts-ignore
-                            readonly LINKEDLIST: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static readonly LINKEDLIST: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             /**
                              * Space saving representation for small sets that contain only integers.ø
                              */
                             // @ts-ignore
-                            readonly INTSET: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static readonly INTSET: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             /**
                              * Encoding for large hashes.
                              */
                             // @ts-ignore
-                            readonly HASHTABLE: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static readonly HASHTABLE: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             /**
                              * Encoding for sorted sets of any size.
                              */
                             // @ts-ignore
-                            readonly SKIPLIST: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static readonly SKIPLIST: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             /**
                              * No encoding present due to non existing key.
                              */
                             // @ts-ignore
-                            readonly VACANT: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static readonly VACANT: org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding[]
+                            public static values(): org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.ValueEncoding.RedisValueEncoding
                             // @ts-ignore
-                            raw(): string
+                            public raw(): string
                         }
                     }
                 }

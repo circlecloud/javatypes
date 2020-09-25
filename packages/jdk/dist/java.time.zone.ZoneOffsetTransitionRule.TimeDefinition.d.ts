@@ -19,21 +19,21 @@ declare namespace java {
                      * The local date-time is expressed in terms of the UTC offset.
                      */
                     // @ts-ignore
-                    readonly UTC: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
+                    public static readonly UTC: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
                     /**
                      * The local date-time is expressed in terms of the wall offset.
                      */
                     // @ts-ignore
-                    readonly WALL: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
+                    public static readonly WALL: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
                     /**
                      * The local date-time is expressed in terms of the standard offset.
                      */
                     // @ts-ignore
-                    readonly STANDARD: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
+                    public static readonly STANDARD: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
                     // @ts-ignore
-                    values(): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition[]
+                    public static values(): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
+                    public static valueOf(name: java.lang.String | string): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
                     /**
                      * Converts the specified local date-time to the local date-time actually
                      * seen on a wall clock.
@@ -51,7 +51,7 @@ declare namespace java {
                      * @return the date-time relative to the wall/before offset, not null
                      */
                     // @ts-ignore
-                    createDateTime(dateTime: java.time.LocalDateTime, standardOffset: java.time.ZoneOffset, wallOffset: java.time.ZoneOffset): java.time.LocalDateTime
+                    public createDateTime(dateTime: java.time.LocalDateTime, standardOffset: java.time.ZoneOffset, wallOffset: java.time.ZoneOffset): java.time.LocalDateTime
                 }
             }
         }

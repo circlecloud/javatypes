@@ -9,13 +9,13 @@ declare namespace org {
                                 // @ts-ignore
                                 class Variable extends java.lang.Enum<org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable> implements org.springframework.data.mongodb.core.aggregation.Field {
                                     // @ts-ignore
-                                    readonly THIS: org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable
+                                    public static readonly THIS: org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable
                                     // @ts-ignore
-                                    readonly VALUE: org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable
+                                    public static readonly VALUE: org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable
                                     // @ts-ignore
-                                    values(): org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable[]
+                                    public static values(): org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable[]
                                     // @ts-ignore
-                                    valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable
+                                    public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.aggregation.ArrayOperators.Reduce.Variable
                                     /**
                                      * Create a {@link Field} reference to a given {@literal property} prefixed with the {@link Variable} identifier.
                                      * eg. {@code $$value.product}
@@ -23,7 +23,7 @@ declare namespace org {
                                      * @return 
                                      */
                                     // @ts-ignore
-                                    referringTo(property: java.lang.String | string): org.springframework.data.mongodb.core.aggregation.Field
+                                    public referringTo(property: java.lang.String | string): org.springframework.data.mongodb.core.aggregation.Field
                                 }
                             }
                         }

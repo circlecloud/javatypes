@@ -81,7 +81,7 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            readonly UP: java.math.RoundingMode
+            public static readonly UP: java.math.RoundingMode
             /**
              * Rounding mode to round towards zero.  Never increments the digit
              * prior to a discarded fraction (i.e., truncates).  Note that this
@@ -104,7 +104,7 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            readonly DOWN: java.math.RoundingMode
+            public static readonly DOWN: java.math.RoundingMode
             /**
              * Rounding mode to round towards positive infinity.  If the
              * result is positive, behaves as for {@code RoundingMode.UP};
@@ -128,7 +128,7 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            readonly CEILING: java.math.RoundingMode
+            public static readonly CEILING: java.math.RoundingMode
             /**
              * Rounding mode to round towards negative infinity.  If the
              * result is positive, behave as for {@code RoundingMode.DOWN};
@@ -152,7 +152,7 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            readonly FLOOR: java.math.RoundingMode
+            public static readonly FLOOR: java.math.RoundingMode
             /**
              * Rounding mode to round towards {@literal "nearest neighbor"}
              * unless both neighbors are equidistant, in which case round up.
@@ -178,7 +178,7 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            readonly HALF_UP: java.math.RoundingMode
+            public static readonly HALF_UP: java.math.RoundingMode
             /**
              * Rounding mode to round towards {@literal "nearest neighbor"}
              * unless both neighbors are equidistant, in which case round
@@ -203,7 +203,7 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            readonly HALF_DOWN: java.math.RoundingMode
+            public static readonly HALF_DOWN: java.math.RoundingMode
             /**
              * Rounding mode to round towards the {@literal "nearest neighbor"}
              * unless both neighbors are equidistant, in which case, round
@@ -235,7 +235,7 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            readonly HALF_EVEN: java.math.RoundingMode
+            public static readonly HALF_EVEN: java.math.RoundingMode
             /**
              * Rounding mode to assert that the requested operation has an exact
              * result, hence no rounding is necessary.  If this rounding mode is
@@ -259,11 +259,11 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            readonly UNNECESSARY: java.math.RoundingMode
+            public static readonly UNNECESSARY: java.math.RoundingMode
             // @ts-ignore
-            values(): java.math.RoundingMode[]
+            public static values(): java.math.RoundingMode[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): java.math.RoundingMode
+            public static valueOf(name: java.lang.String | string): java.math.RoundingMode
             /**
              * Returns the {@code RoundingMode} object corresponding to a
              * legacy integer rounding mode constant in {@link BigDecimal}.
@@ -272,7 +272,7 @@ declare namespace java {
              * @throws IllegalArgumentException integer is out of range
              */
             // @ts-ignore
-            valueOf(rm: number /*int*/): java.math.RoundingMode
+            public static valueOf(rm: number /*int*/): java.math.RoundingMode
         }
     }
 }

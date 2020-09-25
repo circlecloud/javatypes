@@ -11,16 +11,16 @@ declare namespace org {
                      * Red mushroom cow.
                      */
                     // @ts-ignore
-                    readonly RED: org.bukkit.entity.MushroomCow.Variant
+                    public static readonly RED: org.bukkit.entity.MushroomCow.Variant
                     /**
                      * Brown mushroom cow.
                      */
                     // @ts-ignore
-                    readonly BROWN: org.bukkit.entity.MushroomCow.Variant
+                    public static readonly BROWN: org.bukkit.entity.MushroomCow.Variant
                     // @ts-ignore
-                    values(): org.bukkit.entity.MushroomCow.Variant[]
+                    public static values(): org.bukkit.entity.MushroomCow.Variant[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.entity.MushroomCow.Variant
+                    public static valueOf(name: java.lang.String | string): org.bukkit.entity.MushroomCow.Variant
                 }
             }
         }

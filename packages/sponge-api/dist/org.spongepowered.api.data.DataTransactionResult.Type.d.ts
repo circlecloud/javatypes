@@ -15,12 +15,12 @@ declare namespace org {
                          * state of the {@link DataManipulator} is undefined.
                          */
                         // @ts-ignore
-                        readonly UNDEFINED: org.spongepowered.api.data.DataTransactionResult.Type
+                        public static readonly UNDEFINED: org.spongepowered.api.data.DataTransactionResult.Type
                         /**
                          * The item data operation succeeded.
                          */
                         // @ts-ignore
-                        readonly SUCCESS: org.spongepowered.api.data.DataTransactionResult.Type
+                        public static readonly SUCCESS: org.spongepowered.api.data.DataTransactionResult.Type
                         /**
                          * The {@link DataManipulator} operation failed for an
                          * <em>expected</em> reason (such as the {@link DataManipulator} being
@@ -28,25 +28,25 @@ declare namespace org {
                          * {@link DataManipulator} is unchanged.
                          */
                         // @ts-ignore
-                        readonly FAILURE: org.spongepowered.api.data.DataTransactionResult.Type
+                        public static readonly FAILURE: org.spongepowered.api.data.DataTransactionResult.Type
                         /**
                          * The {@link DataManipulator} operation failed because an
                          * <em>unexpected</em> condition occurred. The state of the
                          * {@link DataManipulator} is undefined.
                          */
                         // @ts-ignore
-                        readonly ERROR: org.spongepowered.api.data.DataTransactionResult.Type
+                        public static readonly ERROR: org.spongepowered.api.data.DataTransactionResult.Type
                         /**
                          * An operation was cancelled by a third party (eg. a
                          * {@link DataManipulator} event was cancelled). The condition of the
                          * {@link DataManipulator} is unchanged.
                          */
                         // @ts-ignore
-                        readonly CANCELLED: org.spongepowered.api.data.DataTransactionResult.Type
+                        public static readonly CANCELLED: org.spongepowered.api.data.DataTransactionResult.Type
                         // @ts-ignore
-                        values(): org.spongepowered.api.data.DataTransactionResult.Type[]
+                        public static values(): org.spongepowered.api.data.DataTransactionResult.Type[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.spongepowered.api.data.DataTransactionResult.Type
+                        public static valueOf(name: java.lang.String | string): org.spongepowered.api.data.DataTransactionResult.Type
                     }
                 }
             }

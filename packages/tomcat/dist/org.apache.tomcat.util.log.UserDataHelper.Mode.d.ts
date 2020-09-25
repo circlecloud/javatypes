@@ -10,15 +10,15 @@ declare namespace org {
                         // @ts-ignore
                         class Mode extends java.lang.Enum<org.apache.tomcat.util.log.UserDataHelper.Mode> {
                             // @ts-ignore
-                            readonly DEBUG: org.apache.tomcat.util.log.UserDataHelper.Mode
+                            public static readonly DEBUG: org.apache.tomcat.util.log.UserDataHelper.Mode
                             // @ts-ignore
-                            readonly INFO_THEN_DEBUG: org.apache.tomcat.util.log.UserDataHelper.Mode
+                            public static readonly INFO_THEN_DEBUG: org.apache.tomcat.util.log.UserDataHelper.Mode
                             // @ts-ignore
-                            readonly INFO: org.apache.tomcat.util.log.UserDataHelper.Mode
+                            public static readonly INFO: org.apache.tomcat.util.log.UserDataHelper.Mode
                             // @ts-ignore
-                            values(): org.apache.tomcat.util.log.UserDataHelper.Mode[]
+                            public static values(): org.apache.tomcat.util.log.UserDataHelper.Mode[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.apache.tomcat.util.log.UserDataHelper.Mode
+                            public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.log.UserDataHelper.Mode
                         }
                     }
                 }

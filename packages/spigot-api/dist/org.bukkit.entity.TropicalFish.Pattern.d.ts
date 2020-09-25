@@ -10,33 +10,33 @@ declare namespace org {
                 // @ts-ignore
                 class Pattern extends java.lang.Enum<org.bukkit.entity.TropicalFish.Pattern> {
                     // @ts-ignore
-                    readonly KOB: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly KOB: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly SUNSTREAK: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly SUNSTREAK: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly SNOOPER: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly SNOOPER: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly DASHER: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly DASHER: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly BRINELY: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly BRINELY: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly SPOTTY: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly SPOTTY: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly FLOPPER: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly FLOPPER: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly STRIPEY: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly STRIPEY: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly GLITTER: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly GLITTER: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly BLOCKFISH: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly BLOCKFISH: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly BETTY: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly BETTY: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    readonly CLAYFISH: org.bukkit.entity.TropicalFish.Pattern
+                    public static readonly CLAYFISH: org.bukkit.entity.TropicalFish.Pattern
                     // @ts-ignore
-                    values(): org.bukkit.entity.TropicalFish.Pattern[]
+                    public static values(): org.bukkit.entity.TropicalFish.Pattern[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.entity.TropicalFish.Pattern
+                    public static valueOf(name: java.lang.String | string): org.bukkit.entity.TropicalFish.Pattern
                 }
             }
         }

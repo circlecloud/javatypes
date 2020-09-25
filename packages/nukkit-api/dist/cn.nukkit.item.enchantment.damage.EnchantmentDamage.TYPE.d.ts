@@ -7,15 +7,15 @@ declare namespace cn {
                         // @ts-ignore
                         class TYPE extends java.lang.Enum<cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE> {
                             // @ts-ignore
-                            readonly ALL: cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE
+                            public static readonly ALL: cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE
                             // @ts-ignore
-                            readonly SMITE: cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE
+                            public static readonly SMITE: cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE
                             // @ts-ignore
-                            readonly ARTHROPODS: cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE
+                            public static readonly ARTHROPODS: cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE
                             // @ts-ignore
-                            values(): cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE[]
+                            public static values(): cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE
+                            public static valueOf(name: java.lang.String | string): cn.nukkit.item.enchantment.damage.EnchantmentDamage.TYPE
                         }
                     }
                 }

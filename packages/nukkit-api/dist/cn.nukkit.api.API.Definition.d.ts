@@ -15,24 +15,24 @@ declare namespace cn {
                      * Should not be used in production.
                      */
                     // @ts-ignore
-                    readonly INTERNAL: cn.nukkit.api.API.Definition
+                    public static readonly INTERNAL: cn.nukkit.api.API.Definition
                     /**
                      * Intended for features only available on one or several client platforms.
                      * <p>By using {@code PLATFORM_NATIVE} features, program will lose some cross-platform features provided.
                      * Might not available in some client platforms. Read the documents carefully before using this API element.
                      */
                     // @ts-ignore
-                    readonly PLATFORM_NATIVE: cn.nukkit.api.API.Definition
+                    public static readonly PLATFORM_NATIVE: cn.nukkit.api.API.Definition
                     /**
                      * Intended for features implemented in all client platforms.
                      * <p>Preferred to use for production use, but sometimes be lack of platform-native features.
                      */
                     // @ts-ignore
-                    readonly UNIVERSAL: cn.nukkit.api.API.Definition
+                    public static readonly UNIVERSAL: cn.nukkit.api.API.Definition
                     // @ts-ignore
-                    values(): cn.nukkit.api.API.Definition[]
+                    public static values(): cn.nukkit.api.API.Definition[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): cn.nukkit.api.API.Definition
+                    public static valueOf(name: java.lang.String | string): cn.nukkit.api.API.Definition
                 }
             }
         }

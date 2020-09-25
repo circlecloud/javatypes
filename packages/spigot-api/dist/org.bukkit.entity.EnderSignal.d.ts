@@ -38,6 +38,20 @@ declare namespace org {
                 // @ts-ignore
                 setDropItem(drop: boolean): void
                 /**
+                 * Get the {@link ItemStack} to be displayed while in the air and to be
+                 * dropped on death.
+                 * @return the item stack
+                 */
+                // @ts-ignore
+                getItem(): org.bukkit.inventory.ItemStack
+                /**
+                 * Set the {@link ItemStack} to be displayed while in the air and to be
+                 * dropped on death.
+                 * @param item the item to set. If null, resets to the default eye of ender
+                 */
+                // @ts-ignore
+                setItem(item: org.bukkit.inventory.ItemStack): void
+                /**
                  * Gets the amount of time this entity has been alive (in ticks).
                  * <br>
                  * When this number is greater than 80, it will despawn on the next tick.

@@ -2,7 +2,7 @@ declare namespace org {
     namespace bukkit {
         namespace entity {
             // @ts-ignore
-            interface Firework extends org.bukkit.entity.Entity {
+            interface Firework extends org.bukkit.entity.Projectile {
                 /**
                  * Get a copy of the fireworks meta
                  * @return A copy of the current Firework meta

@@ -9,13 +9,13 @@ declare namespace org {
                     // @ts-ignore
                     class LoadType extends java.lang.Enum<org.bukkit.event.server.ServerLoadEvent.LoadType> {
                         // @ts-ignore
-                        readonly STARTUP: org.bukkit.event.server.ServerLoadEvent.LoadType
+                        public static readonly STARTUP: org.bukkit.event.server.ServerLoadEvent.LoadType
                         // @ts-ignore
-                        readonly RELOAD: org.bukkit.event.server.ServerLoadEvent.LoadType
+                        public static readonly RELOAD: org.bukkit.event.server.ServerLoadEvent.LoadType
                         // @ts-ignore
-                        values(): org.bukkit.event.server.ServerLoadEvent.LoadType[]
+                        public static values(): org.bukkit.event.server.ServerLoadEvent.LoadType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.server.ServerLoadEvent.LoadType
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.server.ServerLoadEvent.LoadType
                     }
                 }
             }

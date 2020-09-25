@@ -7,19 +7,19 @@ declare namespace org {
                         // @ts-ignore
                         class Type extends java.lang.Enum<org.apache.tomcat.util.net.SSLHostConfigCertificate.Type> {
                             // @ts-ignore
-                            readonly UNDEFINED: org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
+                            public static readonly UNDEFINED: org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
                             // @ts-ignore
-                            readonly RSA: org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
+                            public static readonly RSA: org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
                             // @ts-ignore
-                            readonly DSA: org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
+                            public static readonly DSA: org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
                             // @ts-ignore
-                            readonly EC: org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
+                            public static readonly EC: org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
                             // @ts-ignore
-                            values(): org.apache.tomcat.util.net.SSLHostConfigCertificate.Type[]
+                            public static values(): org.apache.tomcat.util.net.SSLHostConfigCertificate.Type[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
+                            public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SSLHostConfigCertificate.Type
                             // @ts-ignore
-                            isCompatibleWith(au: org.apache.tomcat.util.net.openssl.ciphers.Authentication): boolean
+                            public isCompatibleWith(au: org.apache.tomcat.util.net.openssl.ciphers.Authentication): boolean
                         }
                     }
                 }

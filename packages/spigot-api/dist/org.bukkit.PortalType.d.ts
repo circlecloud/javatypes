@@ -9,21 +9,21 @@ declare namespace org {
              * This is a Nether portal, made of obsidian.
              */
             // @ts-ignore
-            readonly NETHER: org.bukkit.PortalType
+            public static readonly NETHER: org.bukkit.PortalType
             /**
              * This is an Ender portal.
              */
             // @ts-ignore
-            readonly ENDER: org.bukkit.PortalType
+            public static readonly ENDER: org.bukkit.PortalType
             /**
              * This is a custom Plugin portal.
              */
             // @ts-ignore
-            readonly CUSTOM: org.bukkit.PortalType
+            public static readonly CUSTOM: org.bukkit.PortalType
             // @ts-ignore
-            values(): org.bukkit.PortalType[]
+            public static values(): org.bukkit.PortalType[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.PortalType
+            public static valueOf(name: java.lang.String | string): org.bukkit.PortalType
         }
     }
 }

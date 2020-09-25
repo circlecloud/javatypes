@@ -7,7 +7,7 @@ declare namespace org {
                      * 'hanging' denotes whether the lantern is hanging from a block.
                      */
                     // @ts-ignore
-                    interface Lantern extends org.bukkit.block.data.BlockData {
+                    interface Lantern extends org.bukkit.block.data.Waterlogged {
                         /**
                          * Gets the value of the 'hanging' property.
                          * @return the 'hanging' value

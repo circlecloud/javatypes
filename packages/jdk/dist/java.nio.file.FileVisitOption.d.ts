@@ -12,11 +12,11 @@ declare namespace java {
                  * Follow symbolic links.
                  */
                 // @ts-ignore
-                readonly FOLLOW_LINKS: java.nio.file.FileVisitOption
+                public static readonly FOLLOW_LINKS: java.nio.file.FileVisitOption
                 // @ts-ignore
-                values(): java.nio.file.FileVisitOption[]
+                public static values(): java.nio.file.FileVisitOption[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.nio.file.FileVisitOption
+                public static valueOf(name: java.lang.String | string): java.nio.file.FileVisitOption
             }
         }
     }

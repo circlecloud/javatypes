@@ -10,41 +10,41 @@ declare namespace org {
                  * Entity is standing normally.
                  */
                 // @ts-ignore
-                readonly STANDING: org.bukkit.entity.Pose
+                public static readonly STANDING: org.bukkit.entity.Pose
                 /**
                  * Entity is gliding.
                  */
                 // @ts-ignore
-                readonly FALL_FLYING: org.bukkit.entity.Pose
+                public static readonly FALL_FLYING: org.bukkit.entity.Pose
                 /**
                  * Entity is sleeping.
                  */
                 // @ts-ignore
-                readonly SLEEPING: org.bukkit.entity.Pose
+                public static readonly SLEEPING: org.bukkit.entity.Pose
                 /**
                  * Entity is swimming.
                  */
                 // @ts-ignore
-                readonly SWIMMING: org.bukkit.entity.Pose
+                public static readonly SWIMMING: org.bukkit.entity.Pose
                 /**
                  * Entity is riptiding with a trident.
                  */
                 // @ts-ignore
-                readonly SPIN_ATTACK: org.bukkit.entity.Pose
+                public static readonly SPIN_ATTACK: org.bukkit.entity.Pose
                 /**
                  * Entity is sneaking.
                  */
                 // @ts-ignore
-                readonly SNEAKING: org.bukkit.entity.Pose
+                public static readonly SNEAKING: org.bukkit.entity.Pose
                 /**
                  * Entity is dead.
                  */
                 // @ts-ignore
-                readonly DYING: org.bukkit.entity.Pose
+                public static readonly DYING: org.bukkit.entity.Pose
                 // @ts-ignore
-                values(): org.bukkit.entity.Pose[]
+                public static values(): org.bukkit.entity.Pose[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.bukkit.entity.Pose
+                public static valueOf(name: java.lang.String | string): org.bukkit.entity.Pose
             }
         }
     }

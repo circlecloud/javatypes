@@ -12,7 +12,7 @@ declare namespace org {
                          * is true, this could be default behavior.</p>
                          */
                         // @ts-ignore
-                        readonly DENY: org.spongepowered.api.event.TristateResult.Result
+                        public static readonly DENY: org.spongepowered.api.event.TristateResult.Result
                         /**
                          * Let the event resolve with its normal behavior, as if the event was
                          * not handled at all.
@@ -21,7 +21,7 @@ declare namespace org {
                          * by a plugin.</p>
                          */
                         // @ts-ignore
-                        readonly DEFAULT: org.spongepowered.api.event.TristateResult.Result
+                        public static readonly DEFAULT: org.spongepowered.api.event.TristateResult.Result
                         /**
                          * Forcibly execute the action of this event when it resolves, even if
                          * another condition would normally prevent this event from finishing
@@ -31,11 +31,11 @@ declare namespace org {
                          * result to ALLOW.</p>
                          */
                         // @ts-ignore
-                        readonly ALLOW: org.spongepowered.api.event.TristateResult.Result
+                        public static readonly ALLOW: org.spongepowered.api.event.TristateResult.Result
                         // @ts-ignore
-                        values(): org.spongepowered.api.event.TristateResult.Result[]
+                        public static values(): org.spongepowered.api.event.TristateResult.Result[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.spongepowered.api.event.TristateResult.Result
+                        public static valueOf(name: java.lang.String | string): org.spongepowered.api.event.TristateResult.Result
                     }
                 }
             }

@@ -14,25 +14,25 @@ declare namespace org {
                          * Powered state: true
                          */
                         // @ts-ignore
-                        readonly LIGHTNING: org.bukkit.event.entity.CreeperPowerEvent.PowerCause
+                        public static readonly LIGHTNING: org.bukkit.event.entity.CreeperPowerEvent.PowerCause
                         /**
                          * Power change caused by something else (probably a plugin)
                          * <p>
                          * Powered state: true
                          */
                         // @ts-ignore
-                        readonly SET_ON: org.bukkit.event.entity.CreeperPowerEvent.PowerCause
+                        public static readonly SET_ON: org.bukkit.event.entity.CreeperPowerEvent.PowerCause
                         /**
                          * Power change caused by something else (probably a plugin)
                          * <p>
                          * Powered state: false
                          */
                         // @ts-ignore
-                        readonly SET_OFF: org.bukkit.event.entity.CreeperPowerEvent.PowerCause
+                        public static readonly SET_OFF: org.bukkit.event.entity.CreeperPowerEvent.PowerCause
                         // @ts-ignore
-                        values(): org.bukkit.event.entity.CreeperPowerEvent.PowerCause[]
+                        public static values(): org.bukkit.event.entity.CreeperPowerEvent.PowerCause[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.entity.CreeperPowerEvent.PowerCause
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.entity.CreeperPowerEvent.PowerCause
                     }
                 }
             }

@@ -9,86 +9,86 @@ declare namespace org {
              * Represents white dye.
              */
             // @ts-ignore
-            readonly WHITE: org.bukkit.DyeColor
+            public static readonly WHITE: org.bukkit.DyeColor
             /**
              * Represents orange dye.
              */
             // @ts-ignore
-            readonly ORANGE: org.bukkit.DyeColor
+            public static readonly ORANGE: org.bukkit.DyeColor
             /**
              * Represents magenta dye.
              */
             // @ts-ignore
-            readonly MAGENTA: org.bukkit.DyeColor
+            public static readonly MAGENTA: org.bukkit.DyeColor
             /**
              * Represents light blue dye.
              */
             // @ts-ignore
-            readonly LIGHT_BLUE: org.bukkit.DyeColor
+            public static readonly LIGHT_BLUE: org.bukkit.DyeColor
             /**
              * Represents yellow dye.
              */
             // @ts-ignore
-            readonly YELLOW: org.bukkit.DyeColor
+            public static readonly YELLOW: org.bukkit.DyeColor
             /**
              * Represents lime dye.
              */
             // @ts-ignore
-            readonly LIME: org.bukkit.DyeColor
+            public static readonly LIME: org.bukkit.DyeColor
             /**
              * Represents pink dye.
              */
             // @ts-ignore
-            readonly PINK: org.bukkit.DyeColor
+            public static readonly PINK: org.bukkit.DyeColor
             /**
              * Represents gray dye.
              */
             // @ts-ignore
-            readonly GRAY: org.bukkit.DyeColor
+            public static readonly GRAY: org.bukkit.DyeColor
             /**
              * Represents light gray dye.
              */
             // @ts-ignore
-            readonly LIGHT_GRAY: org.bukkit.DyeColor
+            public static readonly LIGHT_GRAY: org.bukkit.DyeColor
             /**
              * Represents cyan dye.
              */
             // @ts-ignore
-            readonly CYAN: org.bukkit.DyeColor
+            public static readonly CYAN: org.bukkit.DyeColor
             /**
              * Represents purple dye.
              */
             // @ts-ignore
-            readonly PURPLE: org.bukkit.DyeColor
+            public static readonly PURPLE: org.bukkit.DyeColor
             /**
              * Represents blue dye.
              */
             // @ts-ignore
-            readonly BLUE: org.bukkit.DyeColor
+            public static readonly BLUE: org.bukkit.DyeColor
             /**
              * Represents brown dye.
              */
             // @ts-ignore
-            readonly BROWN: org.bukkit.DyeColor
+            public static readonly BROWN: org.bukkit.DyeColor
             /**
              * Represents green dye.
              */
             // @ts-ignore
-            readonly GREEN: org.bukkit.DyeColor
+            public static readonly GREEN: org.bukkit.DyeColor
             /**
              * Represents red dye.
              */
             // @ts-ignore
-            readonly RED: org.bukkit.DyeColor
+            public static readonly RED: org.bukkit.DyeColor
             /**
              * Represents black dye.
              */
             // @ts-ignore
-            readonly BLACK: org.bukkit.DyeColor
+            public static readonly BLACK: org.bukkit.DyeColor
             // @ts-ignore
-            values(): org.bukkit.DyeColor[]
+            public static values(): org.bukkit.DyeColor[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.DyeColor
+            public static valueOf(name: java.lang.String | string): org.bukkit.DyeColor
             /**
              * Gets the associated wool data value representing this color.
              * @return A byte containing the wool data value of this color
@@ -96,7 +96,7 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getWoolData(): number /*byte*/
+            public getWoolData(): number /*byte*/
             /**
              * Gets the associated dye data value representing this color.
              * @return A byte containing the dye data value of this color
@@ -104,19 +104,19 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getDyeData(): number /*byte*/
+            public getDyeData(): number /*byte*/
             /**
              * Gets the color that this dye represents.
              * @return The {#link Color} that this dye represents
              */
             // @ts-ignore
-            getColor(): org.bukkit.Color
+            public getColor(): org.bukkit.Color
             /**
              * Gets the firework color that this dye represents.
              * @return The {#link Color} that this dye represents
              */
             // @ts-ignore
-            getFireworkColor(): org.bukkit.Color
+            public getFireworkColor(): org.bukkit.Color
             /**
              * Gets the DyeColor with the given wool data value.
              * @param data Wool data value to fetch
@@ -126,7 +126,7 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getByWoolData(data: number /*byte*/): org.bukkit.DyeColor
+            public static getByWoolData(data: number /*byte*/): org.bukkit.DyeColor
             /**
              * Gets the DyeColor with the given dye data value.
              * @param data Dye data value to fetch
@@ -136,7 +136,7 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getByDyeData(data: number /*byte*/): org.bukkit.DyeColor
+            public static getByDyeData(data: number /*byte*/): org.bukkit.DyeColor
             /**
              * Gets the DyeColor with the given color value.
              * @param color Color value to get the dye by
@@ -144,7 +144,7 @@ declare namespace org {
              *      it doesn't exist
              */
             // @ts-ignore
-            getByColor(color: org.bukkit.Color): org.bukkit.DyeColor
+            public static getByColor(color: org.bukkit.Color): org.bukkit.DyeColor
             /**
              * Gets the DyeColor with the given firework color value.
              * @param color Color value to get dye by
@@ -152,7 +152,7 @@ declare namespace org {
              *      it doesn't exist
              */
             // @ts-ignore
-            getByFireworkColor(color: org.bukkit.Color): org.bukkit.DyeColor
+            public static getByFireworkColor(color: org.bukkit.Color): org.bukkit.DyeColor
             /**
              * Gets the DyeColor for the given name, possibly doing legacy transformations.
              * @param name dye name
@@ -160,7 +160,7 @@ declare namespace org {
              * @deprecated legacy use only
              */
             // @ts-ignore
-            legacyValueOf(name: java.lang.String | string): org.bukkit.DyeColor
+            public static legacyValueOf(name: java.lang.String | string): org.bukkit.DyeColor
         }
     }
 }

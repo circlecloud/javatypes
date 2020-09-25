@@ -116,6 +116,16 @@ declare namespace org {
                 // @ts-ignore
                 performCommand(command: java.lang.String | string): boolean
                 /**
+                 * Returns true if the entity is supported by a block.
+                 * This value is a state updated by the client after each movement.
+                 * @return True if entity is on ground.
+                 * @deprecated This value is controlled only by the client and is therefore
+                 *  unreliable and vulnerable to spoofing and/or desync depending on the
+                 *  context/time which it is accessed
+                 */
+                // @ts-ignore
+                isOnGround(): boolean
+                /**
                  * Returns if the player is in sneak mode
                  * @return true if player is in sneak mode
                  */
@@ -171,6 +181,27 @@ declare namespace org {
                  */
                 // @ts-ignore
                 isSleepingIgnored(): boolean
+                /**
+                 * Gets the Location where the player will spawn at their bed, null if
+                 * they have not slept in one or their current bed spawn is invalid.
+                 * @return Bed Spawn Location if bed exists, otherwise null.
+                 */
+                // @ts-ignore
+                getBedSpawnLocation(): org.bukkit.Location
+                /**
+                 * Sets the Location where the player will spawn at their bed.
+                 * @param location where to set the respawn location
+                 */
+                // @ts-ignore
+                setBedSpawnLocation(location: org.bukkit.Location): void
+                /**
+                 * Sets the Location where the player will spawn at their bed.
+                 * @param location where to set the respawn location
+                 * @param force whether to forcefully set the respawn location even if a
+                 *      valid bed is not present
+                 */
+                // @ts-ignore
+                setBedSpawnLocation(location: org.bukkit.Location, force: boolean): void
                 /**
                  * Play a note for a player at a location. This requires a note block
                  * at the particular location (as far as the client is concerned). This

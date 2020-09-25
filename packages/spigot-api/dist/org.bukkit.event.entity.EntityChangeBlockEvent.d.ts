@@ -3,7 +3,7 @@ declare namespace org {
         namespace event {
             namespace entity {
                 /**
-                 * Called when any Entity, excluding players, changes a block.
+                 * Called when any Entity changes a block and a more specific event is not available.
                  */
                 // @ts-ignore
                 class EntityChangeBlockEvent extends org.bukkit.event.entity.EntityEvent implements org.bukkit.event.Cancellable {

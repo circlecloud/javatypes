@@ -91,6 +91,18 @@ declare namespace org {
                  */
                 // @ts-ignore
                 setPickupStatus(status: org.bukkit.entity.AbstractArrow.PickupStatus): void
+                /**
+                 * Gets if this arrow was shot from a crossbow.
+                 * @return if shot from a crossbow
+                 */
+                // @ts-ignore
+                isShotFromCrossbow(): boolean
+                /**
+                 * Sets if this arrow was shot from a crossbow.
+                 * @param shotFromCrossbow if shot from a crossbow
+                 */
+                // @ts-ignore
+                setShotFromCrossbow(shotFromCrossbow: boolean): void
             }
         }
     }

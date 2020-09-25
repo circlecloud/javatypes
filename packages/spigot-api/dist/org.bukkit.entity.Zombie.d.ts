@@ -5,16 +5,18 @@ declare namespace org {
              * Represents a Zombie.
              */
             // @ts-ignore
-            interface Zombie extends org.bukkit.entity.Monster {
+            interface Zombie extends org.bukkit.entity.Monster, org.bukkit.entity.Ageable {
                 /**
                  * Gets whether the zombie is a baby
                  * @return Whether the zombie is a baby
+                 * @deprecated see {#link Ageable#isAdult()}
                  */
                 // @ts-ignore
                 isBaby(): boolean
                 /**
                  * Sets whether the zombie is a baby
                  * @param flag Whether the zombie is a baby
+                 * @deprecated see {#link Ageable#setBaby()} and {@link Ageable#setAdult()}
                  */
                 // @ts-ignore
                 setBaby(flag: boolean): void

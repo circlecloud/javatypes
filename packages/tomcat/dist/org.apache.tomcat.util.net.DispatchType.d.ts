@@ -11,15 +11,15 @@ declare namespace org {
                     // @ts-ignore
                     class DispatchType extends java.lang.Enum<org.apache.tomcat.util.net.DispatchType> {
                         // @ts-ignore
-                        readonly NON_BLOCKING_READ: org.apache.tomcat.util.net.DispatchType
+                        public static readonly NON_BLOCKING_READ: org.apache.tomcat.util.net.DispatchType
                         // @ts-ignore
-                        readonly NON_BLOCKING_WRITE: org.apache.tomcat.util.net.DispatchType
+                        public static readonly NON_BLOCKING_WRITE: org.apache.tomcat.util.net.DispatchType
                         // @ts-ignore
-                        values(): org.apache.tomcat.util.net.DispatchType[]
+                        public static values(): org.apache.tomcat.util.net.DispatchType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.DispatchType
+                        public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.DispatchType
                         // @ts-ignore
-                        getSocketStatus(): org.apache.tomcat.util.net.SocketEvent
+                        public getSocketStatus(): org.apache.tomcat.util.net.SocketEvent
                     }
                 }
             }

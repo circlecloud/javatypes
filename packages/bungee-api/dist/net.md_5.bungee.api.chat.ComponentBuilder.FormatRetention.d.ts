@@ -11,28 +11,28 @@ declare namespace net {
                              * component.
                              */
                             // @ts-ignore
-                            readonly NONE: net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
+                            public static readonly NONE: net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
                             /**
                              * Specify that we want the formatting retained from the previous
                              * component.
                              */
                             // @ts-ignore
-                            readonly FORMATTING: net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
+                            public static readonly FORMATTING: net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
                             /**
                              * Specify that we want the events retained from the previous component.
                              */
                             // @ts-ignore
-                            readonly EVENTS: net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
+                            public static readonly EVENTS: net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
                             /**
                              * Specify that we want to retain everything from the previous
                              * component.
                              */
                             // @ts-ignore
-                            readonly ALL: net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
+                            public static readonly ALL: net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
                             // @ts-ignore
-                            values(): net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention[]
+                            public static values(): net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
+                            public static valueOf(name: java.lang.String | string): net.md_5.bungee.api.chat.ComponentBuilder.FormatRetention
                         }
                     }
                 }

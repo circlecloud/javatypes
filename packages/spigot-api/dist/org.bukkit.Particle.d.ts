@@ -3,151 +3,171 @@ declare namespace org {
         // @ts-ignore
         class Particle extends java.lang.Enum<org.bukkit.Particle> {
             // @ts-ignore
-            readonly EXPLOSION_NORMAL: org.bukkit.Particle
+            public static readonly EXPLOSION_NORMAL: org.bukkit.Particle
             // @ts-ignore
-            readonly EXPLOSION_LARGE: org.bukkit.Particle
+            public static readonly EXPLOSION_LARGE: org.bukkit.Particle
             // @ts-ignore
-            readonly EXPLOSION_HUGE: org.bukkit.Particle
+            public static readonly EXPLOSION_HUGE: org.bukkit.Particle
             // @ts-ignore
-            readonly FIREWORKS_SPARK: org.bukkit.Particle
+            public static readonly FIREWORKS_SPARK: org.bukkit.Particle
             // @ts-ignore
-            readonly WATER_BUBBLE: org.bukkit.Particle
+            public static readonly WATER_BUBBLE: org.bukkit.Particle
             // @ts-ignore
-            readonly WATER_SPLASH: org.bukkit.Particle
+            public static readonly WATER_SPLASH: org.bukkit.Particle
             // @ts-ignore
-            readonly WATER_WAKE: org.bukkit.Particle
+            public static readonly WATER_WAKE: org.bukkit.Particle
             // @ts-ignore
-            readonly SUSPENDED: org.bukkit.Particle
+            public static readonly SUSPENDED: org.bukkit.Particle
             // @ts-ignore
-            readonly SUSPENDED_DEPTH: org.bukkit.Particle
+            public static readonly SUSPENDED_DEPTH: org.bukkit.Particle
             // @ts-ignore
-            readonly CRIT: org.bukkit.Particle
+            public static readonly CRIT: org.bukkit.Particle
             // @ts-ignore
-            readonly CRIT_MAGIC: org.bukkit.Particle
+            public static readonly CRIT_MAGIC: org.bukkit.Particle
             // @ts-ignore
-            readonly SMOKE_NORMAL: org.bukkit.Particle
+            public static readonly SMOKE_NORMAL: org.bukkit.Particle
             // @ts-ignore
-            readonly SMOKE_LARGE: org.bukkit.Particle
+            public static readonly SMOKE_LARGE: org.bukkit.Particle
             // @ts-ignore
-            readonly SPELL: org.bukkit.Particle
+            public static readonly SPELL: org.bukkit.Particle
             // @ts-ignore
-            readonly SPELL_INSTANT: org.bukkit.Particle
+            public static readonly SPELL_INSTANT: org.bukkit.Particle
             // @ts-ignore
-            readonly SPELL_MOB: org.bukkit.Particle
+            public static readonly SPELL_MOB: org.bukkit.Particle
             // @ts-ignore
-            readonly SPELL_MOB_AMBIENT: org.bukkit.Particle
+            public static readonly SPELL_MOB_AMBIENT: org.bukkit.Particle
             // @ts-ignore
-            readonly SPELL_WITCH: org.bukkit.Particle
+            public static readonly SPELL_WITCH: org.bukkit.Particle
             // @ts-ignore
-            readonly DRIP_WATER: org.bukkit.Particle
+            public static readonly DRIP_WATER: org.bukkit.Particle
             // @ts-ignore
-            readonly DRIP_LAVA: org.bukkit.Particle
+            public static readonly DRIP_LAVA: org.bukkit.Particle
             // @ts-ignore
-            readonly VILLAGER_ANGRY: org.bukkit.Particle
+            public static readonly VILLAGER_ANGRY: org.bukkit.Particle
             // @ts-ignore
-            readonly VILLAGER_HAPPY: org.bukkit.Particle
+            public static readonly VILLAGER_HAPPY: org.bukkit.Particle
             // @ts-ignore
-            readonly TOWN_AURA: org.bukkit.Particle
+            public static readonly TOWN_AURA: org.bukkit.Particle
             // @ts-ignore
-            readonly NOTE: org.bukkit.Particle
+            public static readonly NOTE: org.bukkit.Particle
             // @ts-ignore
-            readonly PORTAL: org.bukkit.Particle
+            public static readonly PORTAL: org.bukkit.Particle
             // @ts-ignore
-            readonly ENCHANTMENT_TABLE: org.bukkit.Particle
+            public static readonly ENCHANTMENT_TABLE: org.bukkit.Particle
             // @ts-ignore
-            readonly FLAME: org.bukkit.Particle
+            public static readonly FLAME: org.bukkit.Particle
             // @ts-ignore
-            readonly LAVA: org.bukkit.Particle
+            public static readonly LAVA: org.bukkit.Particle
             // @ts-ignore
-            readonly CLOUD: org.bukkit.Particle
+            public static readonly CLOUD: org.bukkit.Particle
             // @ts-ignore
-            readonly REDSTONE: org.bukkit.Particle
+            public static readonly REDSTONE: org.bukkit.Particle
             // @ts-ignore
-            readonly SNOWBALL: org.bukkit.Particle
+            public static readonly SNOWBALL: org.bukkit.Particle
             // @ts-ignore
-            readonly SNOW_SHOVEL: org.bukkit.Particle
+            public static readonly SNOW_SHOVEL: org.bukkit.Particle
             // @ts-ignore
-            readonly SLIME: org.bukkit.Particle
+            public static readonly SLIME: org.bukkit.Particle
             // @ts-ignore
-            readonly HEART: org.bukkit.Particle
+            public static readonly HEART: org.bukkit.Particle
             // @ts-ignore
-            readonly BARRIER: org.bukkit.Particle
+            public static readonly BARRIER: org.bukkit.Particle
             // @ts-ignore
-            readonly ITEM_CRACK: org.bukkit.Particle
+            public static readonly ITEM_CRACK: org.bukkit.Particle
             // @ts-ignore
-            readonly BLOCK_CRACK: org.bukkit.Particle
+            public static readonly BLOCK_CRACK: org.bukkit.Particle
             // @ts-ignore
-            readonly BLOCK_DUST: org.bukkit.Particle
+            public static readonly BLOCK_DUST: org.bukkit.Particle
             // @ts-ignore
-            readonly WATER_DROP: org.bukkit.Particle
+            public static readonly WATER_DROP: org.bukkit.Particle
             // @ts-ignore
-            readonly MOB_APPEARANCE: org.bukkit.Particle
+            public static readonly MOB_APPEARANCE: org.bukkit.Particle
             // @ts-ignore
-            readonly DRAGON_BREATH: org.bukkit.Particle
+            public static readonly DRAGON_BREATH: org.bukkit.Particle
             // @ts-ignore
-            readonly END_ROD: org.bukkit.Particle
+            public static readonly END_ROD: org.bukkit.Particle
             // @ts-ignore
-            readonly DAMAGE_INDICATOR: org.bukkit.Particle
+            public static readonly DAMAGE_INDICATOR: org.bukkit.Particle
             // @ts-ignore
-            readonly SWEEP_ATTACK: org.bukkit.Particle
+            public static readonly SWEEP_ATTACK: org.bukkit.Particle
             // @ts-ignore
-            readonly FALLING_DUST: org.bukkit.Particle
+            public static readonly FALLING_DUST: org.bukkit.Particle
             // @ts-ignore
-            readonly TOTEM: org.bukkit.Particle
+            public static readonly TOTEM: org.bukkit.Particle
             // @ts-ignore
-            readonly SPIT: org.bukkit.Particle
+            public static readonly SPIT: org.bukkit.Particle
             // @ts-ignore
-            readonly SQUID_INK: org.bukkit.Particle
+            public static readonly SQUID_INK: org.bukkit.Particle
             // @ts-ignore
-            readonly BUBBLE_POP: org.bukkit.Particle
+            public static readonly BUBBLE_POP: org.bukkit.Particle
             // @ts-ignore
-            readonly CURRENT_DOWN: org.bukkit.Particle
+            public static readonly CURRENT_DOWN: org.bukkit.Particle
             // @ts-ignore
-            readonly BUBBLE_COLUMN_UP: org.bukkit.Particle
+            public static readonly BUBBLE_COLUMN_UP: org.bukkit.Particle
             // @ts-ignore
-            readonly NAUTILUS: org.bukkit.Particle
+            public static readonly NAUTILUS: org.bukkit.Particle
             // @ts-ignore
-            readonly DOLPHIN: org.bukkit.Particle
+            public static readonly DOLPHIN: org.bukkit.Particle
             // @ts-ignore
-            readonly SNEEZE: org.bukkit.Particle
+            public static readonly SNEEZE: org.bukkit.Particle
             // @ts-ignore
-            readonly CAMPFIRE_COSY_SMOKE: org.bukkit.Particle
+            public static readonly CAMPFIRE_COSY_SMOKE: org.bukkit.Particle
             // @ts-ignore
-            readonly CAMPFIRE_SIGNAL_SMOKE: org.bukkit.Particle
+            public static readonly CAMPFIRE_SIGNAL_SMOKE: org.bukkit.Particle
             // @ts-ignore
-            readonly COMPOSTER: org.bukkit.Particle
+            public static readonly COMPOSTER: org.bukkit.Particle
             // @ts-ignore
-            readonly FLASH: org.bukkit.Particle
+            public static readonly FLASH: org.bukkit.Particle
             // @ts-ignore
-            readonly FALLING_LAVA: org.bukkit.Particle
+            public static readonly FALLING_LAVA: org.bukkit.Particle
             // @ts-ignore
-            readonly LANDING_LAVA: org.bukkit.Particle
+            public static readonly LANDING_LAVA: org.bukkit.Particle
             // @ts-ignore
-            readonly FALLING_WATER: org.bukkit.Particle
+            public static readonly FALLING_WATER: org.bukkit.Particle
             // @ts-ignore
-            readonly DRIPPING_HONEY: org.bukkit.Particle
+            public static readonly DRIPPING_HONEY: org.bukkit.Particle
             // @ts-ignore
-            readonly FALLING_HONEY: org.bukkit.Particle
+            public static readonly FALLING_HONEY: org.bukkit.Particle
             // @ts-ignore
-            readonly LANDING_HONEY: org.bukkit.Particle
+            public static readonly LANDING_HONEY: org.bukkit.Particle
             // @ts-ignore
-            readonly FALLING_NECTAR: org.bukkit.Particle
+            public static readonly FALLING_NECTAR: org.bukkit.Particle
             // @ts-ignore
-            readonly LEGACY_BLOCK_CRACK: org.bukkit.Particle
+            public static readonly SOUL_FIRE_FLAME: org.bukkit.Particle
             // @ts-ignore
-            readonly LEGACY_BLOCK_DUST: org.bukkit.Particle
+            public static readonly ASH: org.bukkit.Particle
             // @ts-ignore
-            readonly LEGACY_FALLING_DUST: org.bukkit.Particle
+            public static readonly CRIMSON_SPORE: org.bukkit.Particle
             // @ts-ignore
-            values(): org.bukkit.Particle[]
+            public static readonly WARPED_SPORE: org.bukkit.Particle
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.Particle
+            public static readonly SOUL: org.bukkit.Particle
+            // @ts-ignore
+            public static readonly DRIPPING_OBSIDIAN_TEAR: org.bukkit.Particle
+            // @ts-ignore
+            public static readonly FALLING_OBSIDIAN_TEAR: org.bukkit.Particle
+            // @ts-ignore
+            public static readonly LANDING_OBSIDIAN_TEAR: org.bukkit.Particle
+            // @ts-ignore
+            public static readonly REVERSE_PORTAL: org.bukkit.Particle
+            // @ts-ignore
+            public static readonly WHITE_ASH: org.bukkit.Particle
+            // @ts-ignore
+            public static readonly LEGACY_BLOCK_CRACK: org.bukkit.Particle
+            // @ts-ignore
+            public static readonly LEGACY_BLOCK_DUST: org.bukkit.Particle
+            // @ts-ignore
+            public static readonly LEGACY_FALLING_DUST: org.bukkit.Particle
+            // @ts-ignore
+            public static values(): org.bukkit.Particle[]
+            // @ts-ignore
+            public static valueOf(name: java.lang.String | string): org.bukkit.Particle
             /**
              * Returns the required data type for the particle
              * @return the required data type
              */
             // @ts-ignore
-            getDataType(): java.lang.Class<any>
+            public getDataType(): java.lang.Class<any>
         }
     }
 }

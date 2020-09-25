@@ -7,73 +7,73 @@ declare namespace org {
             // @ts-ignore
             class BlockFace extends java.lang.Enum<org.bukkit.block.BlockFace> {
                 // @ts-ignore
-                readonly NORTH: org.bukkit.block.BlockFace
+                public static readonly NORTH: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly EAST: org.bukkit.block.BlockFace
+                public static readonly EAST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly SOUTH: org.bukkit.block.BlockFace
+                public static readonly SOUTH: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly WEST: org.bukkit.block.BlockFace
+                public static readonly WEST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly UP: org.bukkit.block.BlockFace
+                public static readonly UP: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly DOWN: org.bukkit.block.BlockFace
+                public static readonly DOWN: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly NORTH_EAST: org.bukkit.block.BlockFace
+                public static readonly NORTH_EAST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly NORTH_WEST: org.bukkit.block.BlockFace
+                public static readonly NORTH_WEST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly SOUTH_EAST: org.bukkit.block.BlockFace
+                public static readonly SOUTH_EAST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly SOUTH_WEST: org.bukkit.block.BlockFace
+                public static readonly SOUTH_WEST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly WEST_NORTH_WEST: org.bukkit.block.BlockFace
+                public static readonly WEST_NORTH_WEST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly NORTH_NORTH_WEST: org.bukkit.block.BlockFace
+                public static readonly NORTH_NORTH_WEST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly NORTH_NORTH_EAST: org.bukkit.block.BlockFace
+                public static readonly NORTH_NORTH_EAST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly EAST_NORTH_EAST: org.bukkit.block.BlockFace
+                public static readonly EAST_NORTH_EAST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly EAST_SOUTH_EAST: org.bukkit.block.BlockFace
+                public static readonly EAST_SOUTH_EAST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly SOUTH_SOUTH_EAST: org.bukkit.block.BlockFace
+                public static readonly SOUTH_SOUTH_EAST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly SOUTH_SOUTH_WEST: org.bukkit.block.BlockFace
+                public static readonly SOUTH_SOUTH_WEST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly WEST_SOUTH_WEST: org.bukkit.block.BlockFace
+                public static readonly WEST_SOUTH_WEST: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly SELF: org.bukkit.block.BlockFace
+                public static readonly SELF: org.bukkit.block.BlockFace
                 // @ts-ignore
-                values(): org.bukkit.block.BlockFace[]
+                public static values(): org.bukkit.block.BlockFace[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.bukkit.block.BlockFace
+                public static valueOf(name: java.lang.String | string): org.bukkit.block.BlockFace
                 /**
                  * Get the amount of X-coordinates to modify to get the represented block
                  * @return Amount of X-coordinates to modify
                  */
                 // @ts-ignore
-                getModX(): number /*int*/
+                public getModX(): number /*int*/
                 /**
                  * Get the amount of Y-coordinates to modify to get the represented block
                  * @return Amount of Y-coordinates to modify
                  */
                 // @ts-ignore
-                getModY(): number /*int*/
+                public getModY(): number /*int*/
                 /**
                  * Get the amount of Z-coordinates to modify to get the represented block
                  * @return Amount of Z-coordinates to modify
                  */
                 // @ts-ignore
-                getModZ(): number /*int*/
+                public getModZ(): number /*int*/
                 /**
                  * Gets the normal vector corresponding to this block face.
                  * @return the normal vector
                  */
                 // @ts-ignore
-                getDirection(): org.bukkit.util.Vector
+                public getDirection(): org.bukkit.util.Vector
                 // @ts-ignore
-                getOppositeFace(): org.bukkit.block.BlockFace
+                public getOppositeFace(): org.bukkit.block.BlockFace
             }
         }
     }

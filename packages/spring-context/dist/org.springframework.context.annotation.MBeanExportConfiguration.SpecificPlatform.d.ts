@@ -12,20 +12,20 @@ declare namespace org {
                          * Weblogic.
                          */
                         // @ts-ignore
-                        readonly WEBLOGIC: org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform
+                        public static readonly WEBLOGIC: org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform
                         /**
                          * Websphere.
                          */
                         // @ts-ignore
-                        readonly WEBSPHERE: org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform
+                        public static readonly WEBSPHERE: org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform
                         // @ts-ignore
-                        values(): org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform[]
+                        public static values(): org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform
+                        public static valueOf(name: java.lang.String | string): org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform
                         // @ts-ignore
-                        getMBeanServer(): javax.management.MBeanServer
+                        public getMBeanServer(): javax.management.MBeanServer
                         // @ts-ignore
-                        get(): org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform
+                        public static get(): org.springframework.context.annotation.MBeanExportConfiguration.SpecificPlatform
                     }
                 }
             }

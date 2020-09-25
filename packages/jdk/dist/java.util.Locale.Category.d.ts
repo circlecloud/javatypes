@@ -16,17 +16,17 @@ declare namespace java {
                  * displaying user interfaces.
                  */
                 // @ts-ignore
-                readonly DISPLAY: java.util.Locale.Category
+                public static readonly DISPLAY: java.util.Locale.Category
                 /**
                  * Category used to represent the default locale for
                  * formatting dates, numbers, and/or currencies.
                  */
                 // @ts-ignore
-                readonly FORMAT: java.util.Locale.Category
+                public static readonly FORMAT: java.util.Locale.Category
                 // @ts-ignore
-                values(): java.util.Locale.Category[]
+                public static values(): java.util.Locale.Category[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.util.Locale.Category
+                public static valueOf(name: java.lang.String | string): java.util.Locale.Category
             }
         }
     }

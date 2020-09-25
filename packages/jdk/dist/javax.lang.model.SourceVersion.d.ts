@@ -21,14 +21,14 @@ declare namespace javax {
                  * <cite>The Java&trade; Language Specification, First Edition</cite>.
                  */
                 // @ts-ignore
-                readonly RELEASE_0: javax.lang.model.SourceVersion
+                public static readonly RELEASE_0: javax.lang.model.SourceVersion
                 /**
                  * The version recognized by the Java Platform 1.1.
                  * The language is {@code RELEASE_0} augmented with nested classes as described in the 1.1 update to
                  * <cite>The Java&trade; Language Specification, First Edition</cite>.
                  */
                 // @ts-ignore
-                readonly RELEASE_1: javax.lang.model.SourceVersion
+                public static readonly RELEASE_1: javax.lang.model.SourceVersion
                 /**
                  * The version recognized by the Java 2 Platform, Standard Edition,
                  * v 1.2.
@@ -38,21 +38,21 @@ declare namespace javax {
                  * strictfp} modifier.
                  */
                 // @ts-ignore
-                readonly RELEASE_2: javax.lang.model.SourceVersion
+                public static readonly RELEASE_2: javax.lang.model.SourceVersion
                 /**
                  * The version recognized by the Java 2 Platform, Standard Edition,
                  * v 1.3.
                  * No major changes from {@code RELEASE_2}.
                  */
                 // @ts-ignore
-                readonly RELEASE_3: javax.lang.model.SourceVersion
+                public static readonly RELEASE_3: javax.lang.model.SourceVersion
                 /**
                  * The version recognized by the Java 2 Platform, Standard Edition,
                  * v 1.4.
                  * Added a simple assertion facility.
                  */
                 // @ts-ignore
-                readonly RELEASE_4: javax.lang.model.SourceVersion
+                public static readonly RELEASE_4: javax.lang.model.SourceVersion
                 /**
                  * The version recognized by the Java 2 Platform, Standard
                  * Edition 5.0.
@@ -63,14 +63,14 @@ declare namespace javax {
                  * for} loop, and hexadecimal floating-point literals.
                  */
                 // @ts-ignore
-                readonly RELEASE_5: javax.lang.model.SourceVersion
+                public static readonly RELEASE_5: javax.lang.model.SourceVersion
                 /**
                  * The version recognized by the Java Platform, Standard Edition
                  * 6.
                  * No major changes from {@code RELEASE_5}.
                  */
                 // @ts-ignore
-                readonly RELEASE_6: javax.lang.model.SourceVersion
+                public static readonly RELEASE_6: javax.lang.model.SourceVersion
                 /**
                  * The version recognized by the Java Platform, Standard Edition
                  * 7.
@@ -80,7 +80,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                readonly RELEASE_7: javax.lang.model.SourceVersion
+                public static readonly RELEASE_7: javax.lang.model.SourceVersion
                 /**
                  * The version recognized by the Java Platform, Standard Edition
                  * 8.
@@ -88,17 +88,17 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                readonly RELEASE_8: javax.lang.model.SourceVersion
+                public static readonly RELEASE_8: javax.lang.model.SourceVersion
                 // @ts-ignore
-                values(): javax.lang.model.SourceVersion[]
+                public static values(): javax.lang.model.SourceVersion[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.lang.model.SourceVersion
+                public static valueOf(name: java.lang.String | string): javax.lang.model.SourceVersion
                 /**
                  * Returns the latest source version that can be modeled.
                  * @return the latest source version that can be modeled
                  */
                 // @ts-ignore
-                latest(): javax.lang.model.SourceVersion
+                public static latest(): javax.lang.model.SourceVersion
                 /**
                  * Returns the latest source version fully supported by the
                  * current execution environment.  {@code RELEASE_5} or later must
@@ -106,7 +106,7 @@ declare namespace javax {
                  * @return the latest source version that is fully supported
                  */
                 // @ts-ignore
-                latestSupported(): javax.lang.model.SourceVersion
+                public static latestSupported(): javax.lang.model.SourceVersion
                 /**
                  * Returns whether or not {@code name} is a syntactically valid
                  * identifier (simple name) or keyword in the latest source
@@ -124,7 +124,7 @@ declare namespace javax {
                  *  otherwise.
                  */
                 // @ts-ignore
-                isIdentifier(name: java.lang.CharSequence): boolean
+                public static isIdentifier(name: java.lang.CharSequence): boolean
                 /**
                  * Returns whether or not {@code name} is a syntactically valid
                  * qualified name in the latest source version.  Unlike {@link
@@ -136,7 +136,7 @@ declare namespace javax {
                  * @jls 6.2 Names and Identifiers
                  */
                 // @ts-ignore
-                isName(name: java.lang.CharSequence): boolean
+                public static isName(name: java.lang.CharSequence): boolean
                 /**
                  * Returns whether or not {@code s} is a keyword or literal in the
                  * latest source version.
@@ -144,7 +144,7 @@ declare namespace javax {
                  * @return {#code true} if {@code s} is a keyword or literal, {@code false} otherwise.
                  */
                 // @ts-ignore
-                isKeyword(s: java.lang.CharSequence): boolean
+                public static isKeyword(s: java.lang.CharSequence): boolean
             }
         }
     }

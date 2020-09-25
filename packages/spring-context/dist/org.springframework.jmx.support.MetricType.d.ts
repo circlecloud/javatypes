@@ -13,16 +13,16 @@ declare namespace org {
                      * The measurement values may go up or down over time.
                      */
                     // @ts-ignore
-                    readonly GAUGE: org.springframework.jmx.support.MetricType
+                    public static readonly GAUGE: org.springframework.jmx.support.MetricType
                     /**
                      * The measurement values will always increase.
                      */
                     // @ts-ignore
-                    readonly COUNTER: org.springframework.jmx.support.MetricType
+                    public static readonly COUNTER: org.springframework.jmx.support.MetricType
                     // @ts-ignore
-                    values(): org.springframework.jmx.support.MetricType[]
+                    public static values(): org.springframework.jmx.support.MetricType[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.springframework.jmx.support.MetricType
+                    public static valueOf(name: java.lang.String | string): org.springframework.jmx.support.MetricType
                 }
             }
         }

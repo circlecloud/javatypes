@@ -22,7 +22,7 @@ declare namespace javax {
                  * is used for this.
                  */
                 // @ts-ignore
-                readonly RELATED: javax.swing.LayoutStyle.ComponentPlacement
+                public static readonly RELATED: javax.swing.LayoutStyle.ComponentPlacement
                 /**
                  * Enumeration value indicating the two components are
                  * visually unrelated and will be placed in the same parent.
@@ -30,7 +30,7 @@ declare namespace javax {
                  * separated; the constant <code>UNRELATED</code> is used for this.
                  */
                 // @ts-ignore
-                readonly UNRELATED: javax.swing.LayoutStyle.ComponentPlacement
+                public static readonly UNRELATED: javax.swing.LayoutStyle.ComponentPlacement
                 /**
                  * Enumeration value indicating the distance to indent a component
                  * is being requested.  For example, often times the children of
@@ -42,11 +42,11 @@ declare namespace javax {
                  * <code>EAST</code> or <code>WEST</code>.
                  */
                 // @ts-ignore
-                readonly INDENT: javax.swing.LayoutStyle.ComponentPlacement
+                public static readonly INDENT: javax.swing.LayoutStyle.ComponentPlacement
                 // @ts-ignore
-                values(): javax.swing.LayoutStyle.ComponentPlacement[]
+                public static values(): javax.swing.LayoutStyle.ComponentPlacement[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.swing.LayoutStyle.ComponentPlacement
+                public static valueOf(name: java.lang.String | string): javax.swing.LayoutStyle.ComponentPlacement
             }
         }
     }

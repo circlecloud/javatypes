@@ -13,21 +13,21 @@ declare namespace org {
                              * No leaves.
                              */
                             // @ts-ignore
-                            readonly NONE: org.bukkit.block.data.type.Bamboo.Leaves
+                            public static readonly NONE: org.bukkit.block.data.type.Bamboo.Leaves
                             /**
                              * Small leaves.
                              */
                             // @ts-ignore
-                            readonly SMALL: org.bukkit.block.data.type.Bamboo.Leaves
+                            public static readonly SMALL: org.bukkit.block.data.type.Bamboo.Leaves
                             /**
                              * Large leaves.
                              */
                             // @ts-ignore
-                            readonly LARGE: org.bukkit.block.data.type.Bamboo.Leaves
+                            public static readonly LARGE: org.bukkit.block.data.type.Bamboo.Leaves
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.Bamboo.Leaves[]
+                            public static values(): org.bukkit.block.data.type.Bamboo.Leaves[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Bamboo.Leaves
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Bamboo.Leaves
                         }
                     }
                 }

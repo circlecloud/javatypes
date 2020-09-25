@@ -16,21 +16,21 @@ declare namespace org {
                              * Simple 2-Dimensional index for legacy-format points.
                              */
                             // @ts-ignore
-                            readonly GEO_2D: org.springframework.data.mongodb.core.index.GeoSpatialIndexType
+                            public static readonly GEO_2D: org.springframework.data.mongodb.core.index.GeoSpatialIndexType
                             /**
                              * 2D Index for GeoJSON-formatted data over a sphere. Only available in Mongo 2.4.
                              */
                             // @ts-ignore
-                            readonly GEO_2DSPHERE: org.springframework.data.mongodb.core.index.GeoSpatialIndexType
+                            public static readonly GEO_2DSPHERE: org.springframework.data.mongodb.core.index.GeoSpatialIndexType
                             /**
                              * An haystack index for grouping results over small results.
                              */
                             // @ts-ignore
-                            readonly GEO_HAYSTACK: org.springframework.data.mongodb.core.index.GeoSpatialIndexType
+                            public static readonly GEO_HAYSTACK: org.springframework.data.mongodb.core.index.GeoSpatialIndexType
                             // @ts-ignore
-                            values(): org.springframework.data.mongodb.core.index.GeoSpatialIndexType[]
+                            public static values(): org.springframework.data.mongodb.core.index.GeoSpatialIndexType[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.index.GeoSpatialIndexType
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.index.GeoSpatialIndexType
                         }
                     }
                 }

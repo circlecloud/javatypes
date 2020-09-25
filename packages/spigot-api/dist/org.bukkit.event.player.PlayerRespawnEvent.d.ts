@@ -9,6 +9,8 @@ declare namespace org {
                 class PlayerRespawnEvent extends org.bukkit.event.player.PlayerEvent {
                     // @ts-ignore
                     constructor(respawnPlayer: org.bukkit.entity.Player, respawnLocation: org.bukkit.Location, isBedSpawn: boolean)
+                    // @ts-ignore
+                    constructor(respawnPlayer: org.bukkit.entity.Player, respawnLocation: org.bukkit.Location, isBedSpawn: boolean, isAnchorSpawn: boolean)
                     /**
                      * Gets the current respawn location
                      * @return Location current respawn location
@@ -27,6 +29,12 @@ declare namespace org {
                      */
                     // @ts-ignore
                     public isBedSpawn(): boolean
+                    /**
+                     * Gets whether the respawn location is the player's respawn anchor.
+                     * @return true if the respawn location is the player's respawn anchor.
+                     */
+                    // @ts-ignore
+                    public isAnchorSpawn(): boolean
                     // @ts-ignore
                     public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore

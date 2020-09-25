@@ -11,13 +11,13 @@ declare namespace org {
                         // @ts-ignore
                         class NodeType extends java.lang.Enum<org.springframework.data.redis.connection.RedisNode.NodeType> {
                             // @ts-ignore
-                            readonly MASTER: org.springframework.data.redis.connection.RedisNode.NodeType
+                            public static readonly MASTER: org.springframework.data.redis.connection.RedisNode.NodeType
                             // @ts-ignore
-                            readonly SLAVE: org.springframework.data.redis.connection.RedisNode.NodeType
+                            public static readonly SLAVE: org.springframework.data.redis.connection.RedisNode.NodeType
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.RedisNode.NodeType[]
+                            public static values(): org.springframework.data.redis.connection.RedisNode.NodeType[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisNode.NodeType
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisNode.NodeType
                         }
                     }
                 }

@@ -11,13 +11,13 @@ declare namespace org {
                         // @ts-ignore
                         class LinkState extends java.lang.Enum<org.springframework.data.redis.connection.RedisClusterNode.LinkState> {
                             // @ts-ignore
-                            readonly CONNECTED: org.springframework.data.redis.connection.RedisClusterNode.LinkState
+                            public static readonly CONNECTED: org.springframework.data.redis.connection.RedisClusterNode.LinkState
                             // @ts-ignore
-                            readonly DISCONNECTED: org.springframework.data.redis.connection.RedisClusterNode.LinkState
+                            public static readonly DISCONNECTED: org.springframework.data.redis.connection.RedisClusterNode.LinkState
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.RedisClusterNode.LinkState[]
+                            public static values(): org.springframework.data.redis.connection.RedisClusterNode.LinkState[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisClusterNode.LinkState
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisClusterNode.LinkState
                         }
                     }
                 }

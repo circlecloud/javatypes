@@ -246,6 +246,13 @@ declare namespace org {
                 // @ts-ignore
                 firstEmpty(): number /*int*/
                 /**
+                 * Check whether or not this inventory is empty. An inventory is considered
+                 * to be empty if there are no ItemStacks in any slot of this inventory.
+                 * @return true if empty, false otherwise
+                 */
+                // @ts-ignore
+                isEmpty(): boolean
+                /**
                  * Removes all stacks in the inventory matching the given material.
                  * @param material The material to remove
                  * @throws IllegalArgumentException if material is null

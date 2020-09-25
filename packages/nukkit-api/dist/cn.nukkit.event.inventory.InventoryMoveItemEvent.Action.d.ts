@@ -6,17 +6,17 @@ declare namespace cn {
                     // @ts-ignore
                     class Action extends java.lang.Enum<cn.nukkit.event.inventory.InventoryMoveItemEvent.Action> {
                         // @ts-ignore
-                        readonly SLOT_CHANGE: cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
+                        public static readonly SLOT_CHANGE: cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
                         // @ts-ignore
-                        readonly PICKUP: cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
+                        public static readonly PICKUP: cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
                         // @ts-ignore
-                        readonly DROP: cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
+                        public static readonly DROP: cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
                         // @ts-ignore
-                        readonly DISPENSE: cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
+                        public static readonly DISPENSE: cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
                         // @ts-ignore
-                        values(): cn.nukkit.event.inventory.InventoryMoveItemEvent.Action[]
+                        public static values(): cn.nukkit.event.inventory.InventoryMoveItemEvent.Action[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
+                        public static valueOf(name: java.lang.String | string): cn.nukkit.event.inventory.InventoryMoveItemEvent.Action
                     }
                 }
             }

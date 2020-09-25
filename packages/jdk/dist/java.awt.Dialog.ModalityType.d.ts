@@ -18,7 +18,7 @@ declare namespace java {
                  * <code>MODELESS</code> dialog doesn't block any top-level windows.
                  */
                 // @ts-ignore
-                readonly MODELESS: java.awt.Dialog.ModalityType
+                public static readonly MODELESS: java.awt.Dialog.ModalityType
                 /**
                  * A <code>DOCUMENT_MODAL</code> dialog blocks input to all top-level windows
                  * from the same document except those from its own child hierarchy.
@@ -28,7 +28,7 @@ declare namespace java {
                  * document, its root can be found as the top-nearest window without an owner.
                  */
                 // @ts-ignore
-                readonly DOCUMENT_MODAL: java.awt.Dialog.ModalityType
+                public static readonly DOCUMENT_MODAL: java.awt.Dialog.ModalityType
                 /**
                  * An <code>APPLICATION_MODAL</code> dialog blocks all top-level windows
                  * from the same Java application except those from its own child hierarchy.
@@ -37,7 +37,7 @@ declare namespace java {
                  * is implementation-dependent.
                  */
                 // @ts-ignore
-                readonly APPLICATION_MODAL: java.awt.Dialog.ModalityType
+                public static readonly APPLICATION_MODAL: java.awt.Dialog.ModalityType
                 /**
                  * A <code>TOOLKIT_MODAL</code> dialog blocks all top-level windows run
                  * from the same toolkit except those from its own child hierarchy. If there
@@ -54,11 +54,11 @@ declare namespace java {
                  * be left unchanged.
                  */
                 // @ts-ignore
-                readonly TOOLKIT_MODAL: java.awt.Dialog.ModalityType
+                public static readonly TOOLKIT_MODAL: java.awt.Dialog.ModalityType
                 // @ts-ignore
-                values(): java.awt.Dialog.ModalityType[]
+                public static values(): java.awt.Dialog.ModalityType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.awt.Dialog.ModalityType
+                public static valueOf(name: java.lang.String | string): java.awt.Dialog.ModalityType
             }
         }
     }

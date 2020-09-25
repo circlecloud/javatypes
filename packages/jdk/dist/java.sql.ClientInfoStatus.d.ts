@@ -12,30 +12,30 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly REASON_UNKNOWN: java.sql.ClientInfoStatus
+            public static readonly REASON_UNKNOWN: java.sql.ClientInfoStatus
             /**
              * The client info property name specified was not a recognized property
              * name.
              * @since 1.6
              */
             // @ts-ignore
-            readonly REASON_UNKNOWN_PROPERTY: java.sql.ClientInfoStatus
+            public static readonly REASON_UNKNOWN_PROPERTY: java.sql.ClientInfoStatus
             /**
              * The value specified for the client info property was not valid.
              * @since 1.6
              */
             // @ts-ignore
-            readonly REASON_VALUE_INVALID: java.sql.ClientInfoStatus
+            public static readonly REASON_VALUE_INVALID: java.sql.ClientInfoStatus
             /**
              * The value specified for the client info property was too large.
              * @since 1.6
              */
             // @ts-ignore
-            readonly REASON_VALUE_TRUNCATED: java.sql.ClientInfoStatus
+            public static readonly REASON_VALUE_TRUNCATED: java.sql.ClientInfoStatus
             // @ts-ignore
-            values(): java.sql.ClientInfoStatus[]
+            public static values(): java.sql.ClientInfoStatus[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): java.sql.ClientInfoStatus
+            public static valueOf(name: java.lang.String | string): java.sql.ClientInfoStatus
         }
     }
 }

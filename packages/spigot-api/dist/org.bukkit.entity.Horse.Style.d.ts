@@ -11,31 +11,31 @@ declare namespace org {
                      * No markings
                      */
                     // @ts-ignore
-                    readonly NONE: org.bukkit.entity.Horse.Style
+                    public static readonly NONE: org.bukkit.entity.Horse.Style
                     /**
                      * White socks or stripes
                      */
                     // @ts-ignore
-                    readonly WHITE: org.bukkit.entity.Horse.Style
+                    public static readonly WHITE: org.bukkit.entity.Horse.Style
                     /**
                      * Milky splotches
                      */
                     // @ts-ignore
-                    readonly WHITEFIELD: org.bukkit.entity.Horse.Style
+                    public static readonly WHITEFIELD: org.bukkit.entity.Horse.Style
                     /**
                      * Round white dots
                      */
                     // @ts-ignore
-                    readonly WHITE_DOTS: org.bukkit.entity.Horse.Style
+                    public static readonly WHITE_DOTS: org.bukkit.entity.Horse.Style
                     /**
                      * Small black dots
                      */
                     // @ts-ignore
-                    readonly BLACK_DOTS: org.bukkit.entity.Horse.Style
+                    public static readonly BLACK_DOTS: org.bukkit.entity.Horse.Style
                     // @ts-ignore
-                    values(): org.bukkit.entity.Horse.Style[]
+                    public static values(): org.bukkit.entity.Horse.Style[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.entity.Horse.Style
+                    public static valueOf(name: java.lang.String | string): org.bukkit.entity.Horse.Style
                 }
             }
         }

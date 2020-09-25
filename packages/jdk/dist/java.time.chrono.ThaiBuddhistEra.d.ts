@@ -45,17 +45,17 @@ declare namespace java {
                  * which has the numeric value 0.
                  */
                 // @ts-ignore
-                readonly BEFORE_BE: java.time.chrono.ThaiBuddhistEra
+                public static readonly BEFORE_BE: java.time.chrono.ThaiBuddhistEra
                 /**
                  * The singleton instance for the current era, 'Buddhist Era',
                  * which has the numeric value 1.
                  */
                 // @ts-ignore
-                readonly BE: java.time.chrono.ThaiBuddhistEra
+                public static readonly BE: java.time.chrono.ThaiBuddhistEra
                 // @ts-ignore
-                values(): java.time.chrono.ThaiBuddhistEra[]
+                public static values(): java.time.chrono.ThaiBuddhistEra[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.time.chrono.ThaiBuddhistEra
+                public static valueOf(name: java.lang.String | string): java.time.chrono.ThaiBuddhistEra
                 /**
                  * Obtains an instance of {@code ThaiBuddhistEra} from an {@code int} value.
                  * <p>
@@ -66,7 +66,7 @@ declare namespace java {
                  * @throws DateTimeException if the era is invalid
                  */
                 // @ts-ignore
-                of(thaiBuddhistEra: number /*int*/): java.time.chrono.ThaiBuddhistEra
+                public static of(thaiBuddhistEra: number /*int*/): java.time.chrono.ThaiBuddhistEra
                 /**
                  * Gets the numeric era {@code int} value.
                  * <p>
@@ -74,7 +74,7 @@ declare namespace java {
                  * @return the era value, from 0 (BEFORE_BE) to 1 (BE)
                  */
                 // @ts-ignore
-                getValue(): number /*int*/
+                public getValue(): number /*int*/
             }
         }
     }

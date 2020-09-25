@@ -26,7 +26,7 @@ declare namespace org {
                          * @see UriComponentsBuilder#encode()
                          */
                         // @ts-ignore
-                        readonly TEMPLATE_AND_VALUES: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
+                        public static readonly TEMPLATE_AND_VALUES: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
                         /**
                          * Does not encode the URI template and instead applies strict encoding
                          * to URI variables via {@link UriUtils#encodeUriVariables} prior to
@@ -35,7 +35,7 @@ declare namespace org {
                          * @see UriUtils#encodeUriVariables(Map)
                          */
                         // @ts-ignore
-                        readonly VALUES_ONLY: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
+                        public static readonly VALUES_ONLY: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
                         /**
                          * Expand URI variables first, and then encode the resulting URI
                          * component values, replacing <em>only</em> non-ASCII and illegal
@@ -44,16 +44,16 @@ declare namespace org {
                          * @see UriComponents#encode()
                          */
                         // @ts-ignore
-                        readonly URI_COMPONENT: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
+                        public static readonly URI_COMPONENT: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
                         /**
                          * No encoding should be applied.
                          */
                         // @ts-ignore
-                        readonly NONE: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
+                        public static readonly NONE: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
                         // @ts-ignore
-                        values(): org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode[]
+                        public static values(): org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
+                        public static valueOf(name: java.lang.String | string): org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
                     }
                 }
             }

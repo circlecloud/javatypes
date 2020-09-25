@@ -12,35 +12,35 @@ declare namespace javax {
                  * All CardTerminals.
                  */
                 // @ts-ignore
-                readonly ALL: javax.smartcardio.CardTerminals.State
+                public static readonly ALL: javax.smartcardio.CardTerminals.State
                 /**
                  * CardTerminals in which a card is present.
                  */
                 // @ts-ignore
-                readonly CARD_PRESENT: javax.smartcardio.CardTerminals.State
+                public static readonly CARD_PRESENT: javax.smartcardio.CardTerminals.State
                 /**
                  * CardTerminals in which a card is not present.
                  */
                 // @ts-ignore
-                readonly CARD_ABSENT: javax.smartcardio.CardTerminals.State
+                public static readonly CARD_ABSENT: javax.smartcardio.CardTerminals.State
                 /**
                  * CardTerminals for which a card insertion was detected during the
                  * latest call to {@linkplain State#waitForChange waitForChange()}
                  * call.
                  */
                 // @ts-ignore
-                readonly CARD_INSERTION: javax.smartcardio.CardTerminals.State
+                public static readonly CARD_INSERTION: javax.smartcardio.CardTerminals.State
                 /**
                  * CardTerminals for which a card removal was detected during the
                  * latest call to {@linkplain State#waitForChange waitForChange()}
                  * call.
                  */
                 // @ts-ignore
-                readonly CARD_REMOVAL: javax.smartcardio.CardTerminals.State
+                public static readonly CARD_REMOVAL: javax.smartcardio.CardTerminals.State
                 // @ts-ignore
-                values(): javax.smartcardio.CardTerminals.State[]
+                public static values(): javax.smartcardio.CardTerminals.State[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.smartcardio.CardTerminals.State
+                public static valueOf(name: java.lang.String | string): javax.smartcardio.CardTerminals.State
             }
         }
     }

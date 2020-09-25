@@ -5,15 +5,15 @@ declare namespace org {
                 // @ts-ignore
                 class CocoaPlantSize extends java.lang.Enum<org.bukkit.material.CocoaPlant.CocoaPlantSize> {
                     // @ts-ignore
-                    readonly SMALL: org.bukkit.material.CocoaPlant.CocoaPlantSize
+                    public static readonly SMALL: org.bukkit.material.CocoaPlant.CocoaPlantSize
                     // @ts-ignore
-                    readonly MEDIUM: org.bukkit.material.CocoaPlant.CocoaPlantSize
+                    public static readonly MEDIUM: org.bukkit.material.CocoaPlant.CocoaPlantSize
                     // @ts-ignore
-                    readonly LARGE: org.bukkit.material.CocoaPlant.CocoaPlantSize
+                    public static readonly LARGE: org.bukkit.material.CocoaPlant.CocoaPlantSize
                     // @ts-ignore
-                    values(): org.bukkit.material.CocoaPlant.CocoaPlantSize[]
+                    public static values(): org.bukkit.material.CocoaPlant.CocoaPlantSize[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.material.CocoaPlant.CocoaPlantSize
+                    public static valueOf(name: java.lang.String | string): org.bukkit.material.CocoaPlant.CocoaPlantSize
                 }
             }
         }

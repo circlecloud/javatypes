@@ -6,29 +6,29 @@ declare namespace org {
         // @ts-ignore
         class SoundCategory extends java.lang.Enum<org.bukkit.SoundCategory> {
             // @ts-ignore
-            readonly MASTER: org.bukkit.SoundCategory
+            public static readonly MASTER: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly MUSIC: org.bukkit.SoundCategory
+            public static readonly MUSIC: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly RECORDS: org.bukkit.SoundCategory
+            public static readonly RECORDS: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly WEATHER: org.bukkit.SoundCategory
+            public static readonly WEATHER: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly BLOCKS: org.bukkit.SoundCategory
+            public static readonly BLOCKS: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly HOSTILE: org.bukkit.SoundCategory
+            public static readonly HOSTILE: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly NEUTRAL: org.bukkit.SoundCategory
+            public static readonly NEUTRAL: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly PLAYERS: org.bukkit.SoundCategory
+            public static readonly PLAYERS: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly AMBIENT: org.bukkit.SoundCategory
+            public static readonly AMBIENT: org.bukkit.SoundCategory
             // @ts-ignore
-            readonly VOICE: org.bukkit.SoundCategory
+            public static readonly VOICE: org.bukkit.SoundCategory
             // @ts-ignore
-            values(): org.bukkit.SoundCategory[]
+            public static values(): org.bukkit.SoundCategory[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.SoundCategory
+            public static valueOf(name: java.lang.String | string): org.bukkit.SoundCategory
         }
     }
 }

@@ -5,7 +5,7 @@ declare namespace org {
              * Represents a captured state of a chest.
              */
             // @ts-ignore
-            interface Chest extends org.bukkit.block.Container, org.bukkit.loot.Lootable {
+            interface Chest extends org.bukkit.block.Container, org.bukkit.loot.Lootable, org.bukkit.block.Lidded {
                 /**
                  * Gets the inventory of the chest block represented by this block state.
                  * <p>

@@ -13,36 +13,36 @@ declare namespace org {
                      * No spell is being evoked.
                      */
                     // @ts-ignore
-                    readonly NONE: org.bukkit.entity.Evoker.Spell
+                    public static readonly NONE: org.bukkit.entity.Evoker.Spell
                     /**
                      * The spell that summons Vexes.
                      */
                     // @ts-ignore
-                    readonly SUMMON: org.bukkit.entity.Evoker.Spell
+                    public static readonly SUMMON: org.bukkit.entity.Evoker.Spell
                     /**
                      * The spell that summons Fangs.
                      */
                     // @ts-ignore
-                    readonly FANGS: org.bukkit.entity.Evoker.Spell
+                    public static readonly FANGS: org.bukkit.entity.Evoker.Spell
                     /**
                      * The "wololo" spell.
                      */
                     // @ts-ignore
-                    readonly WOLOLO: org.bukkit.entity.Evoker.Spell
+                    public static readonly WOLOLO: org.bukkit.entity.Evoker.Spell
                     /**
                      * The spell that makes the casting entity invisible.
                      */
                     // @ts-ignore
-                    readonly DISAPPEAR: org.bukkit.entity.Evoker.Spell
+                    public static readonly DISAPPEAR: org.bukkit.entity.Evoker.Spell
                     /**
                      * The spell that makes the target blind.
                      */
                     // @ts-ignore
-                    readonly BLINDNESS: org.bukkit.entity.Evoker.Spell
+                    public static readonly BLINDNESS: org.bukkit.entity.Evoker.Spell
                     // @ts-ignore
-                    values(): org.bukkit.entity.Evoker.Spell[]
+                    public static values(): org.bukkit.entity.Evoker.Spell[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.entity.Evoker.Spell
+                    public static valueOf(name: java.lang.String | string): org.bukkit.entity.Evoker.Spell
                 }
             }
         }

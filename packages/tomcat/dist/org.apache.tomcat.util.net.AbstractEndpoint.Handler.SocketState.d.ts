@@ -11,25 +11,25 @@ declare namespace org {
                             // @ts-ignore
                             class SocketState extends java.lang.Enum<org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState> {
                                 // @ts-ignore
-                                readonly OPEN: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static readonly OPEN: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                                 // @ts-ignore
-                                readonly CLOSED: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static readonly CLOSED: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                                 // @ts-ignore
-                                readonly LONG: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static readonly LONG: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                                 // @ts-ignore
-                                readonly ASYNC_END: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static readonly ASYNC_END: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                                 // @ts-ignore
-                                readonly SENDFILE: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static readonly SENDFILE: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                                 // @ts-ignore
-                                readonly UPGRADING: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static readonly UPGRADING: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                                 // @ts-ignore
-                                readonly UPGRADED: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static readonly UPGRADED: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                                 // @ts-ignore
-                                readonly SUSPENDED: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static readonly SUSPENDED: org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                                 // @ts-ignore
-                                values(): org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState[]
+                                public static values(): org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
+                                public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState
                             }
                         }
                     }

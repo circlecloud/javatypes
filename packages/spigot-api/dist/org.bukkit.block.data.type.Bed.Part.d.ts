@@ -13,16 +13,16 @@ declare namespace org {
                              * The head is the upper part of the bed containing the pillow.
                              */
                             // @ts-ignore
-                            readonly HEAD: org.bukkit.block.data.type.Bed.Part
+                            public static readonly HEAD: org.bukkit.block.data.type.Bed.Part
                             /**
                              * The foot is the lower half of the bed.
                              */
                             // @ts-ignore
-                            readonly FOOT: org.bukkit.block.data.type.Bed.Part
+                            public static readonly FOOT: org.bukkit.block.data.type.Bed.Part
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.Bed.Part[]
+                            public static values(): org.bukkit.block.data.type.Bed.Part[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Bed.Part
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Bed.Part
                         }
                     }
                 }

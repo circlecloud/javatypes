@@ -12,13 +12,13 @@ declare namespace org {
                     // @ts-ignore
                     class StartingPoint extends java.lang.Enum<org.apache.catalina.filters.ExpiresFilter.StartingPoint> {
                         // @ts-ignore
-                        readonly ACCESS_TIME: org.apache.catalina.filters.ExpiresFilter.StartingPoint
+                        public static readonly ACCESS_TIME: org.apache.catalina.filters.ExpiresFilter.StartingPoint
                         // @ts-ignore
-                        readonly LAST_MODIFICATION_TIME: org.apache.catalina.filters.ExpiresFilter.StartingPoint
+                        public static readonly LAST_MODIFICATION_TIME: org.apache.catalina.filters.ExpiresFilter.StartingPoint
                         // @ts-ignore
-                        values(): org.apache.catalina.filters.ExpiresFilter.StartingPoint[]
+                        public static values(): org.apache.catalina.filters.ExpiresFilter.StartingPoint[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.apache.catalina.filters.ExpiresFilter.StartingPoint
+                        public static valueOf(name: java.lang.String | string): org.apache.catalina.filters.ExpiresFilter.StartingPoint
                     }
                 }
             }

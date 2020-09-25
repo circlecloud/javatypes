@@ -15,28 +15,28 @@ declare namespace org {
                              * encountered.
                              */
                             // @ts-ignore
-                            readonly ERROR: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
+                            public static readonly ERROR: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
                             /**
                              * Mark the flag as a non-value flag.
                              */
                             // @ts-ignore
-                            readonly ACCEPT_NONVALUE: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
+                            public static readonly ACCEPT_NONVALUE: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
                             /**
                              * Mark the flag as a string-valued flag.
                              */
                             // @ts-ignore
-                            readonly ACCEPT_VALUE: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
+                            public static readonly ACCEPT_VALUE: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
                             /**
                              * Act as if the unknown flag is an ordinary argument, allowing the
                              * parsers specified in {@link Builder#buildWith(CommandElement)} to
                              * attempt to parse the element instead.
                              */
                             // @ts-ignore
-                            readonly IGNORE: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
+                            public static readonly IGNORE: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
                             // @ts-ignore
-                            values(): org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior[]
+                            public static values(): org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
+                            public static valueOf(name: java.lang.String | string): org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior
                         }
                     }
                 }

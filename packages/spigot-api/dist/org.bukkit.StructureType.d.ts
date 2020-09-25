@@ -130,6 +130,21 @@ declare namespace org {
             // @ts-ignore
             public static readonly PILLAGER_OUTPOST: org.bukkit.StructureType
             /**
+             * Nether fossils.
+             */
+            // @ts-ignore
+            public static readonly NETHER_FOSSIL: org.bukkit.StructureType
+            /**
+             * Ruined portal.
+             */
+            // @ts-ignore
+            public static readonly RUINED_PORTAL: org.bukkit.StructureType
+            /**
+             * Bastion remnant.
+             */
+            // @ts-ignore
+            public static readonly BASTION_REMNANT: org.bukkit.StructureType
+            /**
              * Get the name of this structure. This is case-sensitive when used in
              * commands.
              * @return the name of this structure

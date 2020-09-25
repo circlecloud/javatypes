@@ -12,16 +12,16 @@ declare namespace org {
                          * Villager lost their job due to too little experience.
                          */
                         // @ts-ignore
-                        readonly LOSING_JOB: org.bukkit.event.entity.VillagerCareerChangeEvent.ChangeReason
+                        public static readonly LOSING_JOB: org.bukkit.event.entity.VillagerCareerChangeEvent.ChangeReason
                         /**
                          * Villager gained employment.
                          */
                         // @ts-ignore
-                        readonly EMPLOYED: org.bukkit.event.entity.VillagerCareerChangeEvent.ChangeReason
+                        public static readonly EMPLOYED: org.bukkit.event.entity.VillagerCareerChangeEvent.ChangeReason
                         // @ts-ignore
-                        values(): org.bukkit.event.entity.VillagerCareerChangeEvent.ChangeReason[]
+                        public static values(): org.bukkit.event.entity.VillagerCareerChangeEvent.ChangeReason[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.entity.VillagerCareerChangeEvent.ChangeReason
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.entity.VillagerCareerChangeEvent.ChangeReason
                     }
                 }
             }

@@ -43,17 +43,17 @@ declare namespace java {
                  * which has the numeric value 0.
                  */
                 // @ts-ignore
-                readonly BCE: java.time.chrono.IsoEra
+                public static readonly BCE: java.time.chrono.IsoEra
                 /**
                  * The singleton instance for the current era, 'Current Era',
                  * which has the numeric value 1.
                  */
                 // @ts-ignore
-                readonly CE: java.time.chrono.IsoEra
+                public static readonly CE: java.time.chrono.IsoEra
                 // @ts-ignore
-                values(): java.time.chrono.IsoEra[]
+                public static values(): java.time.chrono.IsoEra[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.time.chrono.IsoEra
+                public static valueOf(name: java.lang.String | string): java.time.chrono.IsoEra
                 /**
                  * Obtains an instance of {@code IsoEra} from an {@code int} value.
                  * <p>
@@ -64,7 +64,7 @@ declare namespace java {
                  * @throws DateTimeException if the value is invalid
                  */
                 // @ts-ignore
-                of(isoEra: number /*int*/): java.time.chrono.IsoEra
+                public static of(isoEra: number /*int*/): java.time.chrono.IsoEra
                 /**
                  * Gets the numeric era {@code int} value.
                  * <p>
@@ -72,7 +72,7 @@ declare namespace java {
                  * @return the era value, from 0 (BCE) to 1 (CE)
                  */
                 // @ts-ignore
-                getValue(): number /*int*/
+                public getValue(): number /*int*/
             }
         }
     }

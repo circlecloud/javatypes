@@ -11,13 +11,13 @@ declare namespace org {
                         // @ts-ignore
                         class MapToPropertiesConverter extends java.lang.Enum<org.springframework.data.redis.connection.convert.MapToPropertiesConverter> {
                             // @ts-ignore
-                            readonly INSTANCE: org.springframework.data.redis.connection.convert.MapToPropertiesConverter
+                            public static readonly INSTANCE: org.springframework.data.redis.connection.convert.MapToPropertiesConverter
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.convert.MapToPropertiesConverter[]
+                            public static values(): org.springframework.data.redis.connection.convert.MapToPropertiesConverter[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.convert.MapToPropertiesConverter
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.convert.MapToPropertiesConverter
                             // @ts-ignore
-                            convert(source: java.util.Map<any, any>): java.util.Properties
+                            public convert(source: java.util.Map<any, any>): java.util.Properties
                         }
                     }
                 }

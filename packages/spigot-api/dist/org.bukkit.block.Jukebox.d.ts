@@ -37,6 +37,11 @@ declare namespace org {
                 // @ts-ignore
                 isPlaying(): boolean
                 /**
+                 * Stops the jukebox playing without ejecting the record.
+                 */
+                // @ts-ignore
+                stopPlaying(): void
+                /**
                  * Stops the jukebox playing and ejects the current record.
                  * <p>
                  * If the block represented by this state is no longer a jukebox, this will

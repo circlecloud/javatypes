@@ -8,33 +8,33 @@ declare namespace org {
             // @ts-ignore
             class LifecycleState extends java.lang.Enum<org.apache.catalina.LifecycleState> {
                 // @ts-ignore
-                readonly NEW: org.apache.catalina.LifecycleState
+                public static readonly NEW: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly INITIALIZING: org.apache.catalina.LifecycleState
+                public static readonly INITIALIZING: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly INITIALIZED: org.apache.catalina.LifecycleState
+                public static readonly INITIALIZED: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly STARTING_PREP: org.apache.catalina.LifecycleState
+                public static readonly STARTING_PREP: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly STARTING: org.apache.catalina.LifecycleState
+                public static readonly STARTING: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly STARTED: org.apache.catalina.LifecycleState
+                public static readonly STARTED: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly STOPPING_PREP: org.apache.catalina.LifecycleState
+                public static readonly STOPPING_PREP: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly STOPPING: org.apache.catalina.LifecycleState
+                public static readonly STOPPING: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly STOPPED: org.apache.catalina.LifecycleState
+                public static readonly STOPPED: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly DESTROYING: org.apache.catalina.LifecycleState
+                public static readonly DESTROYING: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly DESTROYED: org.apache.catalina.LifecycleState
+                public static readonly DESTROYED: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                readonly FAILED: org.apache.catalina.LifecycleState
+                public static readonly FAILED: org.apache.catalina.LifecycleState
                 // @ts-ignore
-                values(): org.apache.catalina.LifecycleState[]
+                public static values(): org.apache.catalina.LifecycleState[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.apache.catalina.LifecycleState
+                public static valueOf(name: java.lang.String | string): org.apache.catalina.LifecycleState
                 /**
                  * May the public methods other than property getters/setters and lifecycle
                  * methods be called for a component in this state? It returns
@@ -48,9 +48,9 @@ declare namespace org {
                  *          otherwise <code>false</code>
                  */
                 // @ts-ignore
-                isAvailable(): boolean
+                public isAvailable(): boolean
                 // @ts-ignore
-                getLifecycleEvent(): string
+                public getLifecycleEvent(): string
             }
         }
     }

@@ -17,16 +17,16 @@ declare namespace com {
                  * 1.1 added nested classes and interfaces.
                  */
                 // @ts-ignore
-                readonly JAVA_1_1: com.sun.javadoc.LanguageVersion
+                public static readonly JAVA_1_1: com.sun.javadoc.LanguageVersion
                 /**
                  * 1.5 added generic types, annotations, enums, and varArgs.
                  */
                 // @ts-ignore
-                readonly JAVA_1_5: com.sun.javadoc.LanguageVersion
+                public static readonly JAVA_1_5: com.sun.javadoc.LanguageVersion
                 // @ts-ignore
-                values(): com.sun.javadoc.LanguageVersion[]
+                public static values(): com.sun.javadoc.LanguageVersion[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): com.sun.javadoc.LanguageVersion
+                public static valueOf(name: java.lang.String | string): com.sun.javadoc.LanguageVersion
             }
         }
     }

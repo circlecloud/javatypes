@@ -15,18 +15,18 @@ declare namespace javax {
                  * spreading both columns and rows across multiple pages if necessary.
                  */
                 // @ts-ignore
-                readonly NORMAL: javax.swing.JTable.PrintMode
+                public static readonly NORMAL: javax.swing.JTable.PrintMode
                 /**
                  * Printing mode that scales the output smaller, if necessary,
                  * to fit the table's entire width (and thereby all columns) on each page;
                  * Rows are spread across multiple pages as necessary.
                  */
                 // @ts-ignore
-                readonly FIT_WIDTH: javax.swing.JTable.PrintMode
+                public static readonly FIT_WIDTH: javax.swing.JTable.PrintMode
                 // @ts-ignore
-                values(): javax.swing.JTable.PrintMode[]
+                public static values(): javax.swing.JTable.PrintMode[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.swing.JTable.PrintMode
+                public static valueOf(name: java.lang.String | string): javax.swing.JTable.PrintMode
             }
         }
     }

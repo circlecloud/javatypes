@@ -10,13 +10,13 @@ declare namespace org {
                         // @ts-ignore
                         class IndexDirection extends java.lang.Enum<org.springframework.data.mongodb.core.index.IndexDirection> {
                             // @ts-ignore
-                            readonly ASCENDING: org.springframework.data.mongodb.core.index.IndexDirection
+                            public static readonly ASCENDING: org.springframework.data.mongodb.core.index.IndexDirection
                             // @ts-ignore
-                            readonly DESCENDING: org.springframework.data.mongodb.core.index.IndexDirection
+                            public static readonly DESCENDING: org.springframework.data.mongodb.core.index.IndexDirection
                             // @ts-ignore
-                            values(): org.springframework.data.mongodb.core.index.IndexDirection[]
+                            public static values(): org.springframework.data.mongodb.core.index.IndexDirection[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.index.IndexDirection
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.index.IndexDirection
                         }
                     }
                 }

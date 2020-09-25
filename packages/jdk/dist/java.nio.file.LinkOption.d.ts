@@ -14,11 +14,11 @@ declare namespace java {
                  * @see SecureDirectoryStream#newByteChannel
                  */
                 // @ts-ignore
-                readonly NOFOLLOW_LINKS: java.nio.file.LinkOption
+                public static readonly NOFOLLOW_LINKS: java.nio.file.LinkOption
                 // @ts-ignore
-                values(): java.nio.file.LinkOption[]
+                public static values(): java.nio.file.LinkOption[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.nio.file.LinkOption
+                public static valueOf(name: java.lang.String | string): java.nio.file.LinkOption
             }
         }
     }

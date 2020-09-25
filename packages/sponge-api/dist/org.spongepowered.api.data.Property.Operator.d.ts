@@ -15,46 +15,46 @@ declare namespace org {
                          * then comparison will always return false.
                          */
                         // @ts-ignore
-                        readonly DELEGATE: org.spongepowered.api.data.Property.Operator
+                        public static readonly DELEGATE: org.spongepowered.api.data.Property.Operator
                         /**
                          * Use the <code>.equals()</code> method.
                          */
                         // @ts-ignore
-                        readonly EQUAL: org.spongepowered.api.data.Property.Operator
+                        public static readonly EQUAL: org.spongepowered.api.data.Property.Operator
                         /**
                          * Use the <code>.equals()</code> method but match if the result is
                          * false.
                          */
                         // @ts-ignore
-                        readonly NOTEQUAL: org.spongepowered.api.data.Property.Operator
+                        public static readonly NOTEQUAL: org.spongepowered.api.data.Property.Operator
                         /**
                          * Use <code>.compareTo()</code> amd match if target is greater than
                          * supplied operand.
                          */
                         // @ts-ignore
-                        readonly GREATER: org.spongepowered.api.data.Property.Operator
+                        public static readonly GREATER: org.spongepowered.api.data.Property.Operator
                         /**
                          * Use <code>.compareTo()</code> and match if target is greater than
                          * or equal to supplied operand.
                          */
                         // @ts-ignore
-                        readonly GEQUAL: org.spongepowered.api.data.Property.Operator
+                        public static readonly GEQUAL: org.spongepowered.api.data.Property.Operator
                         /**
                          * Use <code>.compareTo()</code> amd match if target is less than the
                          * supplied operand.
                          */
                         // @ts-ignore
-                        readonly LESS: org.spongepowered.api.data.Property.Operator
+                        public static readonly LESS: org.spongepowered.api.data.Property.Operator
                         /**
                          * Use <code>.compareTo()</code> amd match if target is less than or
                          * equal to the supplied operand.
                          */
                         // @ts-ignore
-                        readonly LEQUAL: org.spongepowered.api.data.Property.Operator
+                        public static readonly LEQUAL: org.spongepowered.api.data.Property.Operator
                         // @ts-ignore
-                        values(): org.spongepowered.api.data.Property.Operator[]
+                        public static values(): org.spongepowered.api.data.Property.Operator[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.spongepowered.api.data.Property.Operator
+                        public static valueOf(name: java.lang.String | string): org.spongepowered.api.data.Property.Operator
                         /**
                          * <p>Compare the two operands by applying this operator <em>infix</em>
                          * with respect to them. For example, if this object is
@@ -68,7 +68,7 @@ declare namespace org {
                          * @return First operand's comparison to second
                          */
                         // @ts-ignore
-                        compare(operand1: org.spongepowered.api.data.Property<any, any>, operand2: org.spongepowered.api.data.Property<any, any>): boolean
+                        public compare(operand1: org.spongepowered.api.data.Property<any, any>, operand2: org.spongepowered.api.data.Property<any, any>): boolean
                         /**
                          * Stub for subclasses to implement their logic. Used so we can get the
                          * null comparison logic out of the way first and then only proceed with
@@ -84,7 +84,7 @@ declare namespace org {
                          * @return the default operator
                          */
                         // @ts-ignore
-                        defaultOperator(): org.spongepowered.api.data.Property.Operator
+                        public static defaultOperator(): org.spongepowered.api.data.Property.Operator
                     }
                 }
             }

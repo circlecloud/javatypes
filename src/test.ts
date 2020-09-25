@@ -70,6 +70,7 @@ function start(root: com.sun.javadoc.RootDoc) {
 function printMethod(method: com.sun.javadoc.MethodDoc, prefix: string = "") {
     console.log(prefix, '===== com.sun.javadoc.MethodDoc Info Table =====')
     console.log(prefix, 'toString:', method)
+    console.log(prefix, 'modifiers:', method.modifiers())
     console.log(prefix, 'commentText:', method.commentText())
     console.log(prefix, 'name:', method.name())
     console.log(prefix, 'signature:', method.signature())
@@ -95,6 +96,9 @@ function printParam(param: com.sun.javadoc.Parameter, prefix: string = "") {
 function printField(field: com.sun.javadoc.FieldDoc, prefix: string = "") {
     console.log(prefix, '===== com.sun.javadoc.FieldDoc Info Table =====')
     console.log(prefix, 'toString:', field)
+    console.log(prefix, 'modifiers:', field.modifiers())
+    console.log(prefix, 'isPublic:', field.isPublic())
+    console.log(prefix, 'isStatic:', field.isStatic())
     console.log(prefix, 'commentText:', field.commentText())
     console.log(prefix, 'constantValue:', field.constantValue())
     console.log(prefix, 'constantValueExpression:', field.constantValueExpression())
@@ -105,6 +109,8 @@ function printType(type: com.sun.javadoc.Type, prefix: string = '') {
     if (!type) { return }
     console.log(prefix, '===== com.sun.javadoc.Type Info Table =====')
     console.log(prefix, 'toString:', type.toString())
+    //@ts-ignore
+    console.log(prefix, 'isOrdinaryClass:', type.isOrdinaryClass && type.isOrdinaryClass())
     console.log(prefix, 'typeName:', type.typeName())
     console.log(prefix, 'simpleTypeName:', type.simpleTypeName())
     console.log(prefix, 'qualifiedTypeName:', type.qualifiedTypeName())

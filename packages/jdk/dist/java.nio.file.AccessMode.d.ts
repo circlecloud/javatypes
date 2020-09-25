@@ -11,21 +11,21 @@ declare namespace java {
                  * Test read access.
                  */
                 // @ts-ignore
-                readonly READ: java.nio.file.AccessMode
+                public static readonly READ: java.nio.file.AccessMode
                 /**
                  * Test write access.
                  */
                 // @ts-ignore
-                readonly WRITE: java.nio.file.AccessMode
+                public static readonly WRITE: java.nio.file.AccessMode
                 /**
                  * Test execute access.
                  */
                 // @ts-ignore
-                readonly EXECUTE: java.nio.file.AccessMode
+                public static readonly EXECUTE: java.nio.file.AccessMode
                 // @ts-ignore
-                values(): java.nio.file.AccessMode[]
+                public static values(): java.nio.file.AccessMode[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.nio.file.AccessMode
+                public static valueOf(name: java.lang.String | string): java.nio.file.AccessMode
             }
         }
     }

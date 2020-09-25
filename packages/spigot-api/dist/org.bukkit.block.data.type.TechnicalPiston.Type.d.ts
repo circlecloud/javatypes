@@ -14,16 +14,16 @@ declare namespace org {
                              * retraction.
                              */
                             // @ts-ignore
-                            readonly NORMAL: org.bukkit.block.data.type.TechnicalPiston.Type
+                            public static readonly NORMAL: org.bukkit.block.data.type.TechnicalPiston.Type
                             /**
                              * A sticky piston which will also retract connected blocks.
                              */
                             // @ts-ignore
-                            readonly STICKY: org.bukkit.block.data.type.TechnicalPiston.Type
+                            public static readonly STICKY: org.bukkit.block.data.type.TechnicalPiston.Type
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.TechnicalPiston.Type[]
+                            public static values(): org.bukkit.block.data.type.TechnicalPiston.Type[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.TechnicalPiston.Type
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.TechnicalPiston.Type
                         }
                     }
                 }

@@ -64,7 +64,7 @@ declare namespace org {
                      * This causes the client to display the potion effect in the potion's name.
                      * @param type the potion effect type to move
                      * @return true if the potion meta changed as a result of this call
-                     * @deprecated use {#link org.bukkit.potion.PotionType#PotionType}
+                     * @deprecated use {#link #setBasePotionData(org.bukkit.potion.PotionData)}
                      */
                     // @ts-ignore
                     setMainEffect(type: org.bukkit.potion.PotionEffectType): boolean

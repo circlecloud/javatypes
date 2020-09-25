@@ -8,31 +8,31 @@ declare namespace org {
                 // @ts-ignore
                 class Type extends java.lang.Enum<org.bukkit.entity.Cat.Type> {
                     // @ts-ignore
-                    readonly TABBY: org.bukkit.entity.Cat.Type
+                    public static readonly TABBY: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly BLACK: org.bukkit.entity.Cat.Type
+                    public static readonly BLACK: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly RED: org.bukkit.entity.Cat.Type
+                    public static readonly RED: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly SIAMESE: org.bukkit.entity.Cat.Type
+                    public static readonly SIAMESE: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly BRITISH_SHORTHAIR: org.bukkit.entity.Cat.Type
+                    public static readonly BRITISH_SHORTHAIR: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly CALICO: org.bukkit.entity.Cat.Type
+                    public static readonly CALICO: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly PERSIAN: org.bukkit.entity.Cat.Type
+                    public static readonly PERSIAN: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly RAGDOLL: org.bukkit.entity.Cat.Type
+                    public static readonly RAGDOLL: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly WHITE: org.bukkit.entity.Cat.Type
+                    public static readonly WHITE: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly JELLIE: org.bukkit.entity.Cat.Type
+                    public static readonly JELLIE: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    readonly ALL_BLACK: org.bukkit.entity.Cat.Type
+                    public static readonly ALL_BLACK: org.bukkit.entity.Cat.Type
                     // @ts-ignore
-                    values(): org.bukkit.entity.Cat.Type[]
+                    public static values(): org.bukkit.entity.Cat.Type[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.entity.Cat.Type
+                    public static valueOf(name: java.lang.String | string): org.bukkit.entity.Cat.Type
                 }
             }
         }

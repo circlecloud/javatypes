@@ -50,6 +50,10 @@ declare namespace org {
              * </tr><tr>
              * <td><code>author</code><br><code>authors</code></td>
              * <td>{@link #getAuthors()}</td>
+             * <td>The plugin authors</td>
+             * </tr><tr>
+             * <td><code>contributors</code></td>
+             * <td>{@link #getContributors()}</td>
              * <td>The plugin contributors</td>
              * </tr><tr>
              * <td><code>description</code></td>
@@ -114,6 +118,7 @@ declare namespace org {
              * # name is displayed first
              * author: CaptainInflamo
              * authors: [Cogito, verrier, EvilSeph]
+             * contributors: [Choco, md_5]
              * website: http://www.curse.com/server-mods/minecraft/myplugin
              * main: com.captaininflamo.bukkit.inferno.Inferno
              * depend: [NewFire, FlameWire]
@@ -307,7 +312,7 @@ declare namespace org {
                  * <li>Gives credit to the developer.
                  * <li>Used in some server error messages to provide helpful feedback on
                  * who to contact when an error occurs.
-                 * <li>A bukkit.org forum handle or email address is recommended.
+                 * <li>A SpigotMC forum handle or email address is recommended.
                  * <li>Is displayed when a user types <code>/version PluginName</code>
                  * <li><code>authors</code> must be in <a
                  * href="http://en.wikipedia.org/wiki/YAML#Lists">YAML list
@@ -333,6 +338,26 @@ declare namespace org {
                  */
                 // @ts-ignore
                 public getAuthors(): Array<java.lang.String | string>
+                /**
+                 * Gives the list of contributors for the plugin.
+                 * <ul>
+                 * <li>Gives credit to those that have contributed to the plugin, though
+                 * not enough so to warrant authorship.
+                 * <li>Unlike {@link #getAuthors()}, contributors will not be mentioned in
+                 * server error messages as a means of contact.
+                 * <li>A SpigotMC forum handle or email address is recommended.
+                 * <li>Is displayed when a user types <code>/version PluginName</code>
+                 * <li><code>contributors</code> must be in <a
+                 * href="http://en.wikipedia.org/wiki/YAML#Lists">YAML list
+                 * format</a>.
+                 * </ul>
+                 * <p>
+                 * Example:
+                 * <blockquote><pre>authors: [Choco, md_5]</pre></blockquote>
+                 * @return an immutable list of the plugin's contributors
+                 */
+                // @ts-ignore
+                public getContributors(): Array<java.lang.String | string>
                 /**
                  * Gives the plugin's or plugin's author's website.
                  * <ul>

@@ -14,29 +14,29 @@ declare namespace javax {
                  * value should be included.
                  */
                 // @ts-ignore
-                readonly BEFORE: javax.swing.RowFilter.ComparisonType
+                public static readonly BEFORE: javax.swing.RowFilter.ComparisonType
                 /**
                  * Indicates that entries with a value after the supplied
                  * value should be included.
                  */
                 // @ts-ignore
-                readonly AFTER: javax.swing.RowFilter.ComparisonType
+                public static readonly AFTER: javax.swing.RowFilter.ComparisonType
                 /**
                  * Indicates that entries with a value equal to the supplied
                  * value should be included.
                  */
                 // @ts-ignore
-                readonly EQUAL: javax.swing.RowFilter.ComparisonType
+                public static readonly EQUAL: javax.swing.RowFilter.ComparisonType
                 /**
                  * Indicates that entries with a value not equal to the supplied
                  * value should be included.
                  */
                 // @ts-ignore
-                readonly NOT_EQUAL: javax.swing.RowFilter.ComparisonType
+                public static readonly NOT_EQUAL: javax.swing.RowFilter.ComparisonType
                 // @ts-ignore
-                values(): javax.swing.RowFilter.ComparisonType[]
+                public static values(): javax.swing.RowFilter.ComparisonType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.swing.RowFilter.ComparisonType
+                public static valueOf(name: java.lang.String | string): javax.swing.RowFilter.ComparisonType
             }
         }
     }

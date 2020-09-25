@@ -11,21 +11,21 @@ declare namespace org {
              * The x axis.
              */
             // @ts-ignore
-            readonly X: org.bukkit.Axis
+            public static readonly X: org.bukkit.Axis
             /**
              * The y axis.
              */
             // @ts-ignore
-            readonly Y: org.bukkit.Axis
+            public static readonly Y: org.bukkit.Axis
             /**
              * The z axis.
              */
             // @ts-ignore
-            readonly Z: org.bukkit.Axis
+            public static readonly Z: org.bukkit.Axis
             // @ts-ignore
-            values(): org.bukkit.Axis[]
+            public static values(): org.bukkit.Axis[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.Axis
+            public static valueOf(name: java.lang.String | string): org.bukkit.Axis
         }
     }
 }

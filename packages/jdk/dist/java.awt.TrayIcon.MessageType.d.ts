@@ -15,26 +15,26 @@ declare namespace java {
                  * An error message
                  */
                 // @ts-ignore
-                readonly ERROR: java.awt.TrayIcon.MessageType
+                public static readonly ERROR: java.awt.TrayIcon.MessageType
                 /**
                  * A warning message
                  */
                 // @ts-ignore
-                readonly WARNING: java.awt.TrayIcon.MessageType
+                public static readonly WARNING: java.awt.TrayIcon.MessageType
                 /**
                  * An information message
                  */
                 // @ts-ignore
-                readonly INFO: java.awt.TrayIcon.MessageType
+                public static readonly INFO: java.awt.TrayIcon.MessageType
                 /**
                  * Simple message
                  */
                 // @ts-ignore
-                readonly NONE: java.awt.TrayIcon.MessageType
+                public static readonly NONE: java.awt.TrayIcon.MessageType
                 // @ts-ignore
-                values(): java.awt.TrayIcon.MessageType[]
+                public static values(): java.awt.TrayIcon.MessageType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.awt.TrayIcon.MessageType
+                public static valueOf(name: java.lang.String | string): java.awt.TrayIcon.MessageType
             }
         }
     }

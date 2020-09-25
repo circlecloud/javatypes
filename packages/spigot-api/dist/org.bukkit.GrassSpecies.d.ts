@@ -9,28 +9,28 @@ declare namespace org {
              * Represents the dead looking grass.
              */
             // @ts-ignore
-            readonly DEAD: org.bukkit.GrassSpecies
+            public static readonly DEAD: org.bukkit.GrassSpecies
             /**
              * Represents the normal grass species.
              */
             // @ts-ignore
-            readonly NORMAL: org.bukkit.GrassSpecies
+            public static readonly NORMAL: org.bukkit.GrassSpecies
             /**
              * Represents the fern-looking grass species.
              */
             // @ts-ignore
-            readonly FERN_LIKE: org.bukkit.GrassSpecies
+            public static readonly FERN_LIKE: org.bukkit.GrassSpecies
             // @ts-ignore
-            values(): org.bukkit.GrassSpecies[]
+            public static values(): org.bukkit.GrassSpecies[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.GrassSpecies
+            public static valueOf(name: java.lang.String | string): org.bukkit.GrassSpecies
             /**
              * Gets the associated data value representing this species
              * @return A byte containing the data value of this grass species
              * @deprecated Magic value
              */
             // @ts-ignore
-            getData(): number /*byte*/
+            public getData(): number /*byte*/
             /**
              * Gets the GrassSpecies with the given data value
              * @param data Data value to fetch
@@ -39,7 +39,7 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getByData(data: number /*byte*/): org.bukkit.GrassSpecies
+            public static getByData(data: number /*byte*/): org.bukkit.GrassSpecies
         }
     }
 }

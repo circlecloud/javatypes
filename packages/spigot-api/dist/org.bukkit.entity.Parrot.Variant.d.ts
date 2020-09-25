@@ -11,31 +11,31 @@ declare namespace org {
                      * Classic parrot - red with colored wingtips.
                      */
                     // @ts-ignore
-                    readonly RED: org.bukkit.entity.Parrot.Variant
+                    public static readonly RED: org.bukkit.entity.Parrot.Variant
                     /**
                      * Royal blue colored parrot.
                      */
                     // @ts-ignore
-                    readonly BLUE: org.bukkit.entity.Parrot.Variant
+                    public static readonly BLUE: org.bukkit.entity.Parrot.Variant
                     /**
                      * Green colored parrot.
                      */
                     // @ts-ignore
-                    readonly GREEN: org.bukkit.entity.Parrot.Variant
+                    public static readonly GREEN: org.bukkit.entity.Parrot.Variant
                     /**
                      * Cyan colored parrot.
                      */
                     // @ts-ignore
-                    readonly CYAN: org.bukkit.entity.Parrot.Variant
+                    public static readonly CYAN: org.bukkit.entity.Parrot.Variant
                     /**
                      * Gray colored parrot.
                      */
                     // @ts-ignore
-                    readonly GRAY: org.bukkit.entity.Parrot.Variant
+                    public static readonly GRAY: org.bukkit.entity.Parrot.Variant
                     // @ts-ignore
-                    values(): org.bukkit.entity.Parrot.Variant[]
+                    public static values(): org.bukkit.entity.Parrot.Variant[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.entity.Parrot.Variant
+                    public static valueOf(name: java.lang.String | string): org.bukkit.entity.Parrot.Variant
                 }
             }
         }

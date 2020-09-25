@@ -12,13 +12,13 @@ declare namespace org {
                             // @ts-ignore
                             class NoOpValueTransformer extends java.lang.Enum<org.springframework.data.redis.core.index.RedisIndexDefinition.NoOpValueTransformer> implements org.springframework.data.redis.core.index.IndexValueTransformer {
                                 // @ts-ignore
-                                readonly INSTANCE: org.springframework.data.redis.core.index.RedisIndexDefinition.NoOpValueTransformer
+                                public static readonly INSTANCE: org.springframework.data.redis.core.index.RedisIndexDefinition.NoOpValueTransformer
                                 // @ts-ignore
-                                values(): org.springframework.data.redis.core.index.RedisIndexDefinition.NoOpValueTransformer[]
+                                public static values(): org.springframework.data.redis.core.index.RedisIndexDefinition.NoOpValueTransformer[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.springframework.data.redis.core.index.RedisIndexDefinition.NoOpValueTransformer
+                                public static valueOf(name: java.lang.String | string): org.springframework.data.redis.core.index.RedisIndexDefinition.NoOpValueTransformer
                                 // @ts-ignore
-                                convert(source: java.lang.Object | any): any
+                                public convert(source: java.lang.Object | any): any
                             }
                         }
                     }

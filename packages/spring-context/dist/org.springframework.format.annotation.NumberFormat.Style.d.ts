@@ -14,26 +14,26 @@ declare namespace org {
                          * @since 4.2
                          */
                         // @ts-ignore
-                        readonly DEFAULT: org.springframework.format.annotation.NumberFormat.Style
+                        public static readonly DEFAULT: org.springframework.format.annotation.NumberFormat.Style
                         /**
                          * The general-purpose number format for the current locale.
                          */
                         // @ts-ignore
-                        readonly NUMBER: org.springframework.format.annotation.NumberFormat.Style
+                        public static readonly NUMBER: org.springframework.format.annotation.NumberFormat.Style
                         /**
                          * The percent format for the current locale.
                          */
                         // @ts-ignore
-                        readonly PERCENT: org.springframework.format.annotation.NumberFormat.Style
+                        public static readonly PERCENT: org.springframework.format.annotation.NumberFormat.Style
                         /**
                          * The currency format for the current locale.
                          */
                         // @ts-ignore
-                        readonly CURRENCY: org.springframework.format.annotation.NumberFormat.Style
+                        public static readonly CURRENCY: org.springframework.format.annotation.NumberFormat.Style
                         // @ts-ignore
-                        values(): org.springframework.format.annotation.NumberFormat.Style[]
+                        public static values(): org.springframework.format.annotation.NumberFormat.Style[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.format.annotation.NumberFormat.Style
+                        public static valueOf(name: java.lang.String | string): org.springframework.format.annotation.NumberFormat.Style
                     }
                 }
             }

@@ -7,19 +7,19 @@ declare namespace org {
                         // @ts-ignore
                         class ExtractorResult extends java.lang.Enum<org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult> {
                             // @ts-ignore
-                            readonly COMPLETE: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
+                            public static readonly COMPLETE: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
                             // @ts-ignore
-                            readonly NOT_PRESENT: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
+                            public static readonly NOT_PRESENT: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
                             // @ts-ignore
-                            readonly UNDERFLOW: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
+                            public static readonly UNDERFLOW: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
                             // @ts-ignore
-                            readonly NEED_READ: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
+                            public static readonly NEED_READ: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
                             // @ts-ignore
-                            readonly NON_SECURE: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
+                            public static readonly NON_SECURE: org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
                             // @ts-ignore
-                            values(): org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult[]
+                            public static values(): org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
+                            public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.TLSClientHelloExtractor.ExtractorResult
                         }
                     }
                 }

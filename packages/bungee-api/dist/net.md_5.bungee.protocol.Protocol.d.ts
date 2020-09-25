@@ -5,21 +5,21 @@ declare namespace net {
                 // @ts-ignore
                 class Protocol extends java.lang.Enum<net.md_5.bungee.protocol.Protocol> {
                     // @ts-ignore
-                    readonly HANDSHAKE: net.md_5.bungee.protocol.Protocol
+                    public static readonly HANDSHAKE: net.md_5.bungee.protocol.Protocol
                     // @ts-ignore
-                    readonly GAME: net.md_5.bungee.protocol.Protocol
+                    public static readonly GAME: net.md_5.bungee.protocol.Protocol
                     // @ts-ignore
-                    readonly STATUS: net.md_5.bungee.protocol.Protocol
+                    public static readonly STATUS: net.md_5.bungee.protocol.Protocol
                     // @ts-ignore
-                    readonly LOGIN: net.md_5.bungee.protocol.Protocol
+                    public static readonly LOGIN: net.md_5.bungee.protocol.Protocol
                     // @ts-ignore
-                    readonly MAX_PACKET_ID: number /*int*/
+                    public static readonly MAX_PACKET_ID: number /*int*/
                     // @ts-ignore
-                    values(): net.md_5.bungee.protocol.Protocol[]
+                    public static values(): net.md_5.bungee.protocol.Protocol[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): net.md_5.bungee.protocol.Protocol
+                    public static valueOf(name: java.lang.String | string): net.md_5.bungee.protocol.Protocol
                     // @ts-ignore
-                    main(args: java.lang.String[] | string[]): void
+                    public static main(args: java.lang.String[] | string[]): void
                 }
             }
         }

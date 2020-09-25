@@ -7,7 +7,7 @@ declare namespace org {
                      * 'attachment' denotes how the bell is attached to its block.
                      */
                     // @ts-ignore
-                    interface Bell extends org.bukkit.block.data.Directional {
+                    interface Bell extends org.bukkit.block.data.Directional, org.bukkit.block.data.Powerable {
                         /**
                          * Gets the value of the 'attachment' property.
                          * @return the 'attachment' value

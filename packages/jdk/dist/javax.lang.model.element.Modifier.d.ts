@@ -22,72 +22,72 @@ declare namespace javax {
                      * The modifier {@code public}
                      */
                     // @ts-ignore
-                    readonly PUBLIC: javax.lang.model.element.Modifier
+                    public static readonly PUBLIC: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code protected}
                      */
                     // @ts-ignore
-                    readonly PROTECTED: javax.lang.model.element.Modifier
+                    public static readonly PROTECTED: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code private}
                      */
                     // @ts-ignore
-                    readonly PRIVATE: javax.lang.model.element.Modifier
+                    public static readonly PRIVATE: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code abstract}
                      */
                     // @ts-ignore
-                    readonly ABSTRACT: javax.lang.model.element.Modifier
+                    public static readonly ABSTRACT: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code default}
                      * @since 1.8
                      */
                     // @ts-ignore
-                    readonly DEFAULT: javax.lang.model.element.Modifier
+                    public static readonly DEFAULT: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code static}
                      */
                     // @ts-ignore
-                    readonly STATIC: javax.lang.model.element.Modifier
+                    public static readonly STATIC: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code final}
                      */
                     // @ts-ignore
-                    readonly FINAL: javax.lang.model.element.Modifier
+                    public static readonly FINAL: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code transient}
                      */
                     // @ts-ignore
-                    readonly TRANSIENT: javax.lang.model.element.Modifier
+                    public static readonly TRANSIENT: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code volatile}
                      */
                     // @ts-ignore
-                    readonly VOLATILE: javax.lang.model.element.Modifier
+                    public static readonly VOLATILE: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code synchronized}
                      */
                     // @ts-ignore
-                    readonly SYNCHRONIZED: javax.lang.model.element.Modifier
+                    public static readonly SYNCHRONIZED: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code native}
                      */
                     // @ts-ignore
-                    readonly NATIVE: javax.lang.model.element.Modifier
+                    public static readonly NATIVE: javax.lang.model.element.Modifier
                     /**
                      * The modifier {@code strictfp}
                      */
                     // @ts-ignore
-                    readonly STRICTFP: javax.lang.model.element.Modifier
+                    public static readonly STRICTFP: javax.lang.model.element.Modifier
                     // @ts-ignore
-                    values(): javax.lang.model.element.Modifier[]
+                    public static values(): javax.lang.model.element.Modifier[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.lang.model.element.Modifier
+                    public static valueOf(name: java.lang.String | string): javax.lang.model.element.Modifier
                     /**
                      * Returns this modifier's name in lowercase.
                      */
                     // @ts-ignore
-                    toString(): string
+                    public toString(): string
                 }
             }
         }

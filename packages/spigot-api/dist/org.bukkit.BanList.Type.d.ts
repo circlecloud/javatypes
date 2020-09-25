@@ -10,16 +10,16 @@ declare namespace org {
                  * Banned player names
                  */
                 // @ts-ignore
-                readonly NAME: org.bukkit.BanList.Type
+                public static readonly NAME: org.bukkit.BanList.Type
                 /**
                  * Banned player IP addresses
                  */
                 // @ts-ignore
-                readonly IP: org.bukkit.BanList.Type
+                public static readonly IP: org.bukkit.BanList.Type
                 // @ts-ignore
-                values(): org.bukkit.BanList.Type[]
+                public static values(): org.bukkit.BanList.Type[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.bukkit.BanList.Type
+                public static valueOf(name: java.lang.String | string): org.bukkit.BanList.Type
             }
         }
     }

@@ -29,7 +29,7 @@ declare namespace java {
                  * baseline type of <code>CONSTANT_ASCENT</code>.
                  */
                 // @ts-ignore
-                readonly CONSTANT_ASCENT: java.awt.Component.BaselineResizeBehavior
+                public static readonly CONSTANT_ASCENT: java.awt.Component.BaselineResizeBehavior
                 /**
                  * Indicates the baseline remains fixed relative to the height
                  * and does not change as the width is varied.  That is, for
@@ -40,7 +40,7 @@ declare namespace java {
                  * baseline type of <code>CONSTANT_DESCENT</code>.
                  */
                 // @ts-ignore
-                readonly CONSTANT_DESCENT: java.awt.Component.BaselineResizeBehavior
+                public static readonly CONSTANT_DESCENT: java.awt.Component.BaselineResizeBehavior
                 /**
                  * Indicates the baseline remains a fixed distance from
                  * the center of the component.  That is, for any height H the
@@ -79,7 +79,7 @@ declare namespace java {
                  * </pre>
                  */
                 // @ts-ignore
-                readonly CENTER_OFFSET: java.awt.Component.BaselineResizeBehavior
+                public static readonly CENTER_OFFSET: java.awt.Component.BaselineResizeBehavior
                 /**
                  * Indicates the baseline resize behavior can not be expressed using
                  * any of the other constants.  This may also indicate the baseline
@@ -87,11 +87,11 @@ declare namespace java {
                  * by components that do not have a baseline.
                  */
                 // @ts-ignore
-                readonly OTHER: java.awt.Component.BaselineResizeBehavior
+                public static readonly OTHER: java.awt.Component.BaselineResizeBehavior
                 // @ts-ignore
-                values(): java.awt.Component.BaselineResizeBehavior[]
+                public static values(): java.awt.Component.BaselineResizeBehavior[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.awt.Component.BaselineResizeBehavior
+                public static valueOf(name: java.lang.String | string): java.awt.Component.BaselineResizeBehavior
             }
         }
     }

@@ -23,7 +23,7 @@ declare namespace cn {
                  * @since Nukkit 1.0 | Nukkit API 1.0.0
                  */
                 // @ts-ignore
-                readonly STARTUP: cn.nukkit.plugin.PluginLoadOrder
+                public static readonly STARTUP: cn.nukkit.plugin.PluginLoadOrder
                 /**
                  * 表示这个插件在第一个世界加载完成后开始加载。<br>
                  * Indicates that the plugin will be loaded after the first/default world was created.
@@ -31,11 +31,11 @@ declare namespace cn {
                  * @since Nukkit 1.0 | Nukkit API 1.0.0
                  */
                 // @ts-ignore
-                readonly POSTWORLD: cn.nukkit.plugin.PluginLoadOrder
+                public static readonly POSTWORLD: cn.nukkit.plugin.PluginLoadOrder
                 // @ts-ignore
-                values(): cn.nukkit.plugin.PluginLoadOrder[]
+                public static values(): cn.nukkit.plugin.PluginLoadOrder[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): cn.nukkit.plugin.PluginLoadOrder
+                public static valueOf(name: java.lang.String | string): cn.nukkit.plugin.PluginLoadOrder
             }
         }
     }

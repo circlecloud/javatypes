@@ -11,21 +11,21 @@ declare namespace java {
                  * Type for secret keys.
                  */
                 // @ts-ignore
-                readonly SECRET: java.security.KeyRep.Type
+                public static readonly SECRET: java.security.KeyRep.Type
                 /**
                  * Type for public keys.
                  */
                 // @ts-ignore
-                readonly PUBLIC: java.security.KeyRep.Type
+                public static readonly PUBLIC: java.security.KeyRep.Type
                 /**
                  * Type for private keys.
                  */
                 // @ts-ignore
-                readonly PRIVATE: java.security.KeyRep.Type
+                public static readonly PRIVATE: java.security.KeyRep.Type
                 // @ts-ignore
-                values(): java.security.KeyRep.Type[]
+                public static values(): java.security.KeyRep.Type[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.security.KeyRep.Type
+                public static valueOf(name: java.lang.String | string): java.security.KeyRep.Type
             }
         }
     }

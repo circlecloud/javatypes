@@ -19,11 +19,11 @@ declare namespace java {
                  * which has the numeric value 1.
                  */
                 // @ts-ignore
-                readonly AH: java.time.chrono.HijrahEra
+                public static readonly AH: java.time.chrono.HijrahEra
                 // @ts-ignore
-                values(): java.time.chrono.HijrahEra[]
+                public static values(): java.time.chrono.HijrahEra[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.time.chrono.HijrahEra
+                public static valueOf(name: java.lang.String | string): java.time.chrono.HijrahEra
                 /**
                  * Obtains an instance of {@code HijrahEra} from an {@code int} value.
                  * <p>
@@ -33,7 +33,7 @@ declare namespace java {
                  * @throws DateTimeException if the value is invalid
                  */
                 // @ts-ignore
-                of(hijrahEra: number /*int*/): java.time.chrono.HijrahEra
+                public static of(hijrahEra: number /*int*/): java.time.chrono.HijrahEra
                 /**
                  * Gets the numeric era {@code int} value.
                  * <p>
@@ -41,7 +41,7 @@ declare namespace java {
                  * @return the era value, 1 (AH)
                  */
                 // @ts-ignore
-                getValue(): number /*int*/
+                public getValue(): number /*int*/
                 /**
                  * Gets the range of valid values for the specified field.
                  * <p>
@@ -66,7 +66,7 @@ declare namespace java {
                  * @throws UnsupportedTemporalTypeException if the unit is not supported
                  */
                 // @ts-ignore
-                range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+                public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             }
         }
     }

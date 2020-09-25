@@ -28,77 +28,77 @@ declare namespace java {
              * This has the numeric value of {@code 1}.
              */
             // @ts-ignore
-            readonly JANUARY: java.time.Month
+            public static readonly JANUARY: java.time.Month
             /**
              * The singleton instance for the month of February with 28 days, or 29 in a leap year.
              * This has the numeric value of {@code 2}.
              */
             // @ts-ignore
-            readonly FEBRUARY: java.time.Month
+            public static readonly FEBRUARY: java.time.Month
             /**
              * The singleton instance for the month of March with 31 days.
              * This has the numeric value of {@code 3}.
              */
             // @ts-ignore
-            readonly MARCH: java.time.Month
+            public static readonly MARCH: java.time.Month
             /**
              * The singleton instance for the month of April with 30 days.
              * This has the numeric value of {@code 4}.
              */
             // @ts-ignore
-            readonly APRIL: java.time.Month
+            public static readonly APRIL: java.time.Month
             /**
              * The singleton instance for the month of May with 31 days.
              * This has the numeric value of {@code 5}.
              */
             // @ts-ignore
-            readonly MAY: java.time.Month
+            public static readonly MAY: java.time.Month
             /**
              * The singleton instance for the month of June with 30 days.
              * This has the numeric value of {@code 6}.
              */
             // @ts-ignore
-            readonly JUNE: java.time.Month
+            public static readonly JUNE: java.time.Month
             /**
              * The singleton instance for the month of July with 31 days.
              * This has the numeric value of {@code 7}.
              */
             // @ts-ignore
-            readonly JULY: java.time.Month
+            public static readonly JULY: java.time.Month
             /**
              * The singleton instance for the month of August with 31 days.
              * This has the numeric value of {@code 8}.
              */
             // @ts-ignore
-            readonly AUGUST: java.time.Month
+            public static readonly AUGUST: java.time.Month
             /**
              * The singleton instance for the month of September with 30 days.
              * This has the numeric value of {@code 9}.
              */
             // @ts-ignore
-            readonly SEPTEMBER: java.time.Month
+            public static readonly SEPTEMBER: java.time.Month
             /**
              * The singleton instance for the month of October with 31 days.
              * This has the numeric value of {@code 10}.
              */
             // @ts-ignore
-            readonly OCTOBER: java.time.Month
+            public static readonly OCTOBER: java.time.Month
             /**
              * The singleton instance for the month of November with 30 days.
              * This has the numeric value of {@code 11}.
              */
             // @ts-ignore
-            readonly NOVEMBER: java.time.Month
+            public static readonly NOVEMBER: java.time.Month
             /**
              * The singleton instance for the month of December with 31 days.
              * This has the numeric value of {@code 12}.
              */
             // @ts-ignore
-            readonly DECEMBER: java.time.Month
+            public static readonly DECEMBER: java.time.Month
             // @ts-ignore
-            values(): java.time.Month[]
+            public static values(): java.time.Month[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): java.time.Month
+            public static valueOf(name: java.lang.String | string): java.time.Month
             /**
              * Obtains an instance of {@code Month} from an {@code int} value.
              * <p>
@@ -110,7 +110,7 @@ declare namespace java {
              * @throws DateTimeException if the month-of-year is invalid
              */
             // @ts-ignore
-            of(month: number /*int*/): java.time.Month
+            public static of(month: number /*int*/): java.time.Month
             /**
              * Obtains an instance of {@code Month} from a temporal object.
              * <p>
@@ -129,7 +129,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to a {#code Month}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.Month
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.Month
             /**
              * Gets the month-of-year {@code int} value.
              * <p>
@@ -138,7 +138,7 @@ declare namespace java {
              * @return the month-of-year, from 1 (January) to 12 (December)
              */
             // @ts-ignore
-            getValue(): number /*int*/
+            public getValue(): number /*int*/
             /**
              * Gets the textual representation, such as 'Jan' or 'December'.
              * <p>
@@ -152,7 +152,7 @@ declare namespace java {
              * @return the text value of the month-of-year, not null
              */
             // @ts-ignore
-            getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
+            public getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -172,7 +172,7 @@ declare namespace java {
              * @return true if the field is supported on this month-of-year, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -195,7 +195,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this month-of-year as an {@code int}.
              * <p>
@@ -221,7 +221,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): number /*int*/
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this month-of-year as a {@code long}.
              * <p>
@@ -244,7 +244,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): number /*long*/
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Returns the month-of-year that is the specified number of quarters after this one.
              * <p>
@@ -256,7 +256,7 @@ declare namespace java {
              * @return the resulting month, not null
              */
             // @ts-ignore
-            plus(months: number /*long*/): java.time.Month
+            public plus(months: number /*long*/): java.time.Month
             /**
              * Returns the month-of-year that is the specified number of months before this one.
              * <p>
@@ -268,7 +268,7 @@ declare namespace java {
              * @return the resulting month, not null
              */
             // @ts-ignore
-            minus(months: number /*long*/): java.time.Month
+            public minus(months: number /*long*/): java.time.Month
             /**
              * Gets the length of this month in days.
              * <p>
@@ -281,7 +281,7 @@ declare namespace java {
              * @return the length of this month in days, from 28 to 31
              */
             // @ts-ignore
-            length(leapYear: boolean): number /*int*/
+            public length(leapYear: boolean): number /*int*/
             /**
              * Gets the minimum length of this month in days.
              * <p>
@@ -291,7 +291,7 @@ declare namespace java {
              * @return the minimum length of this month in days, from 28 to 31
              */
             // @ts-ignore
-            minLength(): number /*int*/
+            public minLength(): number /*int*/
             /**
              * Gets the maximum length of this month in days.
              * <p>
@@ -301,7 +301,7 @@ declare namespace java {
              * @return the maximum length of this month in days, from 29 to 31
              */
             // @ts-ignore
-            maxLength(): number /*int*/
+            public maxLength(): number /*int*/
             /**
              * Gets the day-of-year corresponding to the first day of this month.
              * <p>
@@ -311,7 +311,7 @@ declare namespace java {
              * @return the day of year corresponding to the first day of this month, from 1 to 336
              */
             // @ts-ignore
-            firstDayOfYear(leapYear: boolean): number /*int*/
+            public firstDayOfYear(leapYear: boolean): number /*int*/
             /**
              * Gets the month corresponding to the first month of this quarter.
              * <p>
@@ -324,7 +324,7 @@ declare namespace java {
              * @return the first month of the quarter corresponding to this month, not null
              */
             // @ts-ignore
-            firstMonthOfQuarter(): java.time.Month
+            public firstMonthOfQuarter(): java.time.Month
             /**
              * Queries this month-of-year using the specified query.
              * <p>
@@ -343,7 +343,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Adjusts the specified temporal object to have this month-of-year.
              * <p>
@@ -379,7 +379,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
         }
     }
 }

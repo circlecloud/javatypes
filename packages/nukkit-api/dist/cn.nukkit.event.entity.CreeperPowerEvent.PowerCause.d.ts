@@ -14,25 +14,25 @@ declare namespace cn {
                          * Powered state: true
                          */
                         // @ts-ignore
-                        readonly LIGHTNING: cn.nukkit.event.entity.CreeperPowerEvent.PowerCause
+                        public static readonly LIGHTNING: cn.nukkit.event.entity.CreeperPowerEvent.PowerCause
                         /**
                          * Power change caused by something else (probably a plugin)
                          * <p>
                          * Powered state: true
                          */
                         // @ts-ignore
-                        readonly SET_ON: cn.nukkit.event.entity.CreeperPowerEvent.PowerCause
+                        public static readonly SET_ON: cn.nukkit.event.entity.CreeperPowerEvent.PowerCause
                         /**
                          * Power change caused by something else (probably a plugin)
                          * <p>
                          * Powered state: false
                          */
                         // @ts-ignore
-                        readonly SET_OFF: cn.nukkit.event.entity.CreeperPowerEvent.PowerCause
+                        public static readonly SET_OFF: cn.nukkit.event.entity.CreeperPowerEvent.PowerCause
                         // @ts-ignore
-                        values(): cn.nukkit.event.entity.CreeperPowerEvent.PowerCause[]
+                        public static values(): cn.nukkit.event.entity.CreeperPowerEvent.PowerCause[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): cn.nukkit.event.entity.CreeperPowerEvent.PowerCause
+                        public static valueOf(name: java.lang.String | string): cn.nukkit.event.entity.CreeperPowerEvent.PowerCause
                     }
                 }
             }

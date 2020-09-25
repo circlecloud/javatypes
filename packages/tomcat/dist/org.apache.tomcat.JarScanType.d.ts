@@ -4,15 +4,15 @@ declare namespace org {
             // @ts-ignore
             class JarScanType extends java.lang.Enum<org.apache.tomcat.JarScanType> {
                 // @ts-ignore
-                readonly TLD: org.apache.tomcat.JarScanType
+                public static readonly TLD: org.apache.tomcat.JarScanType
                 // @ts-ignore
-                readonly PLUGGABILITY: org.apache.tomcat.JarScanType
+                public static readonly PLUGGABILITY: org.apache.tomcat.JarScanType
                 // @ts-ignore
-                readonly OTHER: org.apache.tomcat.JarScanType
+                public static readonly OTHER: org.apache.tomcat.JarScanType
                 // @ts-ignore
-                values(): org.apache.tomcat.JarScanType[]
+                public static values(): org.apache.tomcat.JarScanType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.apache.tomcat.JarScanType
+                public static valueOf(name: java.lang.String | string): org.apache.tomcat.JarScanType
             }
         }
     }

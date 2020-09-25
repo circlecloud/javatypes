@@ -67,10 +67,20 @@ declare namespace org {
             // @ts-ignore
             readonly WOODEN_FENCES: org.bukkit.Tag<org.bukkit.Material>
             /**
+             * Vanilla block tag representing all pressure plates.
+             */
+            // @ts-ignore
+            readonly PRESSURE_PLATES: org.bukkit.Tag<org.bukkit.Material>
+            /**
              * Vanilla block tag representing all wooden pressure plates.
              */
             // @ts-ignore
             readonly WOODEN_PRESSURE_PLATES: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all stone pressure plates.
+             */
+            // @ts-ignore
+            readonly STONE_PRESSURE_PLATES: org.bukkit.Tag<org.bukkit.Material>
             /**
              * Vanilla block tag representing all wooden trapdoors.
              */
@@ -87,6 +97,11 @@ declare namespace org {
              */
             // @ts-ignore
             readonly SAPLINGS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all log and bark variants that burn.
+             */
+            // @ts-ignore
+            readonly LOGS_THAT_BURN: org.bukkit.Tag<org.bukkit.Material>
             /**
              * Vanilla block tag representing all log and bark variants.
              */
@@ -122,6 +137,16 @@ declare namespace org {
              */
             // @ts-ignore
             readonly SPRUCE_LOGS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all crimson stems.
+             */
+            // @ts-ignore
+            readonly CRIMSON_STEMS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all warped stems.
+             */
+            // @ts-ignore
+            readonly WARPED_STEMS: org.bukkit.Tag<org.bukkit.Material>
             /**
              * Vanilla block tag representing all banner blocks.
              */
@@ -199,10 +224,20 @@ declare namespace org {
             // @ts-ignore
             readonly FLOWERS: org.bukkit.Tag<org.bukkit.Material>
             /**
-             * Vanilla block tag representing all shulker boxes.
+             * Vanilla block tag representing all piglin repellents.
              */
             // @ts-ignore
-            readonly SHULKER_BOXES: org.bukkit.Tag<org.bukkit.Material>
+            readonly PIGLIN_REPELLENTS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all gold ores.
+             */
+            // @ts-ignore
+            readonly GOLD_ORES: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all non flammable wood.
+             */
+            // @ts-ignore
+            readonly NON_FLAMMABLE_WOOD: org.bukkit.Tag<org.bukkit.Material>
             /**
              * Vanilla block tag denoting blocks that enderman may pick up and hold.
              */
@@ -279,6 +314,11 @@ declare namespace org {
             // @ts-ignore
             readonly WITHER_IMMUNE: org.bukkit.Tag<org.bukkit.Material>
             /**
+             * Vanilla block tag representing all base blocks used for wither summoning.
+             */
+            // @ts-ignore
+            readonly WITHER_SUMMON_BASE_BLOCKS: org.bukkit.Tag<org.bukkit.Material>
+            /**
              * Vanilla block tag representing all beehives.
              */
             // @ts-ignore
@@ -299,10 +339,113 @@ declare namespace org {
             // @ts-ignore
             readonly PORTALS: org.bukkit.Tag<org.bukkit.Material>
             /**
+             * Vanilla block tag representing all fire blocks.
+             */
+            // @ts-ignore
+            readonly FIRE: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all nylium blocks.
+             */
+            // @ts-ignore
+            readonly NYLIUM: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all wart blocks.
+             */
+            // @ts-ignore
+            readonly WART_BLOCKS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all beacon base blocks.
+             */
+            // @ts-ignore
+            readonly BEACON_BASE_BLOCKS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all blocks affected by the soul speed enchantment.
+             */
+            // @ts-ignore
+            readonly SOUL_SPEED_BLOCKS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all wall post overrides.
+             */
+            // @ts-ignore
+            readonly WALL_POST_OVERRIDE: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all climbable blocks.
+             */
+            // @ts-ignore
+            readonly CLIMBABLE: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all shulker boxes.
+             */
+            // @ts-ignore
+            readonly SHULKER_BOXES: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all hoglin repellents.
+             */
+            // @ts-ignore
+            readonly HOGLIN_REPELLENTS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all soul fire base blocks.
+             */
+            // @ts-ignore
+            readonly SOUL_FIRE_BASE_BLOCKS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all warm strider blocks.
+             */
+            // @ts-ignore
+            readonly STRIDER_WARM_BLOCKS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all campfires.
+             */
+            // @ts-ignore
+            readonly CAMPFIRES: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all blocks guarded by piglins.
+             */
+            // @ts-ignore
+            readonly GUARDED_BY_PIGLINS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all blocks that prevent inside mob
+             * spawning.
+             */
+            // @ts-ignore
+            readonly PREVENT_MOB_SPAWNING_INSIDE: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all fence gates.
+             */
+            // @ts-ignore
+            readonly FENCE_GATES: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all unstable bottom center blocks.
+             */
+            // @ts-ignore
+            readonly UNSTABLE_BOTTOM_CENTER: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all blocks that burn forever in the
+             * overworld.
+             */
+            // @ts-ignore
+            readonly INFINIBURN_OVERWORLD: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all blocks that burn forever in the
+             * nether.
+             */
+            // @ts-ignore
+            readonly INFINIBURN_NETHER: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla block tag representing all blocks that burn forever in the end.
+             */
+            // @ts-ignore
+            readonly INFINIBURN_END: org.bukkit.Tag<org.bukkit.Material>
+            /**
              * Key for the built in item registry.
              */
             // @ts-ignore
             readonly REGISTRY_ITEMS: java.lang.String | string
+            /**
+             * Vanilla item tag representing all items loved by piglins.
+             */
+            // @ts-ignore
+            readonly ITEMS_PIGLIN_LOVED: org.bukkit.Tag<org.bukkit.Material>
             /**
              * Vanilla item tag representing all banner items.
              */
@@ -324,6 +467,11 @@ declare namespace org {
             // @ts-ignore
             readonly ITEMS_MUSIC_DISCS: org.bukkit.Tag<org.bukkit.Material>
             /**
+             * Vanilla item tag representing all music disc items dropped by creepers.
+             */
+            // @ts-ignore
+            readonly ITEMS_CREEPER_DROP_MUSIC_DISCS: org.bukkit.Tag<org.bukkit.Material>
+            /**
              * Vanilla item tag representing all coal items.
              */
             // @ts-ignore
@@ -338,6 +486,36 @@ declare namespace org {
              */
             // @ts-ignore
             readonly ITEMS_LECTERN_BOOKS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla item tag representing all items that may be placed in beacons.
+             */
+            // @ts-ignore
+            readonly ITEMS_BEACON_PAYMENT_ITEMS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla item tag representing all stone tool materials.
+             */
+            // @ts-ignore
+            readonly ITEMS_STONE_TOOL_MATERIALS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Vanilla item tag representing all furnace materials.
+             */
+            // @ts-ignore
+            readonly ITEMS_FURNACE_MATERIALS: org.bukkit.Tag<org.bukkit.Material>
+            /**
+             * Key for the built in fluid registry.
+             */
+            // @ts-ignore
+            readonly REGISTRY_FLUIDS: java.lang.String | string
+            /**
+             * Vanilla fluid tag representing lava and flowing lava.
+             */
+            // @ts-ignore
+            readonly FLUIDS_LAVA: org.bukkit.Tag<org.bukkit.Fluid>
+            /**
+             * Vanilla fluid tag representing water and flowing water.
+             */
+            // @ts-ignore
+            readonly FLUIDS_WATER: org.bukkit.Tag<org.bukkit.Fluid>
             /**
              * Returns whether or not this tag has an entry for the specified item.
              * @param item to check

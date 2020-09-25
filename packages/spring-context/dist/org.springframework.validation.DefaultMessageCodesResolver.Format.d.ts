@@ -14,24 +14,24 @@ declare namespace org {
                      * {@code errorCode + "." + object name + "." + field}
                      */
                     // @ts-ignore
-                    readonly PREFIX_ERROR_CODE: org.springframework.validation.DefaultMessageCodesResolver.Format
+                    public static readonly PREFIX_ERROR_CODE: org.springframework.validation.DefaultMessageCodesResolver.Format
                     /**
                      * Postfix the error code at the end of the generated message code. e.g.:
                      * {@code object name + "." + field + "." + errorCode}
                      */
                     // @ts-ignore
-                    readonly POSTFIX_ERROR_CODE: org.springframework.validation.DefaultMessageCodesResolver.Format
+                    public static readonly POSTFIX_ERROR_CODE: org.springframework.validation.DefaultMessageCodesResolver.Format
                     // @ts-ignore
-                    values(): org.springframework.validation.DefaultMessageCodesResolver.Format[]
+                    public static values(): org.springframework.validation.DefaultMessageCodesResolver.Format[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.springframework.validation.DefaultMessageCodesResolver.Format
+                    public static valueOf(name: java.lang.String | string): org.springframework.validation.DefaultMessageCodesResolver.Format
                     /**
                      * Concatenate the given elements, delimiting each with
                      * {@link DefaultMessageCodesResolver#CODE_SEPARATOR}, skipping zero-length or
                      * null elements altogether.
                      */
                     // @ts-ignore
-                    toDelimitedString(...elements: java.lang.String[] | string[]): string
+                    public static toDelimitedString(...elements: java.lang.String[] | string[]): string
                 }
             }
         }

@@ -7,19 +7,19 @@ declare namespace org {
                         // @ts-ignore
                         class CertificateVerification extends java.lang.Enum<org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification> {
                             // @ts-ignore
-                            readonly NONE: org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
+                            public static readonly NONE: org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
                             // @ts-ignore
-                            readonly OPTIONAL_NO_CA: org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
+                            public static readonly OPTIONAL_NO_CA: org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
                             // @ts-ignore
-                            readonly OPTIONAL: org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
+                            public static readonly OPTIONAL: org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
                             // @ts-ignore
-                            readonly REQUIRED: org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
+                            public static readonly REQUIRED: org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
                             // @ts-ignore
-                            values(): org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification[]
+                            public static values(): org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
+                            public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
                             // @ts-ignore
-                            fromString(value: java.lang.String | string): org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
+                            public static fromString(value: java.lang.String | string): org.apache.tomcat.util.net.SSLHostConfig.CertificateVerification
                         }
                     }
                 }

@@ -17,7 +17,7 @@ declare namespace org {
                          * superclasses or implemented interfaces.
                          */
                         // @ts-ignore
-                        readonly DIRECT: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
+                        public static readonly DIRECT: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
                         /**
                          * Find all directly declared annotations as well as any
                          * {@link Inherited @Inherited} superclass annotations. This strategy
@@ -27,7 +27,7 @@ declare namespace org {
                          * not search implemented interfaces.
                          */
                         // @ts-ignore
-                        readonly INHERITED_ANNOTATIONS: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
+                        public static readonly INHERITED_ANNOTATIONS: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
                         /**
                          * Find all directly declared and superclass annotations. This strategy
                          * is similar to {@link #INHERITED_ANNOTATIONS} except the annotations
@@ -35,14 +35,14 @@ declare namespace org {
                          * This strategy does not search implemented interfaces.
                          */
                         // @ts-ignore
-                        readonly SUPERCLASS: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
+                        public static readonly SUPERCLASS: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
                         /**
                          * Perform a full search of the entire type hierarchy, including
                          * superclasses and implemented interfaces. Superclass annotations do
                          * not need to be meta-annotated with {@link Inherited @Inherited}.
                          */
                         // @ts-ignore
-                        readonly TYPE_HIERARCHY: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
+                        public static readonly TYPE_HIERARCHY: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
                         /**
                          * Perform a full search of the entire type hierarchy on the source
                          * <em>and</em> any enclosing classes. This strategy is similar to
@@ -53,11 +53,11 @@ declare namespace org {
                          * {@link #TYPE_HIERARCHY}.
                          */
                         // @ts-ignore
-                        readonly TYPE_HIERARCHY_AND_ENCLOSING_CLASSES: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
+                        public static readonly TYPE_HIERARCHY_AND_ENCLOSING_CLASSES: org.springframework.core.annotation.MergedAnnotations.SearchStrategy
                         // @ts-ignore
-                        values(): org.springframework.core.annotation.MergedAnnotations.SearchStrategy[]
+                        public static values(): org.springframework.core.annotation.MergedAnnotations.SearchStrategy[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.core.annotation.MergedAnnotations.SearchStrategy
+                        public static valueOf(name: java.lang.String | string): org.springframework.core.annotation.MergedAnnotations.SearchStrategy
                     }
                 }
             }

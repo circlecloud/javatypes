@@ -14,29 +14,29 @@ declare namespace org {
                          * Data is available to be read.
                          */
                         // @ts-ignore
-                        readonly OPEN_READ: org.apache.tomcat.util.net.SocketEvent
+                        public static readonly OPEN_READ: org.apache.tomcat.util.net.SocketEvent
                         /**
                          * The socket is ready to be written to.
                          */
                         // @ts-ignore
-                        readonly OPEN_WRITE: org.apache.tomcat.util.net.SocketEvent
+                        public static readonly OPEN_WRITE: org.apache.tomcat.util.net.SocketEvent
                         /**
                          * The associated Connector/Endpoint is stopping and the connection/socket
                          * needs to be closed cleanly.
                          */
                         // @ts-ignore
-                        readonly STOP: org.apache.tomcat.util.net.SocketEvent
+                        public static readonly STOP: org.apache.tomcat.util.net.SocketEvent
                         /**
                          * A timeout has occurred and the connection needs to be closed cleanly.
                          * Currently this is only used by the Servlet 3.0 async processing.
                          */
                         // @ts-ignore
-                        readonly TIMEOUT: org.apache.tomcat.util.net.SocketEvent
+                        public static readonly TIMEOUT: org.apache.tomcat.util.net.SocketEvent
                         /**
                          * The client has disconnected.
                          */
                         // @ts-ignore
-                        readonly DISCONNECT: org.apache.tomcat.util.net.SocketEvent
+                        public static readonly DISCONNECT: org.apache.tomcat.util.net.SocketEvent
                         /**
                          * An error has occurred on a non-container thread and processing needs to
                          * return to the container for any necessary clean-up. Examples of where
@@ -48,11 +48,11 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        readonly ERROR: org.apache.tomcat.util.net.SocketEvent
+                        public static readonly ERROR: org.apache.tomcat.util.net.SocketEvent
                         // @ts-ignore
-                        values(): org.apache.tomcat.util.net.SocketEvent[]
+                        public static values(): org.apache.tomcat.util.net.SocketEvent[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SocketEvent
+                        public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SocketEvent
                     }
                 }
             }

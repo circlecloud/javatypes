@@ -7,33 +7,33 @@ declare namespace cn {
                         // @ts-ignore
                         class Origin extends java.lang.Enum<cn.nukkit.network.protocol.types.CommandOriginData.Origin> {
                             // @ts-ignore
-                            readonly PLAYER: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly PLAYER: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly BLOCK: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly BLOCK: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly MINECART_BLOCK: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly MINECART_BLOCK: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly DEV_CONSOLE: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly DEV_CONSOLE: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly TEST: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly TEST: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly AUTOMATION_PLAYER: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly AUTOMATION_PLAYER: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly CLIENT_AUTOMATION: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly CLIENT_AUTOMATION: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly DEDICATED_SERVER: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly DEDICATED_SERVER: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly ENTITY: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly ENTITY: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly VIRTUAL: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly VIRTUAL: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly GAME_ARGUMENT: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly GAME_ARGUMENT: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            readonly ENTITY_SERVER: cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static readonly ENTITY_SERVER: cn.nukkit.network.protocol.types.CommandOriginData.Origin
                             // @ts-ignore
-                            values(): cn.nukkit.network.protocol.types.CommandOriginData.Origin[]
+                            public static values(): cn.nukkit.network.protocol.types.CommandOriginData.Origin[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): cn.nukkit.network.protocol.types.CommandOriginData.Origin
+                            public static valueOf(name: java.lang.String | string): cn.nukkit.network.protocol.types.CommandOriginData.Origin
                         }
                     }
                 }

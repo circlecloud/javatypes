@@ -17,23 +17,23 @@ declare namespace org {
                              * inventory.
                              */
                             // @ts-ignore
-                            readonly SINGLE: org.bukkit.block.data.type.Chest.Type
+                            public static readonly SINGLE: org.bukkit.block.data.type.Chest.Type
                             /**
                              * The chest is the left hand side of a double chest and shares a 54
                              * block inventory with the chest to its right.
                              */
                             // @ts-ignore
-                            readonly LEFT: org.bukkit.block.data.type.Chest.Type
+                            public static readonly LEFT: org.bukkit.block.data.type.Chest.Type
                             /**
                              * The chest is the right hand side of a double chest and shares a 54
                              * block inventory with the chest to its left.
                              */
                             // @ts-ignore
-                            readonly RIGHT: org.bukkit.block.data.type.Chest.Type
+                            public static readonly RIGHT: org.bukkit.block.data.type.Chest.Type
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.Chest.Type[]
+                            public static values(): org.bukkit.block.data.type.Chest.Type[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Chest.Type
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Chest.Type
                         }
                     }
                 }

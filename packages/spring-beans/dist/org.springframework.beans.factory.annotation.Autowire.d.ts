@@ -21,30 +21,30 @@ declare namespace org {
                          * Constant that indicates no autowiring at all.
                          */
                         // @ts-ignore
-                        readonly NO: org.springframework.beans.factory.annotation.Autowire
+                        public static readonly NO: org.springframework.beans.factory.annotation.Autowire
                         /**
                          * Constant that indicates autowiring bean properties by name.
                          */
                         // @ts-ignore
-                        readonly BY_NAME: org.springframework.beans.factory.annotation.Autowire
+                        public static readonly BY_NAME: org.springframework.beans.factory.annotation.Autowire
                         /**
                          * Constant that indicates autowiring bean properties by type.
                          */
                         // @ts-ignore
-                        readonly BY_TYPE: org.springframework.beans.factory.annotation.Autowire
+                        public static readonly BY_TYPE: org.springframework.beans.factory.annotation.Autowire
                         // @ts-ignore
-                        values(): org.springframework.beans.factory.annotation.Autowire[]
+                        public static values(): org.springframework.beans.factory.annotation.Autowire[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.beans.factory.annotation.Autowire
+                        public static valueOf(name: java.lang.String | string): org.springframework.beans.factory.annotation.Autowire
                         // @ts-ignore
-                        value(): number /*int*/
+                        public value(): number /*int*/
                         /**
                          * Return whether this represents an actual autowiring value.
                          * @return whether actual autowiring was specified
                          *  (either BY_NAME or BY_TYPE)
                          */
                         // @ts-ignore
-                        isAutowire(): boolean
+                        public isAutowire(): boolean
                     }
                 }
             }

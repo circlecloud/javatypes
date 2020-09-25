@@ -32,47 +32,47 @@ declare namespace java {
              * This has the numeric value of {@code 1}.
              */
             // @ts-ignore
-            readonly MONDAY: java.time.DayOfWeek
+            public static readonly MONDAY: java.time.DayOfWeek
             /**
              * The singleton instance for the day-of-week of Tuesday.
              * This has the numeric value of {@code 2}.
              */
             // @ts-ignore
-            readonly TUESDAY: java.time.DayOfWeek
+            public static readonly TUESDAY: java.time.DayOfWeek
             /**
              * The singleton instance for the day-of-week of Wednesday.
              * This has the numeric value of {@code 3}.
              */
             // @ts-ignore
-            readonly WEDNESDAY: java.time.DayOfWeek
+            public static readonly WEDNESDAY: java.time.DayOfWeek
             /**
              * The singleton instance for the day-of-week of Thursday.
              * This has the numeric value of {@code 4}.
              */
             // @ts-ignore
-            readonly THURSDAY: java.time.DayOfWeek
+            public static readonly THURSDAY: java.time.DayOfWeek
             /**
              * The singleton instance for the day-of-week of Friday.
              * This has the numeric value of {@code 5}.
              */
             // @ts-ignore
-            readonly FRIDAY: java.time.DayOfWeek
+            public static readonly FRIDAY: java.time.DayOfWeek
             /**
              * The singleton instance for the day-of-week of Saturday.
              * This has the numeric value of {@code 6}.
              */
             // @ts-ignore
-            readonly SATURDAY: java.time.DayOfWeek
+            public static readonly SATURDAY: java.time.DayOfWeek
             /**
              * The singleton instance for the day-of-week of Sunday.
              * This has the numeric value of {@code 7}.
              */
             // @ts-ignore
-            readonly SUNDAY: java.time.DayOfWeek
+            public static readonly SUNDAY: java.time.DayOfWeek
             // @ts-ignore
-            values(): java.time.DayOfWeek[]
+            public static values(): java.time.DayOfWeek[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): java.time.DayOfWeek
+            public static valueOf(name: java.lang.String | string): java.time.DayOfWeek
             /**
              * Obtains an instance of {@code DayOfWeek} from an {@code int} value.
              * <p>
@@ -84,7 +84,7 @@ declare namespace java {
              * @throws DateTimeException if the day-of-week is invalid
              */
             // @ts-ignore
-            of(dayOfWeek: number /*int*/): java.time.DayOfWeek
+            public static of(dayOfWeek: number /*int*/): java.time.DayOfWeek
             /**
              * Obtains an instance of {@code DayOfWeek} from a temporal object.
              * <p>
@@ -101,7 +101,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to a {#code DayOfWeek}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.DayOfWeek
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.DayOfWeek
             /**
              * Gets the day-of-week {@code int} value.
              * <p>
@@ -110,7 +110,7 @@ declare namespace java {
              * @return the day-of-week, from 1 (Monday) to 7 (Sunday)
              */
             // @ts-ignore
-            getValue(): number /*int*/
+            public getValue(): number /*int*/
             /**
              * Gets the textual representation, such as 'Mon' or 'Friday'.
              * <p>
@@ -124,7 +124,7 @@ declare namespace java {
              * @return the text value of the day-of-week, not null
              */
             // @ts-ignore
-            getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
+            public getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -144,7 +144,7 @@ declare namespace java {
              * @return true if the field is supported on this day-of-week, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -167,7 +167,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this day-of-week as an {@code int}.
              * <p>
@@ -193,7 +193,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): number /*int*/
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this day-of-week as a {@code long}.
              * <p>
@@ -216,7 +216,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): number /*long*/
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Returns the day-of-week that is the specified number of days after this one.
              * <p>
@@ -228,7 +228,7 @@ declare namespace java {
              * @return the resulting day-of-week, not null
              */
             // @ts-ignore
-            plus(days: number /*long*/): java.time.DayOfWeek
+            public plus(days: number /*long*/): java.time.DayOfWeek
             /**
              * Returns the day-of-week that is the specified number of days before this one.
              * <p>
@@ -240,7 +240,7 @@ declare namespace java {
              * @return the resulting day-of-week, not null
              */
             // @ts-ignore
-            minus(days: number /*long*/): java.time.DayOfWeek
+            public minus(days: number /*long*/): java.time.DayOfWeek
             /**
              * Queries this day-of-week using the specified query.
              * <p>
@@ -259,7 +259,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Adjusts the specified temporal object to have this day-of-week.
              * <p>
@@ -299,7 +299,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
         }
     }
 }

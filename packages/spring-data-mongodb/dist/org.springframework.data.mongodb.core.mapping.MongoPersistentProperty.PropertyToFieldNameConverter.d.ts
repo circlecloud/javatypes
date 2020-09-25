@@ -12,13 +12,13 @@ declare namespace org {
                             // @ts-ignore
                             class PropertyToFieldNameConverter extends java.lang.Enum<org.springframework.data.mongodb.core.mapping.MongoPersistentProperty.PropertyToFieldNameConverter> {
                                 // @ts-ignore
-                                readonly INSTANCE: org.springframework.data.mongodb.core.mapping.MongoPersistentProperty.PropertyToFieldNameConverter
+                                public static readonly INSTANCE: org.springframework.data.mongodb.core.mapping.MongoPersistentProperty.PropertyToFieldNameConverter
                                 // @ts-ignore
-                                values(): org.springframework.data.mongodb.core.mapping.MongoPersistentProperty.PropertyToFieldNameConverter[]
+                                public static values(): org.springframework.data.mongodb.core.mapping.MongoPersistentProperty.PropertyToFieldNameConverter[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.mapping.MongoPersistentProperty.PropertyToFieldNameConverter
+                                public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.mapping.MongoPersistentProperty.PropertyToFieldNameConverter
                                 // @ts-ignore
-                                convert(source: org.springframework.data.mongodb.core.mapping.MongoPersistentProperty): string
+                                public convert(source: org.springframework.data.mongodb.core.mapping.MongoPersistentProperty): string
                             }
                         }
                     }

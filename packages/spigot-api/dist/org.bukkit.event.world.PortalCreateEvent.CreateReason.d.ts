@@ -13,23 +13,23 @@ declare namespace org {
                          * being set on fire.
                          */
                         // @ts-ignore
-                        readonly FIRE: org.bukkit.event.world.PortalCreateEvent.CreateReason
+                        public static readonly FIRE: org.bukkit.event.world.PortalCreateEvent.CreateReason
                         /**
                          * When a nether portal frame and portal is created at the exit of an
                          * entered nether portal.
                          */
                         // @ts-ignore
-                        readonly NETHER_PAIR: org.bukkit.event.world.PortalCreateEvent.CreateReason
+                        public static readonly NETHER_PAIR: org.bukkit.event.world.PortalCreateEvent.CreateReason
                         /**
                          * When the target end platform is created as a result of a player
                          * entering an end portal.
                          */
                         // @ts-ignore
-                        readonly END_PLATFORM: org.bukkit.event.world.PortalCreateEvent.CreateReason
+                        public static readonly END_PLATFORM: org.bukkit.event.world.PortalCreateEvent.CreateReason
                         // @ts-ignore
-                        values(): org.bukkit.event.world.PortalCreateEvent.CreateReason[]
+                        public static values(): org.bukkit.event.world.PortalCreateEvent.CreateReason[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.world.PortalCreateEvent.CreateReason
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.world.PortalCreateEvent.CreateReason
                     }
                 }
             }

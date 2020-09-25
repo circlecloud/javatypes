@@ -10,22 +10,22 @@ declare namespace org {
                  * Indicates all warnings should be printed for deprecated items.
                  */
                 // @ts-ignore
-                readonly ON: org.bukkit.Warning.WarningState
+                public static readonly ON: org.bukkit.Warning.WarningState
                 /**
                  * Indicates no warnings should be printed for deprecated items.
                  */
                 // @ts-ignore
-                readonly OFF: org.bukkit.Warning.WarningState
+                public static readonly OFF: org.bukkit.Warning.WarningState
                 /**
                  * Indicates each warning would default to the configured {@link
                  * Warning} annotation, or always if annotation not found.
                  */
                 // @ts-ignore
-                readonly DEFAULT: org.bukkit.Warning.WarningState
+                public static readonly DEFAULT: org.bukkit.Warning.WarningState
                 // @ts-ignore
-                values(): org.bukkit.Warning.WarningState[]
+                public static values(): org.bukkit.Warning.WarningState[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.bukkit.Warning.WarningState
+                public static valueOf(name: java.lang.String | string): org.bukkit.Warning.WarningState
                 /**
                  * This method checks the provided warning should be printed for this
                  * state
@@ -38,7 +38,7 @@ declare namespace org {
                  *      </ul>
                  */
                 // @ts-ignore
-                printFor(warning: org.bukkit.Warning): boolean
+                public printFor(warning: org.bukkit.Warning): boolean
                 /**
                  * This method returns the corresponding warning state for the given
                  * string value.
@@ -47,7 +47,7 @@ declare namespace org {
                  *      WarningState
                  */
                 // @ts-ignore
-                value(value: java.lang.String | string): org.bukkit.Warning.WarningState
+                public static value(value: java.lang.String | string): org.bukkit.Warning.WarningState
             }
         }
     }

@@ -17,7 +17,7 @@ declare namespace javax {
                  * @see #createParallelGroup(Alignment)
                  */
                 // @ts-ignore
-                readonly LEADING: javax.swing.GroupLayout.Alignment
+                public static readonly LEADING: javax.swing.GroupLayout.Alignment
                 /**
                  * Indicates the elements should be aligned to the end of the
                  * region.  For the horizontal axis with a left to right
@@ -26,14 +26,14 @@ declare namespace javax {
                  * @see #createParallelGroup(Alignment)
                  */
                 // @ts-ignore
-                readonly TRAILING: javax.swing.GroupLayout.Alignment
+                public static readonly TRAILING: javax.swing.GroupLayout.Alignment
                 /**
                  * Indicates the elements should be centered in
                  * the region.
                  * @see #createParallelGroup(Alignment)
                  */
                 // @ts-ignore
-                readonly CENTER: javax.swing.GroupLayout.Alignment
+                public static readonly CENTER: javax.swing.GroupLayout.Alignment
                 /**
                  * Indicates the elements should be aligned along
                  * their baseline.
@@ -41,11 +41,11 @@ declare namespace javax {
                  * @see #createBaselineGroup(boolean,boolean)
                  */
                 // @ts-ignore
-                readonly BASELINE: javax.swing.GroupLayout.Alignment
+                public static readonly BASELINE: javax.swing.GroupLayout.Alignment
                 // @ts-ignore
-                values(): javax.swing.GroupLayout.Alignment[]
+                public static values(): javax.swing.GroupLayout.Alignment[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.swing.GroupLayout.Alignment
+                public static valueOf(name: java.lang.String | string): javax.swing.GroupLayout.Alignment
             }
         }
     }

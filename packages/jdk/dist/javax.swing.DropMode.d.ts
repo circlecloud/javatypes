@@ -17,14 +17,14 @@ declare namespace javax {
              * components) should be used to track the drop location.
              */
             // @ts-ignore
-            readonly USE_SELECTION: javax.swing.DropMode
+            public static readonly USE_SELECTION: javax.swing.DropMode
             /**
              * The drop location should be tracked in terms of the index of
              * existing items. Useful for dropping on items in tables, lists,
              * and trees.
              */
             // @ts-ignore
-            readonly ON: javax.swing.DropMode
+            public static readonly ON: javax.swing.DropMode
             /**
              * The drop location should be tracked in terms of the position
              * where new data should be inserted. For components that manage
@@ -37,21 +37,21 @@ declare namespace javax {
              * the dropped data.
              */
             // @ts-ignore
-            readonly INSERT: javax.swing.DropMode
+            public static readonly INSERT: javax.swing.DropMode
             /**
              * The drop location should be tracked in terms of the row index
              * where new rows should be inserted to accommodate the dropped
              * data. This is useful for components that manage tabular data.
              */
             // @ts-ignore
-            readonly INSERT_ROWS: javax.swing.DropMode
+            public static readonly INSERT_ROWS: javax.swing.DropMode
             /**
              * The drop location should be tracked in terms of the column index
              * where new columns should be inserted to accommodate the dropped
              * data. This is useful for components that manage tabular data.
              */
             // @ts-ignore
-            readonly INSERT_COLS: javax.swing.DropMode
+            public static readonly INSERT_COLS: javax.swing.DropMode
             /**
              * This mode is a combination of <code>ON</code>
              * and <code>INSERT</code>, specifying that data can be
@@ -59,7 +59,7 @@ declare namespace javax {
              * as specified by <code>INSERT</code>.
              */
             // @ts-ignore
-            readonly ON_OR_INSERT: javax.swing.DropMode
+            public static readonly ON_OR_INSERT: javax.swing.DropMode
             /**
              * This mode is a combination of <code>ON</code>
              * and <code>INSERT_ROWS</code>, specifying that data can be
@@ -67,7 +67,7 @@ declare namespace javax {
              * as specified by <code>INSERT_ROWS</code>.
              */
             // @ts-ignore
-            readonly ON_OR_INSERT_ROWS: javax.swing.DropMode
+            public static readonly ON_OR_INSERT_ROWS: javax.swing.DropMode
             /**
              * This mode is a combination of <code>ON</code>
              * and <code>INSERT_COLS</code>, specifying that data can be
@@ -75,11 +75,11 @@ declare namespace javax {
              * as specified by <code>INSERT_COLS</code>.
              */
             // @ts-ignore
-            readonly ON_OR_INSERT_COLS: javax.swing.DropMode
+            public static readonly ON_OR_INSERT_COLS: javax.swing.DropMode
             // @ts-ignore
-            values(): javax.swing.DropMode[]
+            public static values(): javax.swing.DropMode[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): javax.swing.DropMode
+            public static valueOf(name: java.lang.String | string): javax.swing.DropMode
         }
     }
 }

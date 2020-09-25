@@ -16,20 +16,20 @@ declare namespace org {
                      * Non persistent.
                      */
                     // @ts-ignore
-                    readonly NON_PERSISTENT: org.springframework.amqp.core.MessageDeliveryMode
+                    public static readonly NON_PERSISTENT: org.springframework.amqp.core.MessageDeliveryMode
                     /**
                      * Persistent.
                      */
                     // @ts-ignore
-                    readonly PERSISTENT: org.springframework.amqp.core.MessageDeliveryMode
+                    public static readonly PERSISTENT: org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
-                    values(): org.springframework.amqp.core.MessageDeliveryMode[]
+                    public static values(): org.springframework.amqp.core.MessageDeliveryMode[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.springframework.amqp.core.MessageDeliveryMode
+                    public static valueOf(name: java.lang.String | string): org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
-                    toInt(mode: org.springframework.amqp.core.MessageDeliveryMode): number /*int*/
+                    public static toInt(mode: org.springframework.amqp.core.MessageDeliveryMode): number /*int*/
                     // @ts-ignore
-                    fromInt(modeAsNumber: number /*int*/): org.springframework.amqp.core.MessageDeliveryMode
+                    public static fromInt(modeAsNumber: number /*int*/): org.springframework.amqp.core.MessageDeliveryMode
                 }
             }
         }

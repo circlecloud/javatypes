@@ -152,6 +152,30 @@ declare namespace org {
                 // @ts-ignore
                 setMaximumAir(ticks: number /*int*/): void
                 /**
+                 * Gets the time in ticks until the next arrow leaves the entity's body.
+                 * @return ticks until arrow leaves
+                 */
+                // @ts-ignore
+                getArrowCooldown(): number /*int*/
+                /**
+                 * Sets the time in ticks until the next arrow leaves the entity's body.
+                 * @param ticks time until arrow leaves
+                 */
+                // @ts-ignore
+                setArrowCooldown(ticks: number /*int*/): void
+                /**
+                 * Gets the amount of arrows in an entity's body.
+                 * @return amount of arrows in body
+                 */
+                // @ts-ignore
+                getArrowsInBody(): number /*int*/
+                /**
+                 * Set the amount of arrows in the entity's body.
+                 * @param count amount of arrows in entity's body
+                 */
+                // @ts-ignore
+                setArrowsInBody(count: number /*int*/): void
+                /**
                  * Returns the living entity's current maximum no damage ticks.
                  * <p>
                  * This is the maximum duration in which the living entity will not take
@@ -404,17 +428,19 @@ declare namespace org {
                 // @ts-ignore
                 swingOffHand(): void
                 /**
-                 * Set if this entity will be subject to collisions other entities.
+                 * Set if this entity will be subject to collisions with other entities.
                  * <p>
-                 * Note that collisions are bidirectional, so this method would need to be
-                 * set to false on both the collidee and the collidant to ensure no
-                 * collisions take place.
+                 * Exemptions to this rule can be managed with
+                 * {@link #getCollidableExemptions()}
                  * @param collidable collision status
                  */
                 // @ts-ignore
                 setCollidable(collidable: boolean): void
                 /**
                  * Gets if this entity is subject to collisions with other entities.
+                 * <p>
+                 * Some entities might be exempted from the collidable rule of this entity.
+                 * Use {@link #getCollidableExemptions()} to get these.
                  * <p>
                  * Please note that this method returns only the custom collidable state,
                  * not whether the entity is non-collidable for other reasons such as being
@@ -423,6 +449,22 @@ declare namespace org {
                  */
                 // @ts-ignore
                 isCollidable(): boolean
+                /**
+                 * Gets a mutable set of UUIDs of the entities which are exempt from the
+                 * entity's collidable rule and which's collision with this entity will
+                 * behave the opposite of it.
+                 * <p>
+                 * This set can be modified to add or remove exemptions.
+                 * <p>
+                 * For example if collidable is true and an entity is in the exemptions set
+                 * then it will not collide with it. Similarly if collidable is false and an
+                 * entity is in this set then it will still collide with it.
+                 * <p>
+                 * Note these exemptions are not (currently) persistent.
+                 * @return the collidable exemption set
+                 */
+                // @ts-ignore
+                getCollidableExemptions(): Array<java.util.UUID>
                 /**
                  * Returns the value of the memory specified.
                  * <p>
@@ -445,6 +487,26 @@ declare namespace org {
                  */
                 // @ts-ignore
                 setMemory<T>(memoryKey: org.bukkit.entity.memory.MemoryKey<T>, memoryValue: T): void
+                /**
+                 * Get the category to which this entity belongs.
+                 * Categories may subject this entity to additional effects, benefits or
+                 * debuffs.
+                 * @return the entity category
+                 */
+                // @ts-ignore
+                getCategory(): org.bukkit.entity.EntityCategory
+                /**
+                 * Sets whether the entity is invisible or not.
+                 * @param invisible If the entity is invisible
+                 */
+                // @ts-ignore
+                setInvisible(invisible: boolean): void
+                /**
+                 * Gets whether the entity is invisible or not.
+                 * @return Whether the entity is invisible
+                 */
+                // @ts-ignore
+                isInvisible(): boolean
             }
         }
     }

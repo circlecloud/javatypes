@@ -37,7 +37,7 @@ declare namespace java {
                  * The field is resolved in combination with {@code MILLI_OF_SECOND} and {@code MICRO_OF_SECOND}.
                  */
                 // @ts-ignore
-                readonly NANO_OF_SECOND: java.time.temporal.ChronoField
+                public static readonly NANO_OF_SECOND: java.time.temporal.ChronoField
                 /**
                  * The nano-of-day.
                  * <p>
@@ -54,7 +54,7 @@ declare namespace java {
                  * {@code MINUTE_OF_HOUR} and {@code HOUR_OF_DAY} fields.
                  */
                 // @ts-ignore
-                readonly NANO_OF_DAY: java.time.temporal.ChronoField
+                public static readonly NANO_OF_DAY: java.time.temporal.ChronoField
                 /**
                  * The micro-of-second.
                  * <p>
@@ -75,7 +75,7 @@ declare namespace java {
                  * {@code NANO_OF_SECOND}.
                  */
                 // @ts-ignore
-                readonly MICRO_OF_SECOND: java.time.temporal.ChronoField
+                public static readonly MICRO_OF_SECOND: java.time.temporal.ChronoField
                 /**
                  * The micro-of-day.
                  * <p>
@@ -95,7 +95,7 @@ declare namespace java {
                  * {@code MINUTE_OF_HOUR} and {@code HOUR_OF_DAY} fields.
                  */
                 // @ts-ignore
-                readonly MICRO_OF_DAY: java.time.temporal.ChronoField
+                public static readonly MICRO_OF_DAY: java.time.temporal.ChronoField
                 /**
                  * The milli-of-second.
                  * <p>
@@ -116,7 +116,7 @@ declare namespace java {
                  * {@code NANO_OF_SECOND}.
                  */
                 // @ts-ignore
-                readonly MILLI_OF_SECOND: java.time.temporal.ChronoField
+                public static readonly MILLI_OF_SECOND: java.time.temporal.ChronoField
                 /**
                  * The milli-of-day.
                  * <p>
@@ -136,7 +136,7 @@ declare namespace java {
                  * {@code MINUTE_OF_HOUR} and {@code HOUR_OF_DAY} fields.
                  */
                 // @ts-ignore
-                readonly MILLI_OF_DAY: java.time.temporal.ChronoField
+                public static readonly MILLI_OF_DAY: java.time.temporal.ChronoField
                 /**
                  * The second-of-minute.
                  * <p>
@@ -147,7 +147,7 @@ declare namespace java {
                  * The value is validated in strict and smart mode but not in lenient mode.
                  */
                 // @ts-ignore
-                readonly SECOND_OF_MINUTE: java.time.temporal.ChronoField
+                public static readonly SECOND_OF_MINUTE: java.time.temporal.ChronoField
                 /**
                  * The second-of-day.
                  * <p>
@@ -160,7 +160,7 @@ declare namespace java {
                  * and {@code HOUR_OF_DAY} fields.
                  */
                 // @ts-ignore
-                readonly SECOND_OF_DAY: java.time.temporal.ChronoField
+                public static readonly SECOND_OF_DAY: java.time.temporal.ChronoField
                 /**
                  * The minute-of-hour.
                  * <p>
@@ -171,7 +171,7 @@ declare namespace java {
                  * The value is validated in strict and smart mode but not in lenient mode.
                  */
                 // @ts-ignore
-                readonly MINUTE_OF_HOUR: java.time.temporal.ChronoField
+                public static readonly MINUTE_OF_HOUR: java.time.temporal.ChronoField
                 /**
                  * The minute-of-day.
                  * <p>
@@ -183,7 +183,7 @@ declare namespace java {
                  * The value is split to form {@code MINUTE_OF_HOUR} and {@code HOUR_OF_DAY} fields.
                  */
                 // @ts-ignore
-                readonly MINUTE_OF_DAY: java.time.temporal.ChronoField
+                public static readonly MINUTE_OF_DAY: java.time.temporal.ChronoField
                 /**
                  * The hour-of-am-pm.
                  * <p>
@@ -198,7 +198,7 @@ declare namespace java {
                  * the {AMPM_OF_DAY} value by 12.
                  */
                 // @ts-ignore
-                readonly HOUR_OF_AMPM: java.time.temporal.ChronoField
+                public static readonly HOUR_OF_AMPM: java.time.temporal.ChronoField
                 /**
                  * The clock-hour-of-am-pm.
                  * <p>
@@ -213,7 +213,7 @@ declare namespace java {
                  * unless the value is 12, in which case it is converted to 0.
                  */
                 // @ts-ignore
-                readonly CLOCK_HOUR_OF_AMPM: java.time.temporal.ChronoField
+                public static readonly CLOCK_HOUR_OF_AMPM: java.time.temporal.ChronoField
                 /**
                  * The hour-of-day.
                  * <p>
@@ -229,7 +229,7 @@ declare namespace java {
                  * made available via {@link java.time.format.DateTimeFormatter#parsedExcessDays()}.
                  */
                 // @ts-ignore
-                readonly HOUR_OF_DAY: java.time.temporal.ChronoField
+                public static readonly HOUR_OF_DAY: java.time.temporal.ChronoField
                 /**
                  * The clock-hour-of-day.
                  * <p>
@@ -244,7 +244,7 @@ declare namespace java {
                  * unless the value is 24, in which case it is converted to 0.
                  */
                 // @ts-ignore
-                readonly CLOCK_HOUR_OF_DAY: java.time.temporal.ChronoField
+                public static readonly CLOCK_HOUR_OF_DAY: java.time.temporal.ChronoField
                 /**
                  * The am-pm-of-day.
                  * <p>
@@ -258,7 +258,7 @@ declare namespace java {
                  * the {AMPM_OF_DAY} value by 12.
                  */
                 // @ts-ignore
-                readonly AMPM_OF_DAY: java.time.temporal.ChronoField
+                public static readonly AMPM_OF_DAY: java.time.temporal.ChronoField
                 /**
                  * The day-of-week, such as Tuesday.
                  * <p>
@@ -275,7 +275,7 @@ declare namespace java {
                  * to a week. It is recommended that the numbering starts from 1.
                  */
                 // @ts-ignore
-                readonly DAY_OF_WEEK: java.time.temporal.ChronoField
+                public static readonly DAY_OF_WEEK: java.time.temporal.ChronoField
                 /**
                  * The aligned day-of-week within a month.
                  * <p>
@@ -294,7 +294,7 @@ declare namespace java {
                  * field in the same way, but using the alternate week length.
                  */
                 // @ts-ignore
-                readonly ALIGNED_DAY_OF_WEEK_IN_MONTH: java.time.temporal.ChronoField
+                public static readonly ALIGNED_DAY_OF_WEEK_IN_MONTH: java.time.temporal.ChronoField
                 /**
                  * The aligned day-of-week within a year.
                  * <p>
@@ -313,7 +313,7 @@ declare namespace java {
                  * field in the same way, but using the alternate week length.
                  */
                 // @ts-ignore
-                readonly ALIGNED_DAY_OF_WEEK_IN_YEAR: java.time.temporal.ChronoField
+                public static readonly ALIGNED_DAY_OF_WEEK_IN_YEAR: java.time.temporal.ChronoField
                 /**
                  * The day-of-month.
                  * <p>
@@ -327,7 +327,7 @@ declare namespace java {
                  * Normally, this is a count of days from 1 to the length of the month.
                  */
                 // @ts-ignore
-                readonly DAY_OF_MONTH: java.time.temporal.ChronoField
+                public static readonly DAY_OF_MONTH: java.time.temporal.ChronoField
                 /**
                  * The day-of-year.
                  * <p>
@@ -346,7 +346,7 @@ declare namespace java {
                  * the day-of-year to be reset to 1, but not the month-of-year or day-of-month.
                  */
                 // @ts-ignore
-                readonly DAY_OF_YEAR: java.time.temporal.ChronoField
+                public static readonly DAY_OF_YEAR: java.time.temporal.ChronoField
                 /**
                  * The epoch-day, based on the Java epoch of 1970-01-01 (ISO).
                  * <p>
@@ -357,7 +357,7 @@ declare namespace java {
                  * This is necessary to ensure interoperation between calendars.
                  */
                 // @ts-ignore
-                readonly EPOCH_DAY: java.time.temporal.ChronoField
+                public static readonly EPOCH_DAY: java.time.temporal.ChronoField
                 /**
                  * The aligned week within a month.
                  * <p>
@@ -374,7 +374,7 @@ declare namespace java {
                  * field in the same way, but using the alternate week length.
                  */
                 // @ts-ignore
-                readonly ALIGNED_WEEK_OF_MONTH: java.time.temporal.ChronoField
+                public static readonly ALIGNED_WEEK_OF_MONTH: java.time.temporal.ChronoField
                 /**
                  * The aligned week within a year.
                  * <p>
@@ -391,7 +391,7 @@ declare namespace java {
                  * field in the same way, but using the alternate week length.
                  */
                 // @ts-ignore
-                readonly ALIGNED_WEEK_OF_YEAR: java.time.temporal.ChronoField
+                public static readonly ALIGNED_WEEK_OF_YEAR: java.time.temporal.ChronoField
                 /**
                  * The month-of-year, such as March.
                  * <p>
@@ -403,7 +403,7 @@ declare namespace java {
                  * Normally, this is a count of months starting from 1.
                  */
                 // @ts-ignore
-                readonly MONTH_OF_YEAR: java.time.temporal.ChronoField
+                public static readonly MONTH_OF_YEAR: java.time.temporal.ChronoField
                 /**
                  * The proleptic-month based, counting months sequentially from year 0.
                  * <p>
@@ -424,7 +424,7 @@ declare namespace java {
                  * be extrapolated in order for this method to be defined.
                  */
                 // @ts-ignore
-                readonly PROLEPTIC_MONTH: java.time.temporal.ChronoField
+                public static readonly PROLEPTIC_MONTH: java.time.temporal.ChronoField
                 /**
                  * The year within the era.
                  * <p>
@@ -460,7 +460,7 @@ declare namespace java {
                  * The year-of-era value should typically always be positive, however this is not required.
                  */
                 // @ts-ignore
-                readonly YEAR_OF_ERA: java.time.temporal.ChronoField
+                public static readonly YEAR_OF_ERA: java.time.temporal.ChronoField
                 /**
                  * The proleptic year, such as 2012.
                  * <p>
@@ -485,7 +485,7 @@ declare namespace java {
                  * the best option.
                  */
                 // @ts-ignore
-                readonly YEAR: java.time.temporal.ChronoField
+                public static readonly YEAR: java.time.temporal.ChronoField
                 /**
                  * The era.
                  * <p>
@@ -503,7 +503,7 @@ declare namespace java {
                  * Later eras must have sequentially larger values,
                  */
                 // @ts-ignore
-                readonly ERA: java.time.temporal.ChronoField
+                public static readonly ERA: java.time.temporal.ChronoField
                 /**
                  * The instant epoch-seconds.
                  * <p>
@@ -519,7 +519,7 @@ declare namespace java {
                  * This is necessary to ensure interoperation between calendars.
                  */
                 // @ts-ignore
-                readonly INSTANT_SECONDS: java.time.temporal.ChronoField
+                public static readonly INSTANT_SECONDS: java.time.temporal.ChronoField
                 /**
                  * The offset from UTC/Greenwich.
                  * <p>
@@ -534,17 +534,17 @@ declare namespace java {
                  * This is necessary to ensure interoperation between calendars.
                  */
                 // @ts-ignore
-                readonly OFFSET_SECONDS: java.time.temporal.ChronoField
+                public static readonly OFFSET_SECONDS: java.time.temporal.ChronoField
                 // @ts-ignore
-                values(): java.time.temporal.ChronoField[]
+                public static values(): java.time.temporal.ChronoField[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.time.temporal.ChronoField
+                public static valueOf(name: java.lang.String | string): java.time.temporal.ChronoField
                 // @ts-ignore
-                getDisplayName(locale: java.util.Locale): string
+                public getDisplayName(locale: java.util.Locale): string
                 // @ts-ignore
-                getBaseUnit(): java.time.temporal.TemporalUnit
+                public getBaseUnit(): java.time.temporal.TemporalUnit
                 // @ts-ignore
-                getRangeUnit(): java.time.temporal.TemporalUnit
+                public getRangeUnit(): java.time.temporal.TemporalUnit
                 /**
                  * Gets the range of valid values for the field.
                  * <p>
@@ -562,7 +562,7 @@ declare namespace java {
                  * @return the range of valid values for the field, not null
                  */
                 // @ts-ignore
-                range(): java.time.temporal.ValueRange
+                public range(): java.time.temporal.ValueRange
                 /**
                  * Checks if this field represents a component of a date.
                  * <p>
@@ -570,7 +570,7 @@ declare namespace java {
                  * @return true if it is a component of a date
                  */
                 // @ts-ignore
-                isDateBased(): boolean
+                public isDateBased(): boolean
                 /**
                  * Checks if this field represents a component of a time.
                  * <p>
@@ -578,7 +578,7 @@ declare namespace java {
                  * @return true if it is a component of a time
                  */
                 // @ts-ignore
-                isTimeBased(): boolean
+                public isTimeBased(): boolean
                 /**
                  * Checks that the specified value is valid for this field.
                  * <p>
@@ -593,7 +593,7 @@ declare namespace java {
                  * @return the value that was passed in
                  */
                 // @ts-ignore
-                checkValidValue(value: number /*long*/): number /*long*/
+                public checkValidValue(value: number /*long*/): number /*long*/
                 /**
                  * Checks that the specified value is valid and fits in an {@code int}.
                  * <p>
@@ -609,17 +609,17 @@ declare namespace java {
                  * @return the value that was passed in
                  */
                 // @ts-ignore
-                checkValidIntValue(value: number /*long*/): number /*int*/
+                public checkValidIntValue(value: number /*long*/): number /*int*/
                 // @ts-ignore
-                isSupportedBy(temporal: java.time.temporal.TemporalAccessor): boolean
+                public isSupportedBy(temporal: java.time.temporal.TemporalAccessor): boolean
                 // @ts-ignore
-                rangeRefinedBy(temporal: java.time.temporal.TemporalAccessor): java.time.temporal.ValueRange
+                public rangeRefinedBy(temporal: java.time.temporal.TemporalAccessor): java.time.temporal.ValueRange
                 // @ts-ignore
-                getFrom(temporal: java.time.temporal.TemporalAccessor): number /*long*/
+                public getFrom(temporal: java.time.temporal.TemporalAccessor): number /*long*/
                 // @ts-ignore
-                adjustInto<R extends java.time.temporal.Temporal>(temporal: R, newValue: number /*long*/): R
+                public adjustInto<R extends java.time.temporal.Temporal>(temporal: R, newValue: number /*long*/): R
                 // @ts-ignore
-                toString(): string
+                public toString(): string
             }
         }
     }

@@ -10,13 +10,13 @@ declare namespace org {
                         // @ts-ignore
                         class Position extends java.lang.Enum<org.springframework.data.redis.connection.RedisListCommands.Position> {
                             // @ts-ignore
-                            readonly BEFORE: org.springframework.data.redis.connection.RedisListCommands.Position
+                            public static readonly BEFORE: org.springframework.data.redis.connection.RedisListCommands.Position
                             // @ts-ignore
-                            readonly AFTER: org.springframework.data.redis.connection.RedisListCommands.Position
+                            public static readonly AFTER: org.springframework.data.redis.connection.RedisListCommands.Position
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.RedisListCommands.Position[]
+                            public static values(): org.springframework.data.redis.connection.RedisListCommands.Position[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisListCommands.Position
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisListCommands.Position
                         }
                     }
                 }

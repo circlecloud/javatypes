@@ -14,7 +14,7 @@ declare namespace javax {
                      * The <code>SSLEngine</code> is not currently handshaking.
                      */
                     // @ts-ignore
-                    readonly NOT_HANDSHAKING: javax.net.ssl.SSLEngineResult.HandshakeStatus
+                    public static readonly NOT_HANDSHAKING: javax.net.ssl.SSLEngineResult.HandshakeStatus
                     /**
                      * The <code>SSLEngine</code> has just finished handshaking.
                      * <P>
@@ -27,14 +27,14 @@ declare namespace javax {
                      * @see SSLEngine#getHandshakeStatus()
                      */
                     // @ts-ignore
-                    readonly FINISHED: javax.net.ssl.SSLEngineResult.HandshakeStatus
+                    public static readonly FINISHED: javax.net.ssl.SSLEngineResult.HandshakeStatus
                     /**
                      * The <code>SSLEngine</code> needs the results of one (or more)
                      * delegated tasks before handshaking can continue.
                      * @see SSLEngine#getDelegatedTask()
                      */
                     // @ts-ignore
-                    readonly NEED_TASK: javax.net.ssl.SSLEngineResult.HandshakeStatus
+                    public static readonly NEED_TASK: javax.net.ssl.SSLEngineResult.HandshakeStatus
                     /**
                      * The <code>SSLEngine</code> must send data to the remote side
                      * before handshaking can continue, so <code>SSLEngine.wrap()</code>
@@ -42,17 +42,17 @@ declare namespace javax {
                      * @see SSLEngine#wrap(ByteBuffer, ByteBuffer)
                      */
                     // @ts-ignore
-                    readonly NEED_WRAP: javax.net.ssl.SSLEngineResult.HandshakeStatus
+                    public static readonly NEED_WRAP: javax.net.ssl.SSLEngineResult.HandshakeStatus
                     /**
                      * The <code>SSLEngine</code> needs to receive data from the
                      * remote side before handshaking can continue.
                      */
                     // @ts-ignore
-                    readonly NEED_UNWRAP: javax.net.ssl.SSLEngineResult.HandshakeStatus
+                    public static readonly NEED_UNWRAP: javax.net.ssl.SSLEngineResult.HandshakeStatus
                     // @ts-ignore
-                    values(): javax.net.ssl.SSLEngineResult.HandshakeStatus[]
+                    public static values(): javax.net.ssl.SSLEngineResult.HandshakeStatus[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.net.ssl.SSLEngineResult.HandshakeStatus
+                    public static valueOf(name: java.lang.String | string): javax.net.ssl.SSLEngineResult.HandshakeStatus
                 }
             }
         }

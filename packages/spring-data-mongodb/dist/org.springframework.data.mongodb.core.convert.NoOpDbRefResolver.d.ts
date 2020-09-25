@@ -14,17 +14,17 @@ declare namespace org {
                         // @ts-ignore
                         class NoOpDbRefResolver extends java.lang.Enum<org.springframework.data.mongodb.core.convert.NoOpDbRefResolver> implements org.springframework.data.mongodb.core.convert.DbRefResolver {
                             // @ts-ignore
-                            readonly INSTANCE: org.springframework.data.mongodb.core.convert.NoOpDbRefResolver
+                            public static readonly INSTANCE: org.springframework.data.mongodb.core.convert.NoOpDbRefResolver
                             // @ts-ignore
-                            values(): org.springframework.data.mongodb.core.convert.NoOpDbRefResolver[]
+                            public static values(): org.springframework.data.mongodb.core.convert.NoOpDbRefResolver[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.convert.NoOpDbRefResolver
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.convert.NoOpDbRefResolver
                             // @ts-ignore
-                            resolveDbRef(property: org.springframework.data.mongodb.core.mapping.MongoPersistentProperty, dbref: DBRef, callback: org.springframework.data.mongodb.core.convert.DbRefResolverCallback, proxyHandler: org.springframework.data.mongodb.core.convert.DbRefProxyHandler): any
+                            public resolveDbRef(property: org.springframework.data.mongodb.core.mapping.MongoPersistentProperty, dbref: DBRef, callback: org.springframework.data.mongodb.core.convert.DbRefResolverCallback, proxyHandler: org.springframework.data.mongodb.core.convert.DbRefProxyHandler): any
                             // @ts-ignore
-                            fetch(dbRef: DBRef): Document
+                            public fetch(dbRef: DBRef): Document
                             // @ts-ignore
-                            bulkFetch(dbRefs: java.util.List<DBRef> | Array<DBRef>): Array<Document>
+                            public bulkFetch(dbRefs: java.util.List<DBRef> | Array<DBRef>): Array<Document>
                         }
                     }
                 }

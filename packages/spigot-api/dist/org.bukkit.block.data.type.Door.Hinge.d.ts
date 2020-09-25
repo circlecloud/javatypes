@@ -13,16 +13,16 @@ declare namespace org {
                              * Door is attached to the left side.
                              */
                             // @ts-ignore
-                            readonly LEFT: org.bukkit.block.data.type.Door.Hinge
+                            public static readonly LEFT: org.bukkit.block.data.type.Door.Hinge
                             /**
                              * Door is attached to the right side.
                              */
                             // @ts-ignore
-                            readonly RIGHT: org.bukkit.block.data.type.Door.Hinge
+                            public static readonly RIGHT: org.bukkit.block.data.type.Door.Hinge
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.Door.Hinge[]
+                            public static values(): org.bukkit.block.data.type.Door.Hinge[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Door.Hinge
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Door.Hinge
                         }
                     }
                 }

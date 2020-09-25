@@ -13,33 +13,33 @@ declare namespace org {
                          * A simple HTTP request, i.e. it shouldn't be pre-flighted.
                          */
                         // @ts-ignore
-                        readonly SIMPLE: org.apache.catalina.filters.CorsFilter.CORSRequestType
+                        public static readonly SIMPLE: org.apache.catalina.filters.CorsFilter.CORSRequestType
                         /**
                          * A HTTP request that needs to be pre-flighted.
                          */
                         // @ts-ignore
-                        readonly ACTUAL: org.apache.catalina.filters.CorsFilter.CORSRequestType
+                        public static readonly ACTUAL: org.apache.catalina.filters.CorsFilter.CORSRequestType
                         /**
                          * A pre-flight CORS request, to get meta information, before a
                          * non-simple HTTP request is sent.
                          */
                         // @ts-ignore
-                        readonly PRE_FLIGHT: org.apache.catalina.filters.CorsFilter.CORSRequestType
+                        public static readonly PRE_FLIGHT: org.apache.catalina.filters.CorsFilter.CORSRequestType
                         /**
                          * Not a CORS request, but a normal request.
                          */
                         // @ts-ignore
-                        readonly NOT_CORS: org.apache.catalina.filters.CorsFilter.CORSRequestType
+                        public static readonly NOT_CORS: org.apache.catalina.filters.CorsFilter.CORSRequestType
                         /**
                          * An invalid CORS request, i.e. it qualifies to be a CORS request, but
                          * fails to be a valid one.
                          */
                         // @ts-ignore
-                        readonly INVALID_CORS: org.apache.catalina.filters.CorsFilter.CORSRequestType
+                        public static readonly INVALID_CORS: org.apache.catalina.filters.CorsFilter.CORSRequestType
                         // @ts-ignore
-                        values(): org.apache.catalina.filters.CorsFilter.CORSRequestType[]
+                        public static values(): org.apache.catalina.filters.CorsFilter.CORSRequestType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.apache.catalina.filters.CorsFilter.CORSRequestType
+                        public static valueOf(name: java.lang.String | string): org.apache.catalina.filters.CorsFilter.CORSRequestType
                     }
                 }
             }

@@ -6,15 +6,15 @@ declare namespace cn {
                     // @ts-ignore
                     class State extends java.lang.Enum<cn.nukkit.utils.Rail.Orientation.State> {
                         // @ts-ignore
-                        readonly STRAIGHT: cn.nukkit.utils.Rail.Orientation.State
+                        public static readonly STRAIGHT: cn.nukkit.utils.Rail.Orientation.State
                         // @ts-ignore
-                        readonly ASCENDING: cn.nukkit.utils.Rail.Orientation.State
+                        public static readonly ASCENDING: cn.nukkit.utils.Rail.Orientation.State
                         // @ts-ignore
-                        readonly CURVED: cn.nukkit.utils.Rail.Orientation.State
+                        public static readonly CURVED: cn.nukkit.utils.Rail.Orientation.State
                         // @ts-ignore
-                        values(): cn.nukkit.utils.Rail.Orientation.State[]
+                        public static values(): cn.nukkit.utils.Rail.Orientation.State[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): cn.nukkit.utils.Rail.Orientation.State
+                        public static valueOf(name: java.lang.String | string): cn.nukkit.utils.Rail.Orientation.State
                     }
                 }
             }

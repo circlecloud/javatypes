@@ -99,6 +99,15 @@ declare namespace org {
                 // @ts-ignore
                 getOrDefault<T, Z>(key: org.bukkit.NamespacedKey, type: org.bukkit.persistence.PersistentDataType<T, Z>, defaultValue: Z): Z
                 /**
+                 * Get a set of keys present on this {@link PersistentDataContainer}
+                 * instance.
+                 * Any changes made to the returned set will not be reflected on the
+                 * instance.
+                 * @return the key set
+                 */
+                // @ts-ignore
+                getKeys(): Array<org.bukkit.NamespacedKey>
+                /**
                  * Removes a custom key from the {@link PersistentDataHolder} instance.
                  * @param key the key
                  * @throws NullPointerException if the provided key is null

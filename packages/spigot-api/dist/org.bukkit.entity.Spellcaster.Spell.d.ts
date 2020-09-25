@@ -11,36 +11,36 @@ declare namespace org {
                      * No spell is being used..
                      */
                     // @ts-ignore
-                    readonly NONE: org.bukkit.entity.Spellcaster.Spell
+                    public static readonly NONE: org.bukkit.entity.Spellcaster.Spell
                     /**
                      * The spell that summons Vexes.
                      */
                     // @ts-ignore
-                    readonly SUMMON_VEX: org.bukkit.entity.Spellcaster.Spell
+                    public static readonly SUMMON_VEX: org.bukkit.entity.Spellcaster.Spell
                     /**
                      * The spell that summons Fangs.
                      */
                     // @ts-ignore
-                    readonly FANGS: org.bukkit.entity.Spellcaster.Spell
+                    public static readonly FANGS: org.bukkit.entity.Spellcaster.Spell
                     /**
                      * The "wololo" spell.
                      */
                     // @ts-ignore
-                    readonly WOLOLO: org.bukkit.entity.Spellcaster.Spell
+                    public static readonly WOLOLO: org.bukkit.entity.Spellcaster.Spell
                     /**
                      * The spell that makes the casting entity invisible.
                      */
                     // @ts-ignore
-                    readonly DISAPPEAR: org.bukkit.entity.Spellcaster.Spell
+                    public static readonly DISAPPEAR: org.bukkit.entity.Spellcaster.Spell
                     /**
                      * The spell that makes the target blind.
                      */
                     // @ts-ignore
-                    readonly BLINDNESS: org.bukkit.entity.Spellcaster.Spell
+                    public static readonly BLINDNESS: org.bukkit.entity.Spellcaster.Spell
                     // @ts-ignore
-                    values(): org.bukkit.entity.Spellcaster.Spell[]
+                    public static values(): org.bukkit.entity.Spellcaster.Spell[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.entity.Spellcaster.Spell
+                    public static valueOf(name: java.lang.String | string): org.bukkit.entity.Spellcaster.Spell
                 }
             }
         }

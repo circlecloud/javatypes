@@ -7,17 +7,17 @@ declare namespace org {
                         // @ts-ignore
                         class BindState extends java.lang.Enum<org.apache.tomcat.util.net.AbstractEndpoint.BindState> {
                             // @ts-ignore
-                            readonly UNBOUND: org.apache.tomcat.util.net.AbstractEndpoint.BindState
+                            public static readonly UNBOUND: org.apache.tomcat.util.net.AbstractEndpoint.BindState
                             // @ts-ignore
-                            readonly BOUND_ON_INIT: org.apache.tomcat.util.net.AbstractEndpoint.BindState
+                            public static readonly BOUND_ON_INIT: org.apache.tomcat.util.net.AbstractEndpoint.BindState
                             // @ts-ignore
-                            readonly BOUND_ON_START: org.apache.tomcat.util.net.AbstractEndpoint.BindState
+                            public static readonly BOUND_ON_START: org.apache.tomcat.util.net.AbstractEndpoint.BindState
                             // @ts-ignore
-                            readonly SOCKET_CLOSED_ON_STOP: org.apache.tomcat.util.net.AbstractEndpoint.BindState
+                            public static readonly SOCKET_CLOSED_ON_STOP: org.apache.tomcat.util.net.AbstractEndpoint.BindState
                             // @ts-ignore
-                            values(): org.apache.tomcat.util.net.AbstractEndpoint.BindState[]
+                            public static values(): org.apache.tomcat.util.net.AbstractEndpoint.BindState[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.AbstractEndpoint.BindState
+                            public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.AbstractEndpoint.BindState
                         }
                     }
                 }

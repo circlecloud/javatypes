@@ -150,6 +150,16 @@ declare namespace org {
             // @ts-ignore
             public static readonly DO_TRADER_SPAWNING: org.bukkit.GameRule<java.lang.Boolean>
             /**
+             * Whether mobs should cease being angry at a player once they die.
+             */
+            // @ts-ignore
+            public static readonly FORGIVE_DEAD_PLAYERS: org.bukkit.GameRule<java.lang.Boolean>
+            /**
+             * Whether mobs will target all player entities once angered.
+             */
+            // @ts-ignore
+            public static readonly UNIVERSAL_ANGER: org.bukkit.GameRule<java.lang.Boolean>
+            /**
              * How often a random block tick occurs (such as plant growth, leaf decay,
              * etc.) per chunk section per game tick. 0 will disable random ticks,
              * higher numbers will increase random ticks.

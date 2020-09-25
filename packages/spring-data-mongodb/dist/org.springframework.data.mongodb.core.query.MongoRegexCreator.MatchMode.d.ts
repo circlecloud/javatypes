@@ -16,38 +16,38 @@ declare namespace org {
                                  * Store specific default.
                                  */
                                 // @ts-ignore
-                                readonly DEFAULT: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
+                                public static readonly DEFAULT: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
                                 /**
                                  * Matches the exact string
                                  */
                                 // @ts-ignore
-                                readonly EXACT: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
+                                public static readonly EXACT: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
                                 /**
                                  * Matches string starting with pattern
                                  */
                                 // @ts-ignore
-                                readonly STARTING_WITH: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
+                                public static readonly STARTING_WITH: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
                                 /**
                                  * Matches string ending with pattern
                                  */
                                 // @ts-ignore
-                                readonly ENDING_WITH: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
+                                public static readonly ENDING_WITH: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
                                 /**
                                  * Matches string containing pattern
                                  */
                                 // @ts-ignore
-                                readonly CONTAINING: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
+                                public static readonly CONTAINING: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
                                 /**
                                  * Treats strings as regular expression patterns
                                  */
                                 // @ts-ignore
-                                readonly REGEX: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
+                                public static readonly REGEX: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
                                 // @ts-ignore
-                                readonly LIKE: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
+                                public static readonly LIKE: org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
                                 // @ts-ignore
-                                values(): org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode[]
+                                public static values(): org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
+                                public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.query.MongoRegexCreator.MatchMode
                             }
                         }
                     }

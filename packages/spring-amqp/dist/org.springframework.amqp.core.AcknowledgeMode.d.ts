@@ -13,12 +13,12 @@ declare namespace org {
                      * No acks - {@code autoAck=true} in {@code Channel.basicConsume()}.
                      */
                     // @ts-ignore
-                    readonly NONE: org.springframework.amqp.core.AcknowledgeMode
+                    public static readonly NONE: org.springframework.amqp.core.AcknowledgeMode
                     /**
                      * Manual acks - user must ack/nack via a channel aware listener.
                      */
                     // @ts-ignore
-                    readonly MANUAL: org.springframework.amqp.core.AcknowledgeMode
+                    public static readonly MANUAL: org.springframework.amqp.core.AcknowledgeMode
                     /**
                      * Auto - the container will issue the ack/nack based on whether
                      * the listener returns normally, or throws an exception.
@@ -26,31 +26,31 @@ declare namespace org {
                      * represented by {@link #NONE} here</em>.
                      */
                     // @ts-ignore
-                    readonly AUTO: org.springframework.amqp.core.AcknowledgeMode
+                    public static readonly AUTO: org.springframework.amqp.core.AcknowledgeMode
                     // @ts-ignore
-                    values(): org.springframework.amqp.core.AcknowledgeMode[]
+                    public static values(): org.springframework.amqp.core.AcknowledgeMode[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.springframework.amqp.core.AcknowledgeMode
+                    public static valueOf(name: java.lang.String | string): org.springframework.amqp.core.AcknowledgeMode
                     /**
                      * Return if transactions are allowed - if the mode is {@link #AUTO} or
                      * {@link #MANUAL}.
                      * @return true if transactions are allowed.
                      */
                     // @ts-ignore
-                    isTransactionAllowed(): boolean
+                    public isTransactionAllowed(): boolean
                     /**
                      * Return if the mode is {@link #NONE} (which is called {@code autoAck}
                      * in RabbitMQ).
                      * @return true if the mode is {#link #NONE}.
                      */
                     // @ts-ignore
-                    isAutoAck(): boolean
+                    public isAutoAck(): boolean
                     /**
                      * Return true if the mode is {@link #MANUAL}.
                      * @return true if manual.
                      */
                     // @ts-ignore
-                    isManual(): boolean
+                    public isManual(): boolean
                 }
             }
         }

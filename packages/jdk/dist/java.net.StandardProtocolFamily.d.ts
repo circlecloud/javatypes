@@ -10,16 +10,16 @@ declare namespace java {
              * Internet Protocol Version 4 (IPv4)
              */
             // @ts-ignore
-            readonly INET: java.net.StandardProtocolFamily
+            public static readonly INET: java.net.StandardProtocolFamily
             /**
              * Internet Protocol Version 6 (IPv6)
              */
             // @ts-ignore
-            readonly INET6: java.net.StandardProtocolFamily
+            public static readonly INET6: java.net.StandardProtocolFamily
             // @ts-ignore
-            values(): java.net.StandardProtocolFamily[]
+            public static values(): java.net.StandardProtocolFamily[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): java.net.StandardProtocolFamily
+            public static valueOf(name: java.lang.String | string): java.net.StandardProtocolFamily
         }
     }
 }

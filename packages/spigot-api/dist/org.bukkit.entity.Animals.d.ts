@@ -5,7 +5,7 @@ declare namespace org {
              * Represents an Animal.
              */
             // @ts-ignore
-            interface Animals extends org.bukkit.entity.Ageable {
+            interface Animals extends org.bukkit.entity.Breedable {
                 /**
                  * Get the UUID of the entity that caused this entity to enter the
                  * {@link #canBreed()} state.

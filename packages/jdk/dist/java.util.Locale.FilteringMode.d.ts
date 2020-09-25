@@ -96,18 +96,18 @@ declare namespace java {
                  * filtering is selected.
                  */
                 // @ts-ignore
-                readonly AUTOSELECT_FILTERING: java.util.Locale.FilteringMode
+                public static readonly AUTOSELECT_FILTERING: java.util.Locale.FilteringMode
                 /**
                  * Specifies extended filtering.
                  */
                 // @ts-ignore
-                readonly EXTENDED_FILTERING: java.util.Locale.FilteringMode
+                public static readonly EXTENDED_FILTERING: java.util.Locale.FilteringMode
                 /**
                  * Specifies basic filtering: Note that any extended language ranges
                  * included in the given Language Priority List are ignored.
                  */
                 // @ts-ignore
-                readonly IGNORE_EXTENDED_RANGES: java.util.Locale.FilteringMode
+                public static readonly IGNORE_EXTENDED_RANGES: java.util.Locale.FilteringMode
                 /**
                  * Specifies basic filtering: If any extended language ranges are
                  * included in the given Language Priority List, they are mapped to the
@@ -118,18 +118,18 @@ declare namespace java {
                  * For example, {@code "ja-*-JP"} is mapped to {@code "ja-JP"}.
                  */
                 // @ts-ignore
-                readonly MAP_EXTENDED_RANGES: java.util.Locale.FilteringMode
+                public static readonly MAP_EXTENDED_RANGES: java.util.Locale.FilteringMode
                 /**
                  * Specifies basic filtering: If any extended language ranges are
                  * included in the given Language Priority List, the list is rejected
                  * and the filtering method throws {@link IllegalArgumentException}.
                  */
                 // @ts-ignore
-                readonly REJECT_EXTENDED_RANGES: java.util.Locale.FilteringMode
+                public static readonly REJECT_EXTENDED_RANGES: java.util.Locale.FilteringMode
                 // @ts-ignore
-                values(): java.util.Locale.FilteringMode[]
+                public static values(): java.util.Locale.FilteringMode[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.util.Locale.FilteringMode
+                public static valueOf(name: java.lang.String | string): java.util.Locale.FilteringMode
             }
         }
     }

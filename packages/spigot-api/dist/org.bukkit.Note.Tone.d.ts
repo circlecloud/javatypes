@@ -7,35 +7,35 @@ declare namespace org {
             // @ts-ignore
             class Tone extends java.lang.Enum<org.bukkit.Note.Tone> {
                 // @ts-ignore
-                readonly G: org.bukkit.Note.Tone
+                public static readonly G: org.bukkit.Note.Tone
                 // @ts-ignore
-                readonly A: org.bukkit.Note.Tone
+                public static readonly A: org.bukkit.Note.Tone
                 // @ts-ignore
-                readonly B: org.bukkit.Note.Tone
+                public static readonly B: org.bukkit.Note.Tone
                 // @ts-ignore
-                readonly C: org.bukkit.Note.Tone
+                public static readonly C: org.bukkit.Note.Tone
                 // @ts-ignore
-                readonly D: org.bukkit.Note.Tone
+                public static readonly D: org.bukkit.Note.Tone
                 // @ts-ignore
-                readonly E: org.bukkit.Note.Tone
+                public static readonly E: org.bukkit.Note.Tone
                 // @ts-ignore
-                readonly F: org.bukkit.Note.Tone
+                public static readonly F: org.bukkit.Note.Tone
                 /**
                  * The number of tones including sharped tones.
                  */
                 // @ts-ignore
-                readonly TONES_COUNT: number /*byte*/
+                public static readonly TONES_COUNT: number /*byte*/
                 // @ts-ignore
-                values(): org.bukkit.Note.Tone[]
+                public static values(): org.bukkit.Note.Tone[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.bukkit.Note.Tone
+                public static valueOf(name: java.lang.String | string): org.bukkit.Note.Tone
                 /**
                  * Returns the not sharped id of this tone.
                  * @return the not sharped id of this tone.
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getId(): number /*byte*/
+                public getId(): number /*byte*/
                 /**
                  * Returns the id of this tone. These method allows to return the
                  * sharped id of the tone. If the tone couldn't be sharped it always
@@ -45,13 +45,13 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getId(sharped: boolean): number /*byte*/
+                public getId(sharped: boolean): number /*byte*/
                 /**
                  * Returns if this tone could be sharped.
                  * @return if this tone could be sharped.
                  */
                 // @ts-ignore
-                isSharpable(): boolean
+                public isSharpable(): boolean
                 /**
                  * Returns if this tone id is the sharped id of the tone.
                  * @param id the id of the tone.
@@ -61,7 +61,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                isSharped(id: number /*byte*/): boolean
+                public isSharped(id: number /*byte*/): boolean
                 /**
                  * Returns the tone to id. Also returning the semitones.
                  * @param id the id of the tone.
@@ -69,7 +69,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getById(id: number /*byte*/): org.bukkit.Note.Tone
+                public static getById(id: number /*byte*/): org.bukkit.Note.Tone
             }
         }
     }

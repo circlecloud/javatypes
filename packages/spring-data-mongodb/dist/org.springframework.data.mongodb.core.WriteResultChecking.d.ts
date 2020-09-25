@@ -12,13 +12,13 @@ declare namespace org {
                     // @ts-ignore
                     class WriteResultChecking extends java.lang.Enum<org.springframework.data.mongodb.core.WriteResultChecking> {
                         // @ts-ignore
-                        readonly NONE: org.springframework.data.mongodb.core.WriteResultChecking
+                        public static readonly NONE: org.springframework.data.mongodb.core.WriteResultChecking
                         // @ts-ignore
-                        readonly EXCEPTION: org.springframework.data.mongodb.core.WriteResultChecking
+                        public static readonly EXCEPTION: org.springframework.data.mongodb.core.WriteResultChecking
                         // @ts-ignore
-                        values(): org.springframework.data.mongodb.core.WriteResultChecking[]
+                        public static values(): org.springframework.data.mongodb.core.WriteResultChecking[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.WriteResultChecking
+                        public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.WriteResultChecking
                     }
                 }
             }

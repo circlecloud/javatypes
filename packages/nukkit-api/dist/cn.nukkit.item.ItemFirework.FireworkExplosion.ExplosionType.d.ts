@@ -6,19 +6,19 @@ declare namespace cn {
                     // @ts-ignore
                     class ExplosionType extends java.lang.Enum<cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType> {
                         // @ts-ignore
-                        readonly SMALL_BALL: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
+                        public static readonly SMALL_BALL: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
                         // @ts-ignore
-                        readonly LARGE_BALL: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
+                        public static readonly LARGE_BALL: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
                         // @ts-ignore
-                        readonly STAR_SHAPED: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
+                        public static readonly STAR_SHAPED: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
                         // @ts-ignore
-                        readonly CREEPER_SHAPED: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
+                        public static readonly CREEPER_SHAPED: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
                         // @ts-ignore
-                        readonly BURST: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
+                        public static readonly BURST: cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
                         // @ts-ignore
-                        values(): cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType[]
+                        public static values(): cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
+                        public static valueOf(name: java.lang.String | string): cn.nukkit.item.ItemFirework.FireworkExplosion.ExplosionType
                     }
                 }
             }

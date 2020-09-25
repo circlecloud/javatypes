@@ -15,18 +15,18 @@ declare namespace org {
                          * provide anything but single threaded capabilities.
                          */
                         // @ts-ignore
-                        readonly STANDARD: org.spongepowered.api.world.extent.StorageType
+                        public static readonly STANDARD: org.spongepowered.api.world.extent.StorageType
                         /**
                          * A thread-safe storage solution. Reads and writes are atomic. Necessary
                          * for multi-threaded applications, but single threaded ones might suffer
                          * for extra overhead.
                          */
                         // @ts-ignore
-                        readonly THREAD_SAFE: org.spongepowered.api.world.extent.StorageType
+                        public static readonly THREAD_SAFE: org.spongepowered.api.world.extent.StorageType
                         // @ts-ignore
-                        values(): org.spongepowered.api.world.extent.StorageType[]
+                        public static values(): org.spongepowered.api.world.extent.StorageType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.spongepowered.api.world.extent.StorageType
+                        public static valueOf(name: java.lang.String | string): org.spongepowered.api.world.extent.StorageType
                     }
                 }
             }

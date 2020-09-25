@@ -5,27 +5,27 @@ declare namespace cn {
                 // @ts-ignore
                 class Axis extends java.lang.Enum<cn.nukkit.math.BlockFace.Axis> implements java.util.function.Predicate<cn.nukkit.math.BlockFace> {
                     // @ts-ignore
-                    readonly X: cn.nukkit.math.BlockFace.Axis
+                    public static readonly X: cn.nukkit.math.BlockFace.Axis
                     // @ts-ignore
-                    readonly Y: cn.nukkit.math.BlockFace.Axis
+                    public static readonly Y: cn.nukkit.math.BlockFace.Axis
                     // @ts-ignore
-                    readonly Z: cn.nukkit.math.BlockFace.Axis
+                    public static readonly Z: cn.nukkit.math.BlockFace.Axis
                     // @ts-ignore
-                    values(): cn.nukkit.math.BlockFace.Axis[]
+                    public static values(): cn.nukkit.math.BlockFace.Axis[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): cn.nukkit.math.BlockFace.Axis
+                    public static valueOf(name: java.lang.String | string): cn.nukkit.math.BlockFace.Axis
                     // @ts-ignore
-                    isVertical(): boolean
+                    public isVertical(): boolean
                     // @ts-ignore
-                    isHorizontal(): boolean
+                    public isHorizontal(): boolean
                     // @ts-ignore
-                    getPlane(): cn.nukkit.math.BlockFace.Plane
+                    public getPlane(): cn.nukkit.math.BlockFace.Plane
                     // @ts-ignore
-                    getName(): string
+                    public getName(): string
                     // @ts-ignore
-                    test(face: cn.nukkit.math.BlockFace): boolean
+                    public test(face: cn.nukkit.math.BlockFace): boolean
                     // @ts-ignore
-                    toString(): string
+                    public toString(): string
                 }
             }
         }

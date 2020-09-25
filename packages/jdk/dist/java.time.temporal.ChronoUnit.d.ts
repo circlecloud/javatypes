@@ -21,44 +21,44 @@ declare namespace java {
                  * For the ISO calendar system, it is equal to the 1,000,000,000th part of the second unit.
                  */
                 // @ts-ignore
-                readonly NANOS: java.time.temporal.ChronoUnit
+                public static readonly NANOS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a microsecond.
                  * For the ISO calendar system, it is equal to the 1,000,000th part of the second unit.
                  */
                 // @ts-ignore
-                readonly MICROS: java.time.temporal.ChronoUnit
+                public static readonly MICROS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a millisecond.
                  * For the ISO calendar system, it is equal to the 1000th part of the second unit.
                  */
                 // @ts-ignore
-                readonly MILLIS: java.time.temporal.ChronoUnit
+                public static readonly MILLIS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a second.
                  * For the ISO calendar system, it is equal to the second in the SI system
                  * of units, except around a leap-second.
                  */
                 // @ts-ignore
-                readonly SECONDS: java.time.temporal.ChronoUnit
+                public static readonly SECONDS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a minute.
                  * For the ISO calendar system, it is equal to 60 seconds.
                  */
                 // @ts-ignore
-                readonly MINUTES: java.time.temporal.ChronoUnit
+                public static readonly MINUTES: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of an hour.
                  * For the ISO calendar system, it is equal to 60 minutes.
                  */
                 // @ts-ignore
-                readonly HOURS: java.time.temporal.ChronoUnit
+                public static readonly HOURS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of half a day, as used in AM/PM.
                  * For the ISO calendar system, it is equal to 12 hours.
                  */
                 // @ts-ignore
-                readonly HALF_DAYS: java.time.temporal.ChronoUnit
+                public static readonly HALF_DAYS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a day.
                  * For the ISO calendar system, it is the standard day from midnight to midnight.
@@ -70,7 +70,7 @@ declare namespace java {
                  * equivalent at midday.
                  */
                 // @ts-ignore
-                readonly DAYS: java.time.temporal.ChronoUnit
+                public static readonly DAYS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a week.
                  * For the ISO calendar system, it is equal to 7 days.
@@ -78,7 +78,7 @@ declare namespace java {
                  * When used with other calendar systems it must correspond to an integral number of days.
                  */
                 // @ts-ignore
-                readonly WEEKS: java.time.temporal.ChronoUnit
+                public static readonly WEEKS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a month.
                  * For the ISO calendar system, the length of the month varies by month-of-year.
@@ -87,7 +87,7 @@ declare namespace java {
                  * When used with other calendar systems it must correspond to an integral number of days.
                  */
                 // @ts-ignore
-                readonly MONTHS: java.time.temporal.ChronoUnit
+                public static readonly MONTHS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a year.
                  * For the ISO calendar system, it is equal to 12 months.
@@ -97,7 +97,7 @@ declare namespace java {
                  * or months roughly equal to a year defined by the passage of the Earth around the Sun.
                  */
                 // @ts-ignore
-                readonly YEARS: java.time.temporal.ChronoUnit
+                public static readonly YEARS: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a decade.
                  * For the ISO calendar system, it is equal to 10 years.
@@ -106,7 +106,7 @@ declare namespace java {
                  * and is normally an integral number of years.
                  */
                 // @ts-ignore
-                readonly DECADES: java.time.temporal.ChronoUnit
+                public static readonly DECADES: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a century.
                  * For the ISO calendar system, it is equal to 100 years.
@@ -115,7 +115,7 @@ declare namespace java {
                  * and is normally an integral number of years.
                  */
                 // @ts-ignore
-                readonly CENTURIES: java.time.temporal.ChronoUnit
+                public static readonly CENTURIES: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of a millennium.
                  * For the ISO calendar system, it is equal to 1000 years.
@@ -124,7 +124,7 @@ declare namespace java {
                  * and is normally an integral number of years.
                  */
                 // @ts-ignore
-                readonly MILLENNIA: java.time.temporal.ChronoUnit
+                public static readonly MILLENNIA: java.time.temporal.ChronoUnit
                 /**
                  * Unit that represents the concept of an era.
                  * The ISO calendar system doesn't have eras thus it is impossible to add
@@ -134,7 +134,7 @@ declare namespace java {
                  * When used with other calendar systems there are no restrictions on the unit.
                  */
                 // @ts-ignore
-                readonly ERAS: java.time.temporal.ChronoUnit
+                public static readonly ERAS: java.time.temporal.ChronoUnit
                 /**
                  * Artificial unit that represents the concept of forever.
                  * This is primarily used with {@link TemporalField} to represent unbounded fields
@@ -143,11 +143,11 @@ declare namespace java {
                  * supported by {@code Duration}.
                  */
                 // @ts-ignore
-                readonly FOREVER: java.time.temporal.ChronoUnit
+                public static readonly FOREVER: java.time.temporal.ChronoUnit
                 // @ts-ignore
-                values(): java.time.temporal.ChronoUnit[]
+                public static values(): java.time.temporal.ChronoUnit[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.time.temporal.ChronoUnit
+                public static valueOf(name: java.lang.String | string): java.time.temporal.ChronoUnit
                 /**
                  * Gets the estimated duration of this unit in the ISO calendar system.
                  * <p>
@@ -156,7 +156,7 @@ declare namespace java {
                  * @return the estimated duration of this unit, not null
                  */
                 // @ts-ignore
-                getDuration(): java.time.Duration
+                public getDuration(): java.time.Duration
                 /**
                  * Checks if the duration of the unit is an estimate.
                  * <p>
@@ -168,7 +168,7 @@ declare namespace java {
                  * @return true if the duration is estimated, false if accurate
                  */
                 // @ts-ignore
-                isDurationEstimated(): boolean
+                public isDurationEstimated(): boolean
                 /**
                  * Checks if this unit is a date unit.
                  * <p>
@@ -177,7 +177,7 @@ declare namespace java {
                  * @return true if a date unit, false if a time unit
                  */
                 // @ts-ignore
-                isDateBased(): boolean
+                public isDateBased(): boolean
                 /**
                  * Checks if this unit is a time unit.
                  * <p>
@@ -186,15 +186,15 @@ declare namespace java {
                  * @return true if a time unit, false if a date unit
                  */
                 // @ts-ignore
-                isTimeBased(): boolean
+                public isTimeBased(): boolean
                 // @ts-ignore
-                isSupportedBy(temporal: java.time.temporal.Temporal): boolean
+                public isSupportedBy(temporal: java.time.temporal.Temporal): boolean
                 // @ts-ignore
-                addTo<R extends java.time.temporal.Temporal>(temporal: R, amount: number /*long*/): R
+                public addTo<R extends java.time.temporal.Temporal>(temporal: R, amount: number /*long*/): R
                 // @ts-ignore
-                between(temporal1Inclusive: java.time.temporal.Temporal, temporal2Exclusive: java.time.temporal.Temporal): number /*long*/
+                public between(temporal1Inclusive: java.time.temporal.Temporal, temporal2Exclusive: java.time.temporal.Temporal): number /*long*/
                 // @ts-ignore
-                toString(): string
+                public toString(): string
             }
         }
     }

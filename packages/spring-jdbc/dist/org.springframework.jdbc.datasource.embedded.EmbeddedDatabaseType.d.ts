@@ -15,21 +15,21 @@ declare namespace org {
                          * The <a href="http://hsqldb.org">Hypersonic</a> Embedded Java SQL Database.
                          */
                         // @ts-ignore
-                        readonly HSQL: org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
+                        public static readonly HSQL: org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
                         /**
                          * The <a href="https://h2database.com">H2</a> Embedded Java SQL Database Engine.
                          */
                         // @ts-ignore
-                        readonly H2: org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
+                        public static readonly H2: org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
                         /**
                          * The <a href="https://db.apache.org/derby">Apache Derby</a> Embedded SQL Database.
                          */
                         // @ts-ignore
-                        readonly DERBY: org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
+                        public static readonly DERBY: org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
                         // @ts-ignore
-                        values(): org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType[]
+                        public static values(): org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
+                        public static valueOf(name: java.lang.String | string): org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType
                     }
                 }
             }

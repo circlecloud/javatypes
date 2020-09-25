@@ -20,25 +20,25 @@ declare namespace org {
                     // @ts-ignore
                     class RequestMethod extends java.lang.Enum<org.springframework.web.bind.annotation.RequestMethod> {
                         // @ts-ignore
-                        readonly GET: org.springframework.web.bind.annotation.RequestMethod
+                        public static readonly GET: org.springframework.web.bind.annotation.RequestMethod
                         // @ts-ignore
-                        readonly HEAD: org.springframework.web.bind.annotation.RequestMethod
+                        public static readonly HEAD: org.springframework.web.bind.annotation.RequestMethod
                         // @ts-ignore
-                        readonly POST: org.springframework.web.bind.annotation.RequestMethod
+                        public static readonly POST: org.springframework.web.bind.annotation.RequestMethod
                         // @ts-ignore
-                        readonly PUT: org.springframework.web.bind.annotation.RequestMethod
+                        public static readonly PUT: org.springframework.web.bind.annotation.RequestMethod
                         // @ts-ignore
-                        readonly PATCH: org.springframework.web.bind.annotation.RequestMethod
+                        public static readonly PATCH: org.springframework.web.bind.annotation.RequestMethod
                         // @ts-ignore
-                        readonly DELETE: org.springframework.web.bind.annotation.RequestMethod
+                        public static readonly DELETE: org.springframework.web.bind.annotation.RequestMethod
                         // @ts-ignore
-                        readonly OPTIONS: org.springframework.web.bind.annotation.RequestMethod
+                        public static readonly OPTIONS: org.springframework.web.bind.annotation.RequestMethod
                         // @ts-ignore
-                        readonly TRACE: org.springframework.web.bind.annotation.RequestMethod
+                        public static readonly TRACE: org.springframework.web.bind.annotation.RequestMethod
                         // @ts-ignore
-                        values(): org.springframework.web.bind.annotation.RequestMethod[]
+                        public static values(): org.springframework.web.bind.annotation.RequestMethod[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.web.bind.annotation.RequestMethod
+                        public static valueOf(name: java.lang.String | string): org.springframework.web.bind.annotation.RequestMethod
                     }
                 }
             }

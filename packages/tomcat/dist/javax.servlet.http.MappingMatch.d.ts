@@ -8,19 +8,19 @@ declare namespace javax {
             // @ts-ignore
             class MappingMatch extends java.lang.Enum<javax.servlet.http.MappingMatch> {
                 // @ts-ignore
-                readonly CONTEXT_ROOT: javax.servlet.http.MappingMatch
+                public static readonly CONTEXT_ROOT: javax.servlet.http.MappingMatch
                 // @ts-ignore
-                readonly DEFAULT: javax.servlet.http.MappingMatch
+                public static readonly DEFAULT: javax.servlet.http.MappingMatch
                 // @ts-ignore
-                readonly EXACT: javax.servlet.http.MappingMatch
+                public static readonly EXACT: javax.servlet.http.MappingMatch
                 // @ts-ignore
-                readonly EXTENSION: javax.servlet.http.MappingMatch
+                public static readonly EXTENSION: javax.servlet.http.MappingMatch
                 // @ts-ignore
-                readonly PATH: javax.servlet.http.MappingMatch
+                public static readonly PATH: javax.servlet.http.MappingMatch
                 // @ts-ignore
-                values(): javax.servlet.http.MappingMatch[]
+                public static values(): javax.servlet.http.MappingMatch[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.servlet.http.MappingMatch
+                public static valueOf(name: java.lang.String | string): javax.servlet.http.MappingMatch
             }
         }
     }

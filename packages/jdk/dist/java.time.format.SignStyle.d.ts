@@ -19,7 +19,7 @@ declare namespace java {
                  * In lenient parsing, any sign will be accepted.
                  */
                 // @ts-ignore
-                readonly NORMAL: java.time.format.SignStyle
+                public static readonly NORMAL: java.time.format.SignStyle
                 /**
                  * Style to always output the sign, where zero will output '+'.
                  * <p>
@@ -28,7 +28,7 @@ declare namespace java {
                  * of a sign treated as a positive number.
                  */
                 // @ts-ignore
-                readonly ALWAYS: java.time.format.SignStyle
+                public static readonly ALWAYS: java.time.format.SignStyle
                 /**
                  * Style to never output sign, only outputting the absolute value.
                  * <p>
@@ -36,7 +36,7 @@ declare namespace java {
                  * In lenient parsing, any sign will be accepted unless the width is fixed.
                  */
                 // @ts-ignore
-                readonly NEVER: java.time.format.SignStyle
+                public static readonly NEVER: java.time.format.SignStyle
                 /**
                  * Style to block negative values, throwing an exception on printing.
                  * <p>
@@ -44,7 +44,7 @@ declare namespace java {
                  * In lenient parsing, any sign will be accepted unless the width is fixed.
                  */
                 // @ts-ignore
-                readonly NOT_NEGATIVE: java.time.format.SignStyle
+                public static readonly NOT_NEGATIVE: java.time.format.SignStyle
                 /**
                  * Style to always output the sign if the value exceeds the pad width.
                  * A negative value will always output the '-' sign.
@@ -54,11 +54,11 @@ declare namespace java {
                  * of a sign treated as a positive number.
                  */
                 // @ts-ignore
-                readonly EXCEEDS_PAD: java.time.format.SignStyle
+                public static readonly EXCEEDS_PAD: java.time.format.SignStyle
                 // @ts-ignore
-                values(): java.time.format.SignStyle[]
+                public static values(): java.time.format.SignStyle[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.time.format.SignStyle
+                public static valueOf(name: java.lang.String | string): java.time.format.SignStyle
             }
         }
     }

@@ -14,17 +14,17 @@ declare namespace org {
                          * Adapt class or class array attributes to strings.
                          */
                         // @ts-ignore
-                        readonly CLASS_TO_STRING: org.springframework.core.annotation.MergedAnnotation.Adapt
+                        public static readonly CLASS_TO_STRING: org.springframework.core.annotation.MergedAnnotation.Adapt
                         /**
                          * Adapt nested annotation or annotation arrays to maps rather
                          * than synthesizing the values.
                          */
                         // @ts-ignore
-                        readonly ANNOTATION_TO_MAP: org.springframework.core.annotation.MergedAnnotation.Adapt
+                        public static readonly ANNOTATION_TO_MAP: org.springframework.core.annotation.MergedAnnotation.Adapt
                         // @ts-ignore
-                        values(): org.springframework.core.annotation.MergedAnnotation.Adapt[]
+                        public static values(): org.springframework.core.annotation.MergedAnnotation.Adapt[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.core.annotation.MergedAnnotation.Adapt
+                        public static valueOf(name: java.lang.String | string): org.springframework.core.annotation.MergedAnnotation.Adapt
                         // @ts-ignore
                         isIn(...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): boolean
                         /**
@@ -34,7 +34,7 @@ declare namespace org {
                          * @return a new {#link Adapt} array
                          */
                         // @ts-ignore
-                        values(classToString: boolean, annotationsToMap: boolean): org.springframework.core.annotation.MergedAnnotation.Adapt[]
+                        public static values(classToString: boolean, annotationsToMap: boolean): org.springframework.core.annotation.MergedAnnotation.Adapt[]
                     }
                 }
             }

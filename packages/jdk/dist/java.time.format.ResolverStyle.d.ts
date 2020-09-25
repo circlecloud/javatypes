@@ -25,7 +25,7 @@ declare namespace java {
                  * for the year-month, rejecting invalid values.
                  */
                 // @ts-ignore
-                readonly STRICT: java.time.format.ResolverStyle
+                public static readonly STRICT: java.time.format.ResolverStyle
                 /**
                  * Style to resolve dates and times in a smart, or intelligent, manner.
                  * <p>
@@ -39,7 +39,7 @@ declare namespace java {
                  * the last valid day-of-month.
                  */
                 // @ts-ignore
-                readonly SMART: java.time.format.ResolverStyle
+                public static readonly SMART: java.time.format.ResolverStyle
                 /**
                  * Style to resolve dates and times leniently.
                  * <p>
@@ -51,11 +51,11 @@ declare namespace java {
                  * For example, month 15 is treated as being 3 months after month 12.
                  */
                 // @ts-ignore
-                readonly LENIENT: java.time.format.ResolverStyle
+                public static readonly LENIENT: java.time.format.ResolverStyle
                 // @ts-ignore
-                values(): java.time.format.ResolverStyle[]
+                public static values(): java.time.format.ResolverStyle[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.time.format.ResolverStyle
+                public static valueOf(name: java.lang.String | string): java.time.format.ResolverStyle
             }
         }
     }

@@ -8,19 +8,19 @@ declare namespace cn {
                 // @ts-ignore
                 class ServicePriority extends java.lang.Enum<cn.nukkit.plugin.service.ServicePriority> {
                     // @ts-ignore
-                    readonly LOWEST: cn.nukkit.plugin.service.ServicePriority
+                    public static readonly LOWEST: cn.nukkit.plugin.service.ServicePriority
                     // @ts-ignore
-                    readonly LOWER: cn.nukkit.plugin.service.ServicePriority
+                    public static readonly LOWER: cn.nukkit.plugin.service.ServicePriority
                     // @ts-ignore
-                    readonly NORMAL: cn.nukkit.plugin.service.ServicePriority
+                    public static readonly NORMAL: cn.nukkit.plugin.service.ServicePriority
                     // @ts-ignore
-                    readonly HIGHER: cn.nukkit.plugin.service.ServicePriority
+                    public static readonly HIGHER: cn.nukkit.plugin.service.ServicePriority
                     // @ts-ignore
-                    readonly HIGHEST: cn.nukkit.plugin.service.ServicePriority
+                    public static readonly HIGHEST: cn.nukkit.plugin.service.ServicePriority
                     // @ts-ignore
-                    values(): cn.nukkit.plugin.service.ServicePriority[]
+                    public static values(): cn.nukkit.plugin.service.ServicePriority[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): cn.nukkit.plugin.service.ServicePriority
+                    public static valueOf(name: java.lang.String | string): cn.nukkit.plugin.service.ServicePriority
                 }
             }
         }

@@ -13,11 +13,11 @@ declare namespace org {
                              * Slots in an Inventory as opposed to a {@link Container}.
                              */
                             // @ts-ignore
-                            readonly INVENTORY: org.spongepowered.api.item.inventory.Slot.Type
+                            public static readonly INVENTORY: org.spongepowered.api.item.inventory.Slot.Type
                             // @ts-ignore
-                            values(): org.spongepowered.api.item.inventory.Slot.Type[]
+                            public static values(): org.spongepowered.api.item.inventory.Slot.Type[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.spongepowered.api.item.inventory.Slot.Type
+                            public static valueOf(name: java.lang.String | string): org.spongepowered.api.item.inventory.Slot.Type
                         }
                     }
                 }

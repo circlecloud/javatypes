@@ -9,21 +9,21 @@ declare namespace org {
              * Ignore fluids.
              */
             // @ts-ignore
-            readonly NEVER: org.bukkit.FluidCollisionMode
+            public static readonly NEVER: org.bukkit.FluidCollisionMode
             /**
              * Only collide with source fluid blocks.
              */
             // @ts-ignore
-            readonly SOURCE_ONLY: org.bukkit.FluidCollisionMode
+            public static readonly SOURCE_ONLY: org.bukkit.FluidCollisionMode
             /**
              * Collide with all fluids.
              */
             // @ts-ignore
-            readonly ALWAYS: org.bukkit.FluidCollisionMode
+            public static readonly ALWAYS: org.bukkit.FluidCollisionMode
             // @ts-ignore
-            values(): org.bukkit.FluidCollisionMode[]
+            public static values(): org.bukkit.FluidCollisionMode[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.FluidCollisionMode
+            public static valueOf(name: java.lang.String | string): org.bukkit.FluidCollisionMode
         }
     }
 }

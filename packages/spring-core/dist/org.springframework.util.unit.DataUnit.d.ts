@@ -28,31 +28,31 @@ declare namespace org {
                      * Bytes, represented by suffix {@code B}.
                      */
                     // @ts-ignore
-                    readonly BYTES: org.springframework.util.unit.DataUnit
+                    public static readonly BYTES: org.springframework.util.unit.DataUnit
                     /**
                      * Kilobytes, represented by suffix {@code KB}.
                      */
                     // @ts-ignore
-                    readonly KILOBYTES: org.springframework.util.unit.DataUnit
+                    public static readonly KILOBYTES: org.springframework.util.unit.DataUnit
                     /**
                      * Megabytes, represented by suffix {@code MB}.
                      */
                     // @ts-ignore
-                    readonly MEGABYTES: org.springframework.util.unit.DataUnit
+                    public static readonly MEGABYTES: org.springframework.util.unit.DataUnit
                     /**
                      * Gigabytes, represented by suffix {@code GB}.
                      */
                     // @ts-ignore
-                    readonly GIGABYTES: org.springframework.util.unit.DataUnit
+                    public static readonly GIGABYTES: org.springframework.util.unit.DataUnit
                     /**
                      * Terabytes, represented by suffix {@code TB}.
                      */
                     // @ts-ignore
-                    readonly TERABYTES: org.springframework.util.unit.DataUnit
+                    public static readonly TERABYTES: org.springframework.util.unit.DataUnit
                     // @ts-ignore
-                    values(): org.springframework.util.unit.DataUnit[]
+                    public static values(): org.springframework.util.unit.DataUnit[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.springframework.util.unit.DataUnit
+                    public static valueOf(name: java.lang.String | string): org.springframework.util.unit.DataUnit
                     /**
                      * Return the {@link DataUnit} matching the specified {@code suffix}.
                      * @param suffix one of the standard suffixes
@@ -61,7 +61,7 @@ declare namespace org {
                      *  of any of this enum's constants
                      */
                     // @ts-ignore
-                    fromSuffix(suffix: java.lang.String | string): org.springframework.util.unit.DataUnit
+                    public static fromSuffix(suffix: java.lang.String | string): org.springframework.util.unit.DataUnit
                 }
             }
         }

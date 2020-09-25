@@ -7,13 +7,13 @@ declare namespace org {
                         // @ts-ignore
                         class ShutdownOption extends java.lang.Enum<org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption> {
                             // @ts-ignore
-                            readonly SAVE: org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption
+                            public static readonly SAVE: org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption
                             // @ts-ignore
-                            readonly NOSAVE: org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption
+                            public static readonly NOSAVE: org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption[]
+                            public static values(): org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisServerCommands.ShutdownOption
                         }
                     }
                 }

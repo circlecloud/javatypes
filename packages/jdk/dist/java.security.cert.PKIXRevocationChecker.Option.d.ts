@@ -12,19 +12,19 @@ declare namespace java {
                      * Only check the revocation status of end-entity certificates.
                      */
                     // @ts-ignore
-                    readonly ONLY_END_ENTITY: java.security.cert.PKIXRevocationChecker.Option
+                    public static readonly ONLY_END_ENTITY: java.security.cert.PKIXRevocationChecker.Option
                     /**
                      * Prefer CRLs to OSCP. The default behavior is to prefer OCSP. Each
                      * PKIX implementation should document further details of their
                      * specific preference rules and fallback policies.
                      */
                     // @ts-ignore
-                    readonly PREFER_CRLS: java.security.cert.PKIXRevocationChecker.Option
+                    public static readonly PREFER_CRLS: java.security.cert.PKIXRevocationChecker.Option
                     /**
                      * Disable the fallback mechanism.
                      */
                     // @ts-ignore
-                    readonly NO_FALLBACK: java.security.cert.PKIXRevocationChecker.Option
+                    public static readonly NO_FALLBACK: java.security.cert.PKIXRevocationChecker.Option
                     /**
                      * Allow revocation check to succeed if the revocation status cannot be
                      * determined for one of the following reasons:
@@ -43,11 +43,11 @@ declare namespace java {
                      * {@link #getSoftFailExceptions getSoftFailExceptions} method.
                      */
                     // @ts-ignore
-                    readonly SOFT_FAIL: java.security.cert.PKIXRevocationChecker.Option
+                    public static readonly SOFT_FAIL: java.security.cert.PKIXRevocationChecker.Option
                     // @ts-ignore
-                    values(): java.security.cert.PKIXRevocationChecker.Option[]
+                    public static values(): java.security.cert.PKIXRevocationChecker.Option[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): java.security.cert.PKIXRevocationChecker.Option
+                    public static valueOf(name: java.lang.String | string): java.security.cert.PKIXRevocationChecker.Option
                 }
             }
         }

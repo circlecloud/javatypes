@@ -7,6 +7,20 @@ declare namespace org {
             // @ts-ignore
             interface EntityEquipment {
                 /**
+                 * Stores the ItemStack at the given equipment slot in the inventory.
+                 * @param slot the slot to put the ItemStack
+                 * @param item the ItemStack to set
+                 */
+                // @ts-ignore
+                setItem(slot: org.bukkit.inventory.EquipmentSlot, item: org.bukkit.inventory.ItemStack): void
+                /**
+                 * Gets the ItemStack at the given equipment slot in the inventory.
+                 * @param slot the slot to get the ItemStack
+                 * @return the ItemStack in the given slot
+                 */
+                // @ts-ignore
+                getItem(slot: org.bukkit.inventory.EquipmentSlot): org.bukkit.inventory.ItemStack
+                /**
                  * Gets a copy of the item the entity is currently holding
                  * in their main hand.
                  * @return the currently held item

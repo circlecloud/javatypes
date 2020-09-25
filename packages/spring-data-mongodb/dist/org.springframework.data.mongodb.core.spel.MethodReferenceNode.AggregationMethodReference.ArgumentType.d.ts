@@ -14,15 +14,15 @@ declare namespace org {
                                 // @ts-ignore
                                 class ArgumentType extends java.lang.Enum<org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType> {
                                     // @ts-ignore
-                                    readonly SINGLE: org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType
+                                    public static readonly SINGLE: org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType
                                     // @ts-ignore
-                                    readonly ARRAY: org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType
+                                    public static readonly ARRAY: org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType
                                     // @ts-ignore
-                                    readonly MAP: org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType
+                                    public static readonly MAP: org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType
                                     // @ts-ignore
-                                    values(): org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType[]
+                                    public static values(): org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType[]
                                     // @ts-ignore
-                                    valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType
+                                    public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.spel.MethodReferenceNode.AggregationMethodReference.ArgumentType
                                 }
                             }
                         }

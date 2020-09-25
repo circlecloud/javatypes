@@ -13,21 +13,21 @@ declare namespace org {
                              * The wire travels up the side of the block adjacent to this face.
                              */
                             // @ts-ignore
-                            readonly UP: org.bukkit.block.data.type.RedstoneWire.Connection
+                            public static readonly UP: org.bukkit.block.data.type.RedstoneWire.Connection
                             /**
                              * The wire travels flat from this face and into the adjacent block.
                              */
                             // @ts-ignore
-                            readonly SIDE: org.bukkit.block.data.type.RedstoneWire.Connection
+                            public static readonly SIDE: org.bukkit.block.data.type.RedstoneWire.Connection
                             /**
                              * The wire does not connect in this direction.
                              */
                             // @ts-ignore
-                            readonly NONE: org.bukkit.block.data.type.RedstoneWire.Connection
+                            public static readonly NONE: org.bukkit.block.data.type.RedstoneWire.Connection
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.RedstoneWire.Connection[]
+                            public static values(): org.bukkit.block.data.type.RedstoneWire.Connection[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.RedstoneWire.Connection
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.RedstoneWire.Connection
                         }
                     }
                 }

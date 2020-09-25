@@ -197,9 +197,9 @@ function buildField(classes: com.sun.javadoc.ClassDoc, field: com.sun.javadoc.Fi
 
 function buildBasicModifier(classes: com.sun.javadoc.ClassDoc, modifier: com.sun.javadoc.FieldDoc | com.sun.javadoc.MethodDoc, options: Options) {
     let modifiers = ''
-    if (!classes.isOrdinaryClass()) { return options.printBrackets() }
-    // public | private | static => method | field
-    if (modifier.isMethod() || modifier.isField()) {
+    if (!classes.isOrdinaryClass() && !classes.isEnum()) { return options.printBrackets() }
+    // public | private | static => method | field | enum
+    if (modifier.isMethod() || modifier.isField() || modifier.isEnumConstant()) {
         if (modifier.isPublic()) {
             modifiers += 'public '
         } else if (modifier.isPrivate()) {

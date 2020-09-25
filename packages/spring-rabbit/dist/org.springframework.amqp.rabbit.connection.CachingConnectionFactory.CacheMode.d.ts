@@ -13,16 +13,16 @@ declare namespace org {
                              * Cache channels - single connection.
                              */
                             // @ts-ignore
-                            readonly CHANNEL: org.springframework.amqp.rabbit.connection.CachingConnectionFactory.CacheMode
+                            public static readonly CHANNEL: org.springframework.amqp.rabbit.connection.CachingConnectionFactory.CacheMode
                             /**
                              * Cache connections and channels within each connection.
                              */
                             // @ts-ignore
-                            readonly CONNECTION: org.springframework.amqp.rabbit.connection.CachingConnectionFactory.CacheMode
+                            public static readonly CONNECTION: org.springframework.amqp.rabbit.connection.CachingConnectionFactory.CacheMode
                             // @ts-ignore
-                            values(): org.springframework.amqp.rabbit.connection.CachingConnectionFactory.CacheMode[]
+                            public static values(): org.springframework.amqp.rabbit.connection.CachingConnectionFactory.CacheMode[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.amqp.rabbit.connection.CachingConnectionFactory.CacheMode
+                            public static valueOf(name: java.lang.String | string): org.springframework.amqp.rabbit.connection.CachingConnectionFactory.CacheMode
                         }
                     }
                 }

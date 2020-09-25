@@ -13,22 +13,22 @@ declare namespace java {
                  * threads in the virtual machine.
                  */
                 // @ts-ignore
-                readonly HEAP: java.lang.management.MemoryType
+                public static readonly HEAP: java.lang.management.MemoryType
                 /**
                  * Memory that is not on the heap. This encompasses all other storage used
                  * by the virtual machine at runtime.
                  */
                 // @ts-ignore
-                readonly NON_HEAP: java.lang.management.MemoryType
+                public static readonly NON_HEAP: java.lang.management.MemoryType
                 // @ts-ignore
-                values(): java.lang.management.MemoryType[]
+                public static values(): java.lang.management.MemoryType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.lang.management.MemoryType
+                public static valueOf(name: java.lang.String | string): java.lang.management.MemoryType
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                toString(): string
+                public toString(): string
             }
         }
     }

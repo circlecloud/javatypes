@@ -11,16 +11,16 @@ declare namespace java {
                  * Entity requesting authentication is a HTTP proxy server.
                  */
                 // @ts-ignore
-                readonly PROXY: java.net.Authenticator.RequestorType
+                public static readonly PROXY: java.net.Authenticator.RequestorType
                 /**
                  * Entity requesting authentication is a HTTP origin server.
                  */
                 // @ts-ignore
-                readonly SERVER: java.net.Authenticator.RequestorType
+                public static readonly SERVER: java.net.Authenticator.RequestorType
                 // @ts-ignore
-                values(): java.net.Authenticator.RequestorType[]
+                public static values(): java.net.Authenticator.RequestorType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.net.Authenticator.RequestorType
+                public static valueOf(name: java.lang.String | string): java.net.Authenticator.RequestorType
             }
         }
     }

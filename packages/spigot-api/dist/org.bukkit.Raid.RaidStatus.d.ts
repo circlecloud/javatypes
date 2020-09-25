@@ -10,26 +10,26 @@ declare namespace org {
                  * The raid is in progress.
                  */
                 // @ts-ignore
-                readonly ONGOING: org.bukkit.Raid.RaidStatus
+                public static readonly ONGOING: org.bukkit.Raid.RaidStatus
                 /**
                  * The raid was beaten by heroes.
                  */
                 // @ts-ignore
-                readonly VICTORY: org.bukkit.Raid.RaidStatus
+                public static readonly VICTORY: org.bukkit.Raid.RaidStatus
                 /**
                  * The village has fallen (i.e. all villagers died).
                  */
                 // @ts-ignore
-                readonly LOSS: org.bukkit.Raid.RaidStatus
+                public static readonly LOSS: org.bukkit.Raid.RaidStatus
                 /**
                  * The raid was terminated.
                  */
                 // @ts-ignore
-                readonly STOPPED: org.bukkit.Raid.RaidStatus
+                public static readonly STOPPED: org.bukkit.Raid.RaidStatus
                 // @ts-ignore
-                values(): org.bukkit.Raid.RaidStatus[]
+                public static values(): org.bukkit.Raid.RaidStatus[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.bukkit.Raid.RaidStatus
+                public static valueOf(name: java.lang.String | string): org.bukkit.Raid.RaidStatus
             }
         }
     }

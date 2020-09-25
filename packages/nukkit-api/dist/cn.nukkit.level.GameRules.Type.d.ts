@@ -5,17 +5,17 @@ declare namespace cn {
                 // @ts-ignore
                 class Type extends java.lang.Enum<cn.nukkit.level.GameRules.Type> {
                     // @ts-ignore
-                    readonly UNKNOWN: cn.nukkit.level.GameRules.Type
+                    public static readonly UNKNOWN: cn.nukkit.level.GameRules.Type
                     // @ts-ignore
-                    readonly BOOLEAN: cn.nukkit.level.GameRules.Type
+                    public static readonly BOOLEAN: cn.nukkit.level.GameRules.Type
                     // @ts-ignore
-                    readonly INTEGER: cn.nukkit.level.GameRules.Type
+                    public static readonly INTEGER: cn.nukkit.level.GameRules.Type
                     // @ts-ignore
-                    readonly FLOAT: cn.nukkit.level.GameRules.Type
+                    public static readonly FLOAT: cn.nukkit.level.GameRules.Type
                     // @ts-ignore
-                    values(): cn.nukkit.level.GameRules.Type[]
+                    public static values(): cn.nukkit.level.GameRules.Type[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): cn.nukkit.level.GameRules.Type
+                    public static valueOf(name: java.lang.String | string): cn.nukkit.level.GameRules.Type
                 }
             }
         }

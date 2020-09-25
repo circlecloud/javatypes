@@ -17,16 +17,16 @@ declare namespace org {
                      * JDK proxy-based advice.
                      */
                     // @ts-ignore
-                    readonly PROXY: org.springframework.context.annotation.AdviceMode
+                    public static readonly PROXY: org.springframework.context.annotation.AdviceMode
                     /**
                      * AspectJ weaving-based advice.
                      */
                     // @ts-ignore
-                    readonly ASPECTJ: org.springframework.context.annotation.AdviceMode
+                    public static readonly ASPECTJ: org.springframework.context.annotation.AdviceMode
                     // @ts-ignore
-                    values(): org.springframework.context.annotation.AdviceMode[]
+                    public static values(): org.springframework.context.annotation.AdviceMode[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.springframework.context.annotation.AdviceMode
+                    public static valueOf(name: java.lang.String | string): org.springframework.context.annotation.AdviceMode
                 }
             }
         }

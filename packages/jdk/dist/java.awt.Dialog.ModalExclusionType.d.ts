@@ -16,14 +16,14 @@ declare namespace java {
                  * No modal exclusion.
                  */
                 // @ts-ignore
-                readonly NO_EXCLUDE: java.awt.Dialog.ModalExclusionType
+                public static readonly NO_EXCLUDE: java.awt.Dialog.ModalExclusionType
                 /**
                  * <code>APPLICATION_EXCLUDE</code> indicates that a top-level window
                  * won't be blocked by any application-modal dialogs. Also, it isn't
                  * blocked by document-modal dialogs from outside of its child hierarchy.
                  */
                 // @ts-ignore
-                readonly APPLICATION_EXCLUDE: java.awt.Dialog.ModalExclusionType
+                public static readonly APPLICATION_EXCLUDE: java.awt.Dialog.ModalExclusionType
                 /**
                  * <code>TOOLKIT_EXCLUDE</code> indicates that a top-level window
                  * won't be blocked by  application-modal or toolkit-modal dialogs. Also,
@@ -36,11 +36,11 @@ declare namespace java {
                  * property will be left unchanged.
                  */
                 // @ts-ignore
-                readonly TOOLKIT_EXCLUDE: java.awt.Dialog.ModalExclusionType
+                public static readonly TOOLKIT_EXCLUDE: java.awt.Dialog.ModalExclusionType
                 // @ts-ignore
-                values(): java.awt.Dialog.ModalExclusionType[]
+                public static values(): java.awt.Dialog.ModalExclusionType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.awt.Dialog.ModalExclusionType
+                public static valueOf(name: java.lang.String | string): java.awt.Dialog.ModalExclusionType
             }
         }
     }

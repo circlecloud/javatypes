@@ -15,18 +15,18 @@ declare namespace javax {
                      * The ordering of fields and properties in a class is undefined.
                      */
                     // @ts-ignore
-                    readonly UNDEFINED: javax.xml.bind.annotation.XmlAccessOrder
+                    public static readonly UNDEFINED: javax.xml.bind.annotation.XmlAccessOrder
                     /**
                      * The ordering of fields and properties in a class is in
                      * alphabetical order as determined by the
                      * method java.lang.String.compareTo(String anotherString).
                      */
                     // @ts-ignore
-                    readonly ALPHABETICAL: javax.xml.bind.annotation.XmlAccessOrder
+                    public static readonly ALPHABETICAL: javax.xml.bind.annotation.XmlAccessOrder
                     // @ts-ignore
-                    values(): javax.xml.bind.annotation.XmlAccessOrder[]
+                    public static values(): javax.xml.bind.annotation.XmlAccessOrder[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.xml.bind.annotation.XmlAccessOrder
+                    public static valueOf(name: java.lang.String | string): javax.xml.bind.annotation.XmlAccessOrder
                 }
             }
         }

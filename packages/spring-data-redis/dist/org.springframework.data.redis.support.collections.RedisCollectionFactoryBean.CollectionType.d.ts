@@ -12,19 +12,19 @@ declare namespace org {
                             // @ts-ignore
                             class CollectionType extends java.lang.Enum<org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType> {
                                 // @ts-ignore
-                                readonly LIST: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
+                                public static readonly LIST: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
                                 // @ts-ignore
-                                readonly SET: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
+                                public static readonly SET: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
                                 // @ts-ignore
-                                readonly ZSET: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
+                                public static readonly ZSET: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
                                 // @ts-ignore
-                                readonly MAP: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
+                                public static readonly MAP: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
                                 // @ts-ignore
-                                readonly PROPERTIES: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
+                                public static readonly PROPERTIES: org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
                                 // @ts-ignore
-                                values(): org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType[]
+                                public static values(): org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
+                                public static valueOf(name: java.lang.String | string): org.springframework.data.redis.support.collections.RedisCollectionFactoryBean.CollectionType
                             }
                         }
                     }

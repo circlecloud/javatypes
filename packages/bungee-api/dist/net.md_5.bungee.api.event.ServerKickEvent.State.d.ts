@@ -7,15 +7,15 @@ declare namespace net {
                         // @ts-ignore
                         class State extends java.lang.Enum<net.md_5.bungee.api.event.ServerKickEvent.State> {
                             // @ts-ignore
-                            readonly CONNECTING: net.md_5.bungee.api.event.ServerKickEvent.State
+                            public static readonly CONNECTING: net.md_5.bungee.api.event.ServerKickEvent.State
                             // @ts-ignore
-                            readonly CONNECTED: net.md_5.bungee.api.event.ServerKickEvent.State
+                            public static readonly CONNECTED: net.md_5.bungee.api.event.ServerKickEvent.State
                             // @ts-ignore
-                            readonly UNKNOWN: net.md_5.bungee.api.event.ServerKickEvent.State
+                            public static readonly UNKNOWN: net.md_5.bungee.api.event.ServerKickEvent.State
                             // @ts-ignore
-                            values(): net.md_5.bungee.api.event.ServerKickEvent.State[]
+                            public static values(): net.md_5.bungee.api.event.ServerKickEvent.State[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): net.md_5.bungee.api.event.ServerKickEvent.State
+                            public static valueOf(name: java.lang.String | string): net.md_5.bungee.api.event.ServerKickEvent.State
                         }
                     }
                 }

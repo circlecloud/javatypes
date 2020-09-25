@@ -11,25 +11,25 @@ declare namespace javax {
                  * Location of new documentation files.
                  */
                 // @ts-ignore
-                readonly DOCUMENTATION_OUTPUT: javax.tools.DocumentationTool.Location
+                public static readonly DOCUMENTATION_OUTPUT: javax.tools.DocumentationTool.Location
                 /**
                  * Location to search for doclets.
                  */
                 // @ts-ignore
-                readonly DOCLET_PATH: javax.tools.DocumentationTool.Location
+                public static readonly DOCLET_PATH: javax.tools.DocumentationTool.Location
                 /**
                  * Location to search for taglets.
                  */
                 // @ts-ignore
-                readonly TAGLET_PATH: javax.tools.DocumentationTool.Location
+                public static readonly TAGLET_PATH: javax.tools.DocumentationTool.Location
                 // @ts-ignore
-                values(): javax.tools.DocumentationTool.Location[]
+                public static values(): javax.tools.DocumentationTool.Location[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.tools.DocumentationTool.Location
+                public static valueOf(name: java.lang.String | string): javax.tools.DocumentationTool.Location
                 // @ts-ignore
-                getName(): string
+                public getName(): string
                 // @ts-ignore
-                isOutputLocation(): boolean
+                public isOutputLocation(): boolean
             }
         }
     }

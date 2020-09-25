@@ -12,31 +12,31 @@ declare namespace org {
                          * Removed by an entity
                          */
                         // @ts-ignore
-                        readonly ENTITY: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
+                        public static readonly ENTITY: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
                         /**
                          * Removed by an explosion
                          */
                         // @ts-ignore
-                        readonly EXPLOSION: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
+                        public static readonly EXPLOSION: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
                         /**
                          * Removed by placing a block on it
                          */
                         // @ts-ignore
-                        readonly OBSTRUCTION: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
+                        public static readonly OBSTRUCTION: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
                         /**
                          * Removed by destroying the block behind it, etc
                          */
                         // @ts-ignore
-                        readonly PHYSICS: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
+                        public static readonly PHYSICS: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
                         /**
                          * Removed by an uncategorised cause
                          */
                         // @ts-ignore
-                        readonly DEFAULT: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
+                        public static readonly DEFAULT: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
                         // @ts-ignore
-                        values(): org.bukkit.event.hanging.HangingBreakEvent.RemoveCause[]
+                        public static values(): org.bukkit.event.hanging.HangingBreakEvent.RemoveCause[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
                     }
                 }
             }

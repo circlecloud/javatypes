@@ -12,17 +12,17 @@ declare namespace javax {
                      * Indicates the sort order has changed.
                      */
                     // @ts-ignore
-                    readonly SORT_ORDER_CHANGED: javax.swing.event.RowSorterEvent.Type
+                    public static readonly SORT_ORDER_CHANGED: javax.swing.event.RowSorterEvent.Type
                     /**
                      * Indicates the contents have been newly sorted or
                      * transformed in some way.
                      */
                     // @ts-ignore
-                    readonly SORTED: javax.swing.event.RowSorterEvent.Type
+                    public static readonly SORTED: javax.swing.event.RowSorterEvent.Type
                     // @ts-ignore
-                    values(): javax.swing.event.RowSorterEvent.Type[]
+                    public static values(): javax.swing.event.RowSorterEvent.Type[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.swing.event.RowSorterEvent.Type
+                    public static valueOf(name: java.lang.String | string): javax.swing.event.RowSorterEvent.Type
                 }
             }
         }

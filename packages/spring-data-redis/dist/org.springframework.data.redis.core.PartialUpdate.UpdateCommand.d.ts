@@ -11,13 +11,13 @@ declare namespace org {
                         // @ts-ignore
                         class UpdateCommand extends java.lang.Enum<org.springframework.data.redis.core.PartialUpdate.UpdateCommand> {
                             // @ts-ignore
-                            readonly SET: org.springframework.data.redis.core.PartialUpdate.UpdateCommand
+                            public static readonly SET: org.springframework.data.redis.core.PartialUpdate.UpdateCommand
                             // @ts-ignore
-                            readonly DEL: org.springframework.data.redis.core.PartialUpdate.UpdateCommand
+                            public static readonly DEL: org.springframework.data.redis.core.PartialUpdate.UpdateCommand
                             // @ts-ignore
-                            values(): org.springframework.data.redis.core.PartialUpdate.UpdateCommand[]
+                            public static values(): org.springframework.data.redis.core.PartialUpdate.UpdateCommand[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.core.PartialUpdate.UpdateCommand
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.core.PartialUpdate.UpdateCommand
                         }
                     }
                 }

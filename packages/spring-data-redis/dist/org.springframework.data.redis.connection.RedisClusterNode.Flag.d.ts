@@ -11,27 +11,27 @@ declare namespace org {
                         // @ts-ignore
                         class Flag extends java.lang.Enum<org.springframework.data.redis.connection.RedisClusterNode.Flag> {
                             // @ts-ignore
-                            readonly MYSELF: org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static readonly MYSELF: org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            readonly MASTER: org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static readonly MASTER: org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            readonly SLAVE: org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static readonly SLAVE: org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            readonly FAIL: org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static readonly FAIL: org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            readonly PFAIL: org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static readonly PFAIL: org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            readonly HANDSHAKE: org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static readonly HANDSHAKE: org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            readonly NOADDR: org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static readonly NOADDR: org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            readonly NOFLAGS: org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static readonly NOFLAGS: org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.RedisClusterNode.Flag[]
+                            public static values(): org.springframework.data.redis.connection.RedisClusterNode.Flag[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisClusterNode.Flag
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisClusterNode.Flag
                             // @ts-ignore
-                            getRaw(): string
+                            public getRaw(): string
                         }
                     }
                 }

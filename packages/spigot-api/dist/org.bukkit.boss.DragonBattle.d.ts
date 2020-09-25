@@ -22,10 +22,17 @@ declare namespace org {
                 /**
                  * Get the location of the end portal.
                  * This location will be at the center of the base (bottom) of the portal.
-                 * @return the end portal location
+                 * @return the end portal location or null if not generated
                  */
                 // @ts-ignore
                 getEndPortalLocation(): org.bukkit.Location
+                /**
+                 * Generate the end portal.
+                 * @param withPortals whether or not end portal blocks should be generated
+                 * @return true if generated, false if already present
+                 */
+                // @ts-ignore
+                generateEndPortal(withPortals: boolean): boolean
                 /**
                  * Check whether or not the first dragon has been killed already.
                  * @return true if killed before, false otherwise

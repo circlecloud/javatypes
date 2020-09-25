@@ -5,43 +5,43 @@ declare namespace cn {
                 // @ts-ignore
                 class Instrument extends java.lang.Enum<cn.nukkit.block.BlockNoteblock.Instrument> {
                     // @ts-ignore
-                    readonly PIANO: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly PIANO: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly BASS_DRUM: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly BASS_DRUM: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly DRUM: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly DRUM: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly STICKS: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly STICKS: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly BASS: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly BASS: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly GLOCKENSPIEL: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly GLOCKENSPIEL: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly FLUTE: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly FLUTE: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly CHIME: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly CHIME: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly GUITAR: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly GUITAR: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly XYLOPHONE: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly XYLOPHONE: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly VIBRAPHONE: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly VIBRAPHONE: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly COW_BELL: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly COW_BELL: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly DIDGERIDOO: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly DIDGERIDOO: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly SQUARE_WAVE: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly SQUARE_WAVE: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly BANJO: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly BANJO: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    readonly ELECTRIC_PIANO: cn.nukkit.block.BlockNoteblock.Instrument
+                    public static readonly ELECTRIC_PIANO: cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    values(): cn.nukkit.block.BlockNoteblock.Instrument[]
+                    public static values(): cn.nukkit.block.BlockNoteblock.Instrument[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): cn.nukkit.block.BlockNoteblock.Instrument
+                    public static valueOf(name: java.lang.String | string): cn.nukkit.block.BlockNoteblock.Instrument
                     // @ts-ignore
-                    getSound(): cn.nukkit.level.Sound
+                    public getSound(): cn.nukkit.level.Sound
                 }
             }
         }

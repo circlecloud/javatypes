@@ -16,41 +16,41 @@ declare namespace org {
                              * @return 
                              */
                             // @ts-ignore
-                            readonly UPSERT: org.springframework.data.redis.connection.RedisStringCommands.SetOption
+                            public static readonly UPSERT: org.springframework.data.redis.connection.RedisStringCommands.SetOption
                             /**
                              * {@code NX}
                              * @return 
                              */
                             // @ts-ignore
-                            readonly SET_IF_ABSENT: org.springframework.data.redis.connection.RedisStringCommands.SetOption
+                            public static readonly SET_IF_ABSENT: org.springframework.data.redis.connection.RedisStringCommands.SetOption
                             /**
                              * {@code XX}
                              * @return 
                              */
                             // @ts-ignore
-                            readonly SET_IF_PRESENT: org.springframework.data.redis.connection.RedisStringCommands.SetOption
+                            public static readonly SET_IF_PRESENT: org.springframework.data.redis.connection.RedisStringCommands.SetOption
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.RedisStringCommands.SetOption[]
+                            public static values(): org.springframework.data.redis.connection.RedisStringCommands.SetOption[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisStringCommands.SetOption
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisStringCommands.SetOption
                             /**
                              * Do not set any additional command argument.
                              * @return 
                              */
                             // @ts-ignore
-                            upsert(): org.springframework.data.redis.connection.RedisStringCommands.SetOption
+                            public static upsert(): org.springframework.data.redis.connection.RedisStringCommands.SetOption
                             /**
                              * {@code XX}
                              * @return 
                              */
                             // @ts-ignore
-                            ifPresent(): org.springframework.data.redis.connection.RedisStringCommands.SetOption
+                            public static ifPresent(): org.springframework.data.redis.connection.RedisStringCommands.SetOption
                             /**
                              * {@code NX}
                              * @return 
                              */
                             // @ts-ignore
-                            ifAbsent(): org.springframework.data.redis.connection.RedisStringCommands.SetOption
+                            public static ifAbsent(): org.springframework.data.redis.connection.RedisStringCommands.SetOption
                         }
                     }
                 }

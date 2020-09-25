@@ -13,26 +13,26 @@ declare namespace org {
                              * Placed on floor.
                              */
                             // @ts-ignore
-                            readonly FLOOR: org.bukkit.block.data.type.Bell.Attachment
+                            public static readonly FLOOR: org.bukkit.block.data.type.Bell.Attachment
                             /**
                              * Placed on ceiling.
                              */
                             // @ts-ignore
-                            readonly CEILING: org.bukkit.block.data.type.Bell.Attachment
+                            public static readonly CEILING: org.bukkit.block.data.type.Bell.Attachment
                             /**
                              * Placed on one wall.
                              */
                             // @ts-ignore
-                            readonly SINGLE_WALL: org.bukkit.block.data.type.Bell.Attachment
+                            public static readonly SINGLE_WALL: org.bukkit.block.data.type.Bell.Attachment
                             /**
                              * Placed between two walls.
                              */
                             // @ts-ignore
-                            readonly DOUBLE_WALL: org.bukkit.block.data.type.Bell.Attachment
+                            public static readonly DOUBLE_WALL: org.bukkit.block.data.type.Bell.Attachment
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.Bell.Attachment[]
+                            public static values(): org.bukkit.block.data.type.Bell.Attachment[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Bell.Attachment
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Bell.Attachment
                         }
                     }
                 }

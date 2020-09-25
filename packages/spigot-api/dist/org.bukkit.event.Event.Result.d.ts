@@ -10,24 +10,24 @@ declare namespace org {
                      * may not be denied.
                      */
                     // @ts-ignore
-                    readonly DENY: org.bukkit.event.Event.Result
+                    public static readonly DENY: org.bukkit.event.Event.Result
                     /**
                      * Neither deny nor allow the event. The server will proceed with its
                      * normal handling.
                      */
                     // @ts-ignore
-                    readonly DEFAULT: org.bukkit.event.Event.Result
+                    public static readonly DEFAULT: org.bukkit.event.Event.Result
                     /**
                      * Allow / Force the event. The action indicated by the event will
                      * take place if possible, even if the server would not normally allow
                      * the action. Some actions may not be allowed.
                      */
                     // @ts-ignore
-                    readonly ALLOW: org.bukkit.event.Event.Result
+                    public static readonly ALLOW: org.bukkit.event.Event.Result
                     // @ts-ignore
-                    values(): org.bukkit.event.Event.Result[]
+                    public static values(): org.bukkit.event.Event.Result[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.event.Event.Result
+                    public static valueOf(name: java.lang.String | string): org.bukkit.event.Event.Result
                 }
             }
         }

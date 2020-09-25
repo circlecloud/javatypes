@@ -319,6 +319,13 @@ declare namespace org {
                 // @ts-ignore
                 breakNaturally(tool: org.bukkit.inventory.ItemStack): boolean
                 /**
+                 * Simulate bone meal application to this block (if possible).
+                 * @param face the face on which bonemeal should be applied
+                 * @return true if the block was bonemealed, false otherwise
+                 */
+                // @ts-ignore
+                applyBoneMeal(face: org.bukkit.block.BlockFace): boolean
+                /**
                  * Returns a list of items which would drop by destroying this block
                  * @return a list of dropped items for this type of block
                  */

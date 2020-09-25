@@ -15,11 +15,11 @@ declare namespace org {
                      * @deprecated all plugins are now assumed to be UTF-8 aware.
                      */
                     // @ts-ignore
-                    readonly UTF8: org.bukkit.plugin.PluginAwareness.Flags
+                    public static readonly UTF8: org.bukkit.plugin.PluginAwareness.Flags
                     // @ts-ignore
-                    values(): org.bukkit.plugin.PluginAwareness.Flags[]
+                    public static values(): org.bukkit.plugin.PluginAwareness.Flags[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.plugin.PluginAwareness.Flags
+                    public static valueOf(name: java.lang.String | string): org.bukkit.plugin.PluginAwareness.Flags
                 }
             }
         }

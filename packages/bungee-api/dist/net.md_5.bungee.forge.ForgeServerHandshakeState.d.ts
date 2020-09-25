@@ -12,23 +12,23 @@ declare namespace net {
                      * Start the handshake.
                      */
                     // @ts-ignore
-                    readonly START: net.md_5.bungee.forge.ForgeServerHandshakeState
+                    public static readonly START: net.md_5.bungee.forge.ForgeServerHandshakeState
                     // @ts-ignore
-                    readonly HELLO: net.md_5.bungee.forge.ForgeServerHandshakeState
+                    public static readonly HELLO: net.md_5.bungee.forge.ForgeServerHandshakeState
                     // @ts-ignore
-                    readonly WAITINGCACK: net.md_5.bungee.forge.ForgeServerHandshakeState
+                    public static readonly WAITINGCACK: net.md_5.bungee.forge.ForgeServerHandshakeState
                     // @ts-ignore
-                    readonly COMPLETE: net.md_5.bungee.forge.ForgeServerHandshakeState
+                    public static readonly COMPLETE: net.md_5.bungee.forge.ForgeServerHandshakeState
                     /**
                      * Handshake has been completed. Do not respond to any more handshake
                      * packets.
                      */
                     // @ts-ignore
-                    readonly DONE: net.md_5.bungee.forge.ForgeServerHandshakeState
+                    public static readonly DONE: net.md_5.bungee.forge.ForgeServerHandshakeState
                     // @ts-ignore
-                    values(): net.md_5.bungee.forge.ForgeServerHandshakeState[]
+                    public static values(): net.md_5.bungee.forge.ForgeServerHandshakeState[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): net.md_5.bungee.forge.ForgeServerHandshakeState
+                    public static valueOf(name: java.lang.String | string): net.md_5.bungee.forge.ForgeServerHandshakeState
                 }
             }
         }

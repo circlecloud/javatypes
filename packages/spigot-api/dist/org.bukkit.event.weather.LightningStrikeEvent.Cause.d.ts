@@ -9,31 +9,31 @@ declare namespace org {
                          * Triggered by the /summon command.
                          */
                         // @ts-ignore
-                        readonly COMMAND: org.bukkit.event.weather.LightningStrikeEvent.Cause
+                        public static readonly COMMAND: org.bukkit.event.weather.LightningStrikeEvent.Cause
                         /**
                          * Triggered by an enchanted trident.
                          */
                         // @ts-ignore
-                        readonly TRIDENT: org.bukkit.event.weather.LightningStrikeEvent.Cause
+                        public static readonly TRIDENT: org.bukkit.event.weather.LightningStrikeEvent.Cause
                         /**
                          * Triggered by a skeleton horse trap.
                          */
                         // @ts-ignore
-                        readonly TRAP: org.bukkit.event.weather.LightningStrikeEvent.Cause
+                        public static readonly TRAP: org.bukkit.event.weather.LightningStrikeEvent.Cause
                         /**
                          * Triggered by weather.
                          */
                         // @ts-ignore
-                        readonly WEATHER: org.bukkit.event.weather.LightningStrikeEvent.Cause
+                        public static readonly WEATHER: org.bukkit.event.weather.LightningStrikeEvent.Cause
                         /**
                          * Unknown trigger.
                          */
                         // @ts-ignore
-                        readonly UNKNOWN: org.bukkit.event.weather.LightningStrikeEvent.Cause
+                        public static readonly UNKNOWN: org.bukkit.event.weather.LightningStrikeEvent.Cause
                         // @ts-ignore
-                        values(): org.bukkit.event.weather.LightningStrikeEvent.Cause[]
+                        public static values(): org.bukkit.event.weather.LightningStrikeEvent.Cause[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.weather.LightningStrikeEvent.Cause
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.weather.LightningStrikeEvent.Cause
                     }
                 }
             }

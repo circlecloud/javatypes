@@ -11,16 +11,16 @@ declare namespace org {
                      * Use {@link SoftReference SoftReferences}.
                      */
                     // @ts-ignore
-                    readonly SOFT: org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
+                    public static readonly SOFT: org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
                     /**
                      * Use {@link WeakReference WeakReferences}.
                      */
                     // @ts-ignore
-                    readonly WEAK: org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
+                    public static readonly WEAK: org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
                     // @ts-ignore
-                    values(): org.springframework.util.ConcurrentReferenceHashMap.ReferenceType[]
+                    public static values(): org.springframework.util.ConcurrentReferenceHashMap.ReferenceType[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
+                    public static valueOf(name: java.lang.String | string): org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
                 }
             }
         }

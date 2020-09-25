@@ -12,31 +12,31 @@ declare namespace net {
                          * ServerConnectEvent to the new server was canceled.
                          */
                         // @ts-ignore
-                        readonly EVENT_CANCEL: net.md_5.bungee.api.ServerConnectRequest.Result
+                        public static readonly EVENT_CANCEL: net.md_5.bungee.api.ServerConnectRequest.Result
                         /**
                          * Already connected to target server.
                          */
                         // @ts-ignore
-                        readonly ALREADY_CONNECTED: net.md_5.bungee.api.ServerConnectRequest.Result
+                        public static readonly ALREADY_CONNECTED: net.md_5.bungee.api.ServerConnectRequest.Result
                         /**
                          * Already connecting to target server.
                          */
                         // @ts-ignore
-                        readonly ALREADY_CONNECTING: net.md_5.bungee.api.ServerConnectRequest.Result
+                        public static readonly ALREADY_CONNECTING: net.md_5.bungee.api.ServerConnectRequest.Result
                         /**
                          * Successfully connected to server.
                          */
                         // @ts-ignore
-                        readonly SUCCESS: net.md_5.bungee.api.ServerConnectRequest.Result
+                        public static readonly SUCCESS: net.md_5.bungee.api.ServerConnectRequest.Result
                         /**
                          * Connection failed, error can be accessed from callback method handle.
                          */
                         // @ts-ignore
-                        readonly FAIL: net.md_5.bungee.api.ServerConnectRequest.Result
+                        public static readonly FAIL: net.md_5.bungee.api.ServerConnectRequest.Result
                         // @ts-ignore
-                        values(): net.md_5.bungee.api.ServerConnectRequest.Result[]
+                        public static values(): net.md_5.bungee.api.ServerConnectRequest.Result[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): net.md_5.bungee.api.ServerConnectRequest.Result
+                        public static valueOf(name: java.lang.String | string): net.md_5.bungee.api.ServerConnectRequest.Result
                     }
                 }
             }

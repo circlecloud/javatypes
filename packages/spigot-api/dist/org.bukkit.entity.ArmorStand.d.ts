@@ -234,6 +234,30 @@ declare namespace org {
                  */
                 // @ts-ignore
                 setMarker(marker: boolean): void
+                /**
+                 * Locks the equipment slot with the specified
+                 * {@link LockType locking mechanism}.
+                 * @param slot the equipment slot to lock
+                 * @param lockType the LockType to lock the equipment slot with
+                 */
+                // @ts-ignore
+                addEquipmentLock(slot: org.bukkit.inventory.EquipmentSlot, lockType: org.bukkit.entity.ArmorStand.LockType): void
+                /**
+                 * Remove a {@link LockType locking mechanism}.
+                 * @param slot the equipment slot to change
+                 * @param lockType the lockType to remove
+                 */
+                // @ts-ignore
+                removeEquipmentLock(slot: org.bukkit.inventory.EquipmentSlot, lockType: org.bukkit.entity.ArmorStand.LockType): void
+                /**
+                 * Returns if the ArmorStand has the specified
+                 * {@link LockType locking mechanism}.
+                 * @param slot the EquipmentSlot to test
+                 * @param lockType the LockType to test
+                 * @return if the ArmnorStand has been locked with the parameters specified
+                 */
+                // @ts-ignore
+                hasEquipmentLock(slot: org.bukkit.inventory.EquipmentSlot, lockType: org.bukkit.entity.ArmorStand.LockType): boolean
             }
         }
     }

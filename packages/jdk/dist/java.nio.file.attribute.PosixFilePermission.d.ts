@@ -15,51 +15,51 @@ declare namespace java {
                      * Read permission, owner.
                      */
                     // @ts-ignore
-                    readonly OWNER_READ: java.nio.file.attribute.PosixFilePermission
+                    public static readonly OWNER_READ: java.nio.file.attribute.PosixFilePermission
                     /**
                      * Write permission, owner.
                      */
                     // @ts-ignore
-                    readonly OWNER_WRITE: java.nio.file.attribute.PosixFilePermission
+                    public static readonly OWNER_WRITE: java.nio.file.attribute.PosixFilePermission
                     /**
                      * Execute/search permission, owner.
                      */
                     // @ts-ignore
-                    readonly OWNER_EXECUTE: java.nio.file.attribute.PosixFilePermission
+                    public static readonly OWNER_EXECUTE: java.nio.file.attribute.PosixFilePermission
                     /**
                      * Read permission, group.
                      */
                     // @ts-ignore
-                    readonly GROUP_READ: java.nio.file.attribute.PosixFilePermission
+                    public static readonly GROUP_READ: java.nio.file.attribute.PosixFilePermission
                     /**
                      * Write permission, group.
                      */
                     // @ts-ignore
-                    readonly GROUP_WRITE: java.nio.file.attribute.PosixFilePermission
+                    public static readonly GROUP_WRITE: java.nio.file.attribute.PosixFilePermission
                     /**
                      * Execute/search permission, group.
                      */
                     // @ts-ignore
-                    readonly GROUP_EXECUTE: java.nio.file.attribute.PosixFilePermission
+                    public static readonly GROUP_EXECUTE: java.nio.file.attribute.PosixFilePermission
                     /**
                      * Read permission, others.
                      */
                     // @ts-ignore
-                    readonly OTHERS_READ: java.nio.file.attribute.PosixFilePermission
+                    public static readonly OTHERS_READ: java.nio.file.attribute.PosixFilePermission
                     /**
                      * Write permission, others.
                      */
                     // @ts-ignore
-                    readonly OTHERS_WRITE: java.nio.file.attribute.PosixFilePermission
+                    public static readonly OTHERS_WRITE: java.nio.file.attribute.PosixFilePermission
                     /**
                      * Execute/search permission, others.
                      */
                     // @ts-ignore
-                    readonly OTHERS_EXECUTE: java.nio.file.attribute.PosixFilePermission
+                    public static readonly OTHERS_EXECUTE: java.nio.file.attribute.PosixFilePermission
                     // @ts-ignore
-                    values(): java.nio.file.attribute.PosixFilePermission[]
+                    public static values(): java.nio.file.attribute.PosixFilePermission[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): java.nio.file.attribute.PosixFilePermission
+                    public static valueOf(name: java.lang.String | string): java.nio.file.attribute.PosixFilePermission
                 }
             }
         }

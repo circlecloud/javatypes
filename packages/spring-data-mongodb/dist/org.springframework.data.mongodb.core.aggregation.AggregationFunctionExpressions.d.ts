@@ -16,38 +16,38 @@ declare namespace org {
                         // @ts-ignore
                         class AggregationFunctionExpressions extends java.lang.Enum<org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions> {
                             // @ts-ignore
-                            readonly SIZE: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly SIZE: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly CMP: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly CMP: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly EQ: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly EQ: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly GT: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly GT: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly GTE: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly GTE: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly LT: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly LT: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly LTE: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly LTE: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly NE: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly NE: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly SUBTRACT: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly SUBTRACT: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly ADD: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly ADD: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            readonly MULTIPLY: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static readonly MULTIPLY: org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             // @ts-ignore
-                            values(): org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions[]
+                            public static values(): org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.aggregation.AggregationFunctionExpressions
                             /**
                              * Returns an {@link AggregationExpression} build from the current {@link Enum} name and the given parameters.
                              * @param parameters must not be {#literal null}
                              * @return 
                              */
                             // @ts-ignore
-                            of(...parameters: java.lang.Object[] | any[]): org.springframework.data.mongodb.core.aggregation.AggregationExpression
+                            public of(...parameters: java.lang.Object[] | any[]): org.springframework.data.mongodb.core.aggregation.AggregationExpression
                         }
                     }
                 }

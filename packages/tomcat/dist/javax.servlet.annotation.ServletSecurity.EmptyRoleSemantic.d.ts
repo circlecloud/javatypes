@@ -13,16 +13,16 @@ declare namespace javax {
                      * identity
                      */
                     // @ts-ignore
-                    readonly PERMIT: javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic
+                    public static readonly PERMIT: javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic
                     /**
                      * Access MUST be denied, regardless of authentication state or identity
                      */
                     // @ts-ignore
-                    readonly DENY: javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic
+                    public static readonly DENY: javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic
                     // @ts-ignore
-                    values(): javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic[]
+                    public static values(): javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic
+                    public static valueOf(name: java.lang.String | string): javax.servlet.annotation.ServletSecurity.EmptyRoleSemantic
                 }
             }
         }

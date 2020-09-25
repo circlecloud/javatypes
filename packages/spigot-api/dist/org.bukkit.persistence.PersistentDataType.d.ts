@@ -60,6 +60,8 @@ declare namespace org {
                 // @ts-ignore
                 readonly LONG_ARRAY: org.bukkit.persistence.PersistentDataType<number /*long*/[], number /*long*/[]>
                 // @ts-ignore
+                readonly TAG_CONTAINER_ARRAY: org.bukkit.persistence.PersistentDataType<org.bukkit.persistence.PersistentDataContainer[], org.bukkit.persistence.PersistentDataContainer[]>
+                // @ts-ignore
                 readonly TAG_CONTAINER: org.bukkit.persistence.PersistentDataType<org.bukkit.persistence.PersistentDataContainer, org.bukkit.persistence.PersistentDataContainer>
                 /**
                  * Returns the primitive data type of this tag.

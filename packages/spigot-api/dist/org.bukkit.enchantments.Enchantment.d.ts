@@ -195,6 +195,11 @@ declare namespace org {
                  */
                 // @ts-ignore
                 public static readonly VANISHING_CURSE: org.bukkit.enchantments.Enchantment
+                /**
+                 * Walk quicker on soul blocks
+                 */
+                // @ts-ignore
+                public static readonly SOUL_SPEED: org.bukkit.enchantments.Enchantment
                 // @ts-ignore
                 public getKey(): org.bukkit.NamespacedKey
                 /**

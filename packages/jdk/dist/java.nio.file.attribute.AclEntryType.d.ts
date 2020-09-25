@@ -12,28 +12,28 @@ declare namespace java {
                      * Explicitly grants access to a file or directory.
                      */
                     // @ts-ignore
-                    readonly ALLOW: java.nio.file.attribute.AclEntryType
+                    public static readonly ALLOW: java.nio.file.attribute.AclEntryType
                     /**
                      * Explicitly denies access to a file or directory.
                      */
                     // @ts-ignore
-                    readonly DENY: java.nio.file.attribute.AclEntryType
+                    public static readonly DENY: java.nio.file.attribute.AclEntryType
                     /**
                      * Log, in a system dependent way, the access specified in the
                      * permissions component of the ACL entry.
                      */
                     // @ts-ignore
-                    readonly AUDIT: java.nio.file.attribute.AclEntryType
+                    public static readonly AUDIT: java.nio.file.attribute.AclEntryType
                     /**
                      * Generate an alarm, in a system dependent way, the access specified in the
                      * permissions component of the ACL entry.
                      */
                     // @ts-ignore
-                    readonly ALARM: java.nio.file.attribute.AclEntryType
+                    public static readonly ALARM: java.nio.file.attribute.AclEntryType
                     // @ts-ignore
-                    values(): java.nio.file.attribute.AclEntryType[]
+                    public static values(): java.nio.file.attribute.AclEntryType[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): java.nio.file.attribute.AclEntryType
+                    public static valueOf(name: java.lang.String | string): java.nio.file.attribute.AclEntryType
                 }
             }
         }

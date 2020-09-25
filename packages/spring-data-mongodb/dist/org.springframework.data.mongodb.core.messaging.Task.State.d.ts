@@ -13,17 +13,17 @@ declare namespace org {
                             // @ts-ignore
                             class State extends java.lang.Enum<org.springframework.data.mongodb.core.messaging.Task.State> {
                                 // @ts-ignore
-                                readonly CREATED: org.springframework.data.mongodb.core.messaging.Task.State
+                                public static readonly CREATED: org.springframework.data.mongodb.core.messaging.Task.State
                                 // @ts-ignore
-                                readonly STARTING: org.springframework.data.mongodb.core.messaging.Task.State
+                                public static readonly STARTING: org.springframework.data.mongodb.core.messaging.Task.State
                                 // @ts-ignore
-                                readonly RUNNING: org.springframework.data.mongodb.core.messaging.Task.State
+                                public static readonly RUNNING: org.springframework.data.mongodb.core.messaging.Task.State
                                 // @ts-ignore
-                                readonly CANCELLED: org.springframework.data.mongodb.core.messaging.Task.State
+                                public static readonly CANCELLED: org.springframework.data.mongodb.core.messaging.Task.State
                                 // @ts-ignore
-                                values(): org.springframework.data.mongodb.core.messaging.Task.State[]
+                                public static values(): org.springframework.data.mongodb.core.messaging.Task.State[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.messaging.Task.State
+                                public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.messaging.Task.State
                             }
                         }
                     }

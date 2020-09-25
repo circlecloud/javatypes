@@ -14,7 +14,7 @@ declare namespace org {
                          * @see org.springframework.data.repository.reactive.RxJava2SortingRepository
                          */
                         // @ts-ignore
-                        class ReactiveMongoRepositoryFactoryBean<T extends <any>, S, ID extends java.io.Serializable> extends java.lang.Object {
+                        class ReactiveMongoRepositoryFactoryBean<T extends object, S, ID extends java.io.Serializable> extends java.lang.Object {
                             /**
                              * Creates a new {@link ReactiveMongoRepositoryFactoryBean} for the given repository interface.
                              * @param repositoryInterface must not be {#literal null}.

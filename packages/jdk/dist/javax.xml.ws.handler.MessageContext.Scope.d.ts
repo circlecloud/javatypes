@@ -13,13 +13,13 @@ declare namespace javax {
                     // @ts-ignore
                     class Scope extends java.lang.Enum<javax.xml.ws.handler.MessageContext.Scope> {
                         // @ts-ignore
-                        readonly APPLICATION: javax.xml.ws.handler.MessageContext.Scope
+                        public static readonly APPLICATION: javax.xml.ws.handler.MessageContext.Scope
                         // @ts-ignore
-                        readonly HANDLER: javax.xml.ws.handler.MessageContext.Scope
+                        public static readonly HANDLER: javax.xml.ws.handler.MessageContext.Scope
                         // @ts-ignore
-                        values(): javax.xml.ws.handler.MessageContext.Scope[]
+                        public static values(): javax.xml.ws.handler.MessageContext.Scope[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): javax.xml.ws.handler.MessageContext.Scope
+                        public static valueOf(name: java.lang.String | string): javax.xml.ws.handler.MessageContext.Scope
                     }
                 }
             }

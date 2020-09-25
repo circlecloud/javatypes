@@ -4,55 +4,55 @@ declare namespace cn {
             // @ts-ignore
             class DyeColor extends java.lang.Enum<cn.nukkit.utils.DyeColor> {
                 // @ts-ignore
-                readonly BLACK: cn.nukkit.utils.DyeColor
+                public static readonly BLACK: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly RED: cn.nukkit.utils.DyeColor
+                public static readonly RED: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly GREEN: cn.nukkit.utils.DyeColor
+                public static readonly GREEN: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly BROWN: cn.nukkit.utils.DyeColor
+                public static readonly BROWN: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly BLUE: cn.nukkit.utils.DyeColor
+                public static readonly BLUE: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly PURPLE: cn.nukkit.utils.DyeColor
+                public static readonly PURPLE: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly CYAN: cn.nukkit.utils.DyeColor
+                public static readonly CYAN: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly LIGHT_GRAY: cn.nukkit.utils.DyeColor
+                public static readonly LIGHT_GRAY: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly GRAY: cn.nukkit.utils.DyeColor
+                public static readonly GRAY: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly PINK: cn.nukkit.utils.DyeColor
+                public static readonly PINK: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly LIME: cn.nukkit.utils.DyeColor
+                public static readonly LIME: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly YELLOW: cn.nukkit.utils.DyeColor
+                public static readonly YELLOW: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly LIGHT_BLUE: cn.nukkit.utils.DyeColor
+                public static readonly LIGHT_BLUE: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly MAGENTA: cn.nukkit.utils.DyeColor
+                public static readonly MAGENTA: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly ORANGE: cn.nukkit.utils.DyeColor
+                public static readonly ORANGE: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                readonly WHITE: cn.nukkit.utils.DyeColor
+                public static readonly WHITE: cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                values(): cn.nukkit.utils.DyeColor[]
+                public static values(): cn.nukkit.utils.DyeColor[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): cn.nukkit.utils.DyeColor
+                public static valueOf(name: java.lang.String | string): cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                getColor(): cn.nukkit.utils.BlockColor
+                public getColor(): cn.nukkit.utils.BlockColor
                 // @ts-ignore
-                getDyeData(): number /*int*/
+                public getDyeData(): number /*int*/
                 // @ts-ignore
-                getWoolData(): number /*int*/
+                public getWoolData(): number /*int*/
                 // @ts-ignore
-                getName(): string
+                public getName(): string
                 // @ts-ignore
-                getDyeName(): string
+                public getDyeName(): string
                 // @ts-ignore
-                getByDyeData(dyeColorMeta: number /*int*/): cn.nukkit.utils.DyeColor
+                public static getByDyeData(dyeColorMeta: number /*int*/): cn.nukkit.utils.DyeColor
                 // @ts-ignore
-                getByWoolData(woolColorMeta: number /*int*/): cn.nukkit.utils.DyeColor
+                public static getByWoolData(woolColorMeta: number /*int*/): cn.nukkit.utils.DyeColor
             }
         }
     }

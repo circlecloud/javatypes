@@ -7,17 +7,17 @@ declare namespace org {
                         // @ts-ignore
                         class BitOperation extends java.lang.Enum<org.springframework.data.redis.connection.RedisStringCommands.BitOperation> {
                             // @ts-ignore
-                            readonly AND: org.springframework.data.redis.connection.RedisStringCommands.BitOperation
+                            public static readonly AND: org.springframework.data.redis.connection.RedisStringCommands.BitOperation
                             // @ts-ignore
-                            readonly OR: org.springframework.data.redis.connection.RedisStringCommands.BitOperation
+                            public static readonly OR: org.springframework.data.redis.connection.RedisStringCommands.BitOperation
                             // @ts-ignore
-                            readonly XOR: org.springframework.data.redis.connection.RedisStringCommands.BitOperation
+                            public static readonly XOR: org.springframework.data.redis.connection.RedisStringCommands.BitOperation
                             // @ts-ignore
-                            readonly NOT: org.springframework.data.redis.connection.RedisStringCommands.BitOperation
+                            public static readonly NOT: org.springframework.data.redis.connection.RedisStringCommands.BitOperation
                             // @ts-ignore
-                            values(): org.springframework.data.redis.connection.RedisStringCommands.BitOperation[]
+                            public static values(): org.springframework.data.redis.connection.RedisStringCommands.BitOperation[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisStringCommands.BitOperation
+                            public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.RedisStringCommands.BitOperation
                         }
                     }
                 }

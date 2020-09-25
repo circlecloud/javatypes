@@ -9,15 +9,15 @@ declare namespace org {
                 // @ts-ignore
                 class AxisDirection extends java.lang.Enum<org.spongepowered.api.util.AxisDirection> {
                     // @ts-ignore
-                    readonly PLUS: org.spongepowered.api.util.AxisDirection
+                    public static readonly PLUS: org.spongepowered.api.util.AxisDirection
                     // @ts-ignore
-                    readonly ZERO: org.spongepowered.api.util.AxisDirection
+                    public static readonly ZERO: org.spongepowered.api.util.AxisDirection
                     // @ts-ignore
-                    readonly MINUS: org.spongepowered.api.util.AxisDirection
+                    public static readonly MINUS: org.spongepowered.api.util.AxisDirection
                     // @ts-ignore
-                    values(): org.spongepowered.api.util.AxisDirection[]
+                    public static values(): org.spongepowered.api.util.AxisDirection[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.spongepowered.api.util.AxisDirection
+                    public static valueOf(name: java.lang.String | string): org.spongepowered.api.util.AxisDirection
                     /**
                      * Gets the signum for this direction.
                      * <p>
@@ -27,7 +27,7 @@ declare namespace org {
                      * @return The signum
                      */
                     // @ts-ignore
-                    getSignum(): number /*int*/
+                    public getSignum(): number /*int*/
                 }
             }
         }

@@ -16,36 +16,36 @@ declare namespace java {
                  * @see Desktop#open(java.io.File)
                  */
                 // @ts-ignore
-                readonly OPEN: java.awt.Desktop.Action
+                public static readonly OPEN: java.awt.Desktop.Action
                 /**
                  * Represents an "edit" action.
                  * @see Desktop#edit(java.io.File)
                  */
                 // @ts-ignore
-                readonly EDIT: java.awt.Desktop.Action
+                public static readonly EDIT: java.awt.Desktop.Action
                 /**
                  * Represents a "print" action.
                  * @see Desktop#print(java.io.File)
                  */
                 // @ts-ignore
-                readonly PRINT: java.awt.Desktop.Action
+                public static readonly PRINT: java.awt.Desktop.Action
                 /**
                  * Represents a "mail" action.
                  * @see Desktop#mail()
                  * @see Desktop#mail(java.net.URI)
                  */
                 // @ts-ignore
-                readonly MAIL: java.awt.Desktop.Action
+                public static readonly MAIL: java.awt.Desktop.Action
                 /**
                  * Represents a "browse" action.
                  * @see Desktop#browse(java.net.URI)
                  */
                 // @ts-ignore
-                readonly BROWSE: java.awt.Desktop.Action
+                public static readonly BROWSE: java.awt.Desktop.Action
                 // @ts-ignore
-                values(): java.awt.Desktop.Action[]
+                public static values(): java.awt.Desktop.Action[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.awt.Desktop.Action
+                public static valueOf(name: java.lang.String | string): java.awt.Desktop.Action
             }
         }
     }

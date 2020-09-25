@@ -179,27 +179,6 @@ declare namespace org {
                 // @ts-ignore
                 getSleepTicks(): number /*int*/
                 /**
-                 * Gets the Location where the player will spawn at their bed, null if
-                 * they have not slept in one or their current bed spawn is invalid.
-                 * @return Bed Spawn Location if bed exists, otherwise null.
-                 */
-                // @ts-ignore
-                getBedSpawnLocation(): org.bukkit.Location
-                /**
-                 * Sets the Location where the player will spawn at their bed.
-                 * @param location where to set the respawn location
-                 */
-                // @ts-ignore
-                setBedSpawnLocation(location: org.bukkit.Location): void
-                /**
-                 * Sets the Location where the player will spawn at their bed.
-                 * @param location where to set the respawn location
-                 * @param force whether to forcefully set the respawn location even if a
-                 *      valid bed is not present
-                 */
-                // @ts-ignore
-                setBedSpawnLocation(location: org.bukkit.Location, force: boolean): void
-                /**
                  * Attempts to make the entity sleep at the given location.
                  * <br>
                  * The location must be in the current world and have a bed placed at the
@@ -310,6 +289,19 @@ declare namespace org {
                 // @ts-ignore
                 undiscoverRecipes(recipes: java.util.Collection<org.bukkit.NamespacedKey> | Array<org.bukkit.NamespacedKey>): number /*int*/
                 /**
+                 * Check whether or not this entity has discovered the specified recipe.
+                 * @param recipe the key of the recipe to check
+                 * @return true if discovered, false otherwise
+                 */
+                // @ts-ignore
+                hasDiscoveredRecipe(recipe: org.bukkit.NamespacedKey): boolean
+                /**
+                 * Get an immutable set of recipes this entity has discovered.
+                 * @return all discovered recipes
+                 */
+                // @ts-ignore
+                getDiscoveredRecipes(): Array<org.bukkit.NamespacedKey>
+                /**
                  * Gets the entity currently perched on the left shoulder or null if no
                  * entity.
                  * <br>
@@ -363,6 +355,16 @@ declare namespace org {
                  */
                 // @ts-ignore
                 setShoulderEntityRight(entity: org.bukkit.entity.Entity): void
+                /**
+                 * Make the entity drop the item in their hand.
+                 * <br>
+                 * This will force the entity to drop the item they are holding with
+                 * an option to drop the entire {@link ItemStack} or just 1 of the items.
+                 * @param dropAll True to drop entire stack, false to drop 1 of the stack
+                 * @return True if item was dropped successfully
+                 */
+                // @ts-ignore
+                dropItem(dropAll: boolean): boolean
             }
         }
     }

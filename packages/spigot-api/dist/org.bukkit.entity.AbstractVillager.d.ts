@@ -5,7 +5,7 @@ declare namespace org {
              * Represents a villager NPC
              */
             // @ts-ignore
-            interface AbstractVillager extends org.bukkit.entity.Ageable, org.bukkit.entity.NPC, org.bukkit.inventory.InventoryHolder, org.bukkit.inventory.Merchant {
+            interface AbstractVillager extends org.bukkit.entity.Breedable, org.bukkit.entity.NPC, org.bukkit.inventory.InventoryHolder, org.bukkit.inventory.Merchant {
                 /**
                  * Gets this villager's inventory.
                  * <br>

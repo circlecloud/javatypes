@@ -10,34 +10,34 @@ declare namespace org {
                     // @ts-ignore
                     class DataType extends java.lang.Enum<org.springframework.data.redis.connection.DataType> {
                         // @ts-ignore
-                        readonly NONE: org.springframework.data.redis.connection.DataType
+                        public static readonly NONE: org.springframework.data.redis.connection.DataType
                         // @ts-ignore
-                        readonly STRING: org.springframework.data.redis.connection.DataType
+                        public static readonly STRING: org.springframework.data.redis.connection.DataType
                         // @ts-ignore
-                        readonly LIST: org.springframework.data.redis.connection.DataType
+                        public static readonly LIST: org.springframework.data.redis.connection.DataType
                         // @ts-ignore
-                        readonly SET: org.springframework.data.redis.connection.DataType
+                        public static readonly SET: org.springframework.data.redis.connection.DataType
                         // @ts-ignore
-                        readonly ZSET: org.springframework.data.redis.connection.DataType
+                        public static readonly ZSET: org.springframework.data.redis.connection.DataType
                         // @ts-ignore
-                        readonly HASH: org.springframework.data.redis.connection.DataType
+                        public static readonly HASH: org.springframework.data.redis.connection.DataType
                         // @ts-ignore
-                        values(): org.springframework.data.redis.connection.DataType[]
+                        public static values(): org.springframework.data.redis.connection.DataType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.DataType
+                        public static valueOf(name: java.lang.String | string): org.springframework.data.redis.connection.DataType
                         /**
                          * Returns the code associated with the current enum.
                          * @return code of this enum
                          */
                         // @ts-ignore
-                        code(): string
+                        public code(): string
                         /**
                          * Utility method for converting an enum code to an actual enum.
                          * @param code enum code
                          * @return actual enum corresponding to the given code
                          */
                         // @ts-ignore
-                        fromCode(code: java.lang.String | string): org.springframework.data.redis.connection.DataType
+                        public static fromCode(code: java.lang.String | string): org.springframework.data.redis.connection.DataType
                     }
                 }
             }

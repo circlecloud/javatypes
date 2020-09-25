@@ -17,29 +17,29 @@ declare namespace org {
                          * raw {@link EntityDamageEvent#getDamage()}.
                          */
                         // @ts-ignore
-                        readonly BASE: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
+                        public static readonly BASE: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
                         /**
                          * This represents the damage reduced by a wearing a helmet when hit
                          * by a falling block.
                          */
                         // @ts-ignore
-                        readonly HARD_HAT: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
+                        public static readonly HARD_HAT: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
                         /**
                          * This represents  the damage reduction caused by blocking, only present for
                          * {@link Player Players}.
                          */
                         // @ts-ignore
-                        readonly BLOCKING: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
+                        public static readonly BLOCKING: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
                         /**
                          * This represents the damage reduction caused by wearing armor.
                          */
                         // @ts-ignore
-                        readonly ARMOR: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
+                        public static readonly ARMOR: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
                         /**
                          * This represents the damage reduction caused by the Resistance potion effect.
                          */
                         // @ts-ignore
-                        readonly RESISTANCE: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
+                        public static readonly RESISTANCE: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
                         /**
                          * This represents the damage reduction caused by the combination of:
                          * <ul>
@@ -51,17 +51,17 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        readonly MAGIC: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
+                        public static readonly MAGIC: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
                         /**
                          * This represents the damage reduction caused by the absorption potion
                          * effect.
                          */
                         // @ts-ignore
-                        readonly ABSORPTION: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
+                        public static readonly ABSORPTION: org.bukkit.event.entity.EntityDamageEvent.DamageModifier
                         // @ts-ignore
-                        values(): org.bukkit.event.entity.EntityDamageEvent.DamageModifier[]
+                        public static values(): org.bukkit.event.entity.EntityDamageEvent.DamageModifier[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.entity.EntityDamageEvent.DamageModifier
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.entity.EntityDamageEvent.DamageModifier
                     }
                 }
             }

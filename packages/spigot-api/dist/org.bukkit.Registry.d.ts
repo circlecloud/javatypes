@@ -21,6 +21,12 @@ declare namespace org {
             // @ts-ignore
             readonly ART: org.bukkit.Registry<org.bukkit.Art>
             /**
+             * Attribute.
+             * @see Attribute
+             */
+            // @ts-ignore
+            readonly ATTRIBUTE: org.bukkit.Registry<org.bukkit.attribute.Attribute>
+            /**
              * Server biomes.
              * @see Biome
              */
@@ -81,6 +87,12 @@ declare namespace org {
              */
             // @ts-ignore
             readonly MEMORY_MODULE_TYPE: org.bukkit.Registry<org.bukkit.entity.memory.MemoryKey<any>>
+            /**
+             * Server fluids.
+             * @see Fluid
+             */
+            // @ts-ignore
+            readonly FLUID: org.bukkit.Registry<org.bukkit.Fluid>
             /**
              * Get the object by its key.
              * @param key non-null key

@@ -18,13 +18,13 @@ declare namespace javax {
                  * Problem which prevents the tool's normal completion.
                  */
                 // @ts-ignore
-                readonly ERROR: javax.tools.Diagnostic.Kind
+                public static readonly ERROR: javax.tools.Diagnostic.Kind
                 /**
                  * Problem which does not usually prevent the tool from
                  * completing normally.
                  */
                 // @ts-ignore
-                readonly WARNING: javax.tools.Diagnostic.Kind
+                public static readonly WARNING: javax.tools.Diagnostic.Kind
                 /**
                  * Problem similar to a warning, but is mandated by the tool's
                  * specification.  For example, the Java&trade; Language
@@ -32,21 +32,21 @@ declare namespace javax {
                  * unchecked operations and the use of deprecated methods.
                  */
                 // @ts-ignore
-                readonly MANDATORY_WARNING: javax.tools.Diagnostic.Kind
+                public static readonly MANDATORY_WARNING: javax.tools.Diagnostic.Kind
                 /**
                  * Informative message from the tool.
                  */
                 // @ts-ignore
-                readonly NOTE: javax.tools.Diagnostic.Kind
+                public static readonly NOTE: javax.tools.Diagnostic.Kind
                 /**
                  * Diagnostic which does not fit within the other kinds.
                  */
                 // @ts-ignore
-                readonly OTHER: javax.tools.Diagnostic.Kind
+                public static readonly OTHER: javax.tools.Diagnostic.Kind
                 // @ts-ignore
-                values(): javax.tools.Diagnostic.Kind[]
+                public static values(): javax.tools.Diagnostic.Kind[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): javax.tools.Diagnostic.Kind
+                public static valueOf(name: java.lang.String | string): javax.tools.Diagnostic.Kind
             }
         }
     }

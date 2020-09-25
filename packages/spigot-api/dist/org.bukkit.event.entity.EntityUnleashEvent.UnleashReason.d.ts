@@ -10,23 +10,23 @@ declare namespace org {
                          * unleashed
                          */
                         // @ts-ignore
-                        readonly HOLDER_GONE: org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
+                        public static readonly HOLDER_GONE: org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
                         /**
                          * When the entity's leashholder attempts to unleash it
                          */
                         // @ts-ignore
-                        readonly PLAYER_UNLEASH: org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
+                        public static readonly PLAYER_UNLEASH: org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
                         /**
                          * When the entity's leashholder is more than 10 blocks away
                          */
                         // @ts-ignore
-                        readonly DISTANCE: org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
+                        public static readonly DISTANCE: org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
                         // @ts-ignore
-                        readonly UNKNOWN: org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
+                        public static readonly UNKNOWN: org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
                         // @ts-ignore
-                        values(): org.bukkit.event.entity.EntityUnleashEvent.UnleashReason[]
+                        public static values(): org.bukkit.event.entity.EntityUnleashEvent.UnleashReason[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
                     }
                 }
             }

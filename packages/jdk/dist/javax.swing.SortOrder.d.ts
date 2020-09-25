@@ -13,25 +13,25 @@ declare namespace javax {
              * <code>ASCENDING</code> order is <code>0, 1, 4</code>.
              */
             // @ts-ignore
-            readonly ASCENDING: javax.swing.SortOrder
+            public static readonly ASCENDING: javax.swing.SortOrder
             /**
              * Enumeration value indicating the items are sorted in decreasing order.
              * For example, the set <code>1, 4, 0</code> sorted in
              * <code>DESCENDING</code> order is <code>4, 1, 0</code>.
              */
             // @ts-ignore
-            readonly DESCENDING: javax.swing.SortOrder
+            public static readonly DESCENDING: javax.swing.SortOrder
             /**
              * Enumeration value indicating the items are unordered.
              * For example, the set <code>1, 4, 0</code> in
              * <code>UNSORTED</code> order is <code>1, 4, 0</code>.
              */
             // @ts-ignore
-            readonly UNSORTED: javax.swing.SortOrder
+            public static readonly UNSORTED: javax.swing.SortOrder
             // @ts-ignore
-            values(): javax.swing.SortOrder[]
+            public static values(): javax.swing.SortOrder[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): javax.swing.SortOrder
+            public static valueOf(name: java.lang.String | string): javax.swing.SortOrder
         }
     }
 }

@@ -18,7 +18,7 @@ declare namespace javax {
                      * by some of the JAXB annotations.
                      */
                     // @ts-ignore
-                    readonly PROPERTY: javax.xml.bind.annotation.XmlAccessType
+                    public static readonly PROPERTY: javax.xml.bind.annotation.XmlAccessType
                     /**
                      * Every non static, non transient field in a JAXB-bound class will be automatically
                      * bound to XML, unless annotated by {@link XmlTransient}.
@@ -26,7 +26,7 @@ declare namespace javax {
                      * by some of the JAXB annotations.
                      */
                     // @ts-ignore
-                    readonly FIELD: javax.xml.bind.annotation.XmlAccessType
+                    public static readonly FIELD: javax.xml.bind.annotation.XmlAccessType
                     /**
                      * Every public getter/setter pair and every public field will be
                      * automatically bound to XML, unless annotated by {@link XmlTransient}.
@@ -35,17 +35,17 @@ declare namespace javax {
                      * explicitly annotated by the appropriate JAXB annotations.
                      */
                     // @ts-ignore
-                    readonly PUBLIC_MEMBER: javax.xml.bind.annotation.XmlAccessType
+                    public static readonly PUBLIC_MEMBER: javax.xml.bind.annotation.XmlAccessType
                     /**
                      * None of the fields or properties is bound to XML unless they
                      * are specifically  annotated with some of the JAXB annotations.
                      */
                     // @ts-ignore
-                    readonly NONE: javax.xml.bind.annotation.XmlAccessType
+                    public static readonly NONE: javax.xml.bind.annotation.XmlAccessType
                     // @ts-ignore
-                    values(): javax.xml.bind.annotation.XmlAccessType[]
+                    public static values(): javax.xml.bind.annotation.XmlAccessType[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.xml.bind.annotation.XmlAccessType
+                    public static valueOf(name: java.lang.String | string): javax.xml.bind.annotation.XmlAccessType
                 }
             }
         }

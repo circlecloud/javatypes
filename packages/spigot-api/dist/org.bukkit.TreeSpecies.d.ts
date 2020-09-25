@@ -9,43 +9,43 @@ declare namespace org {
              * Represents the common tree species.
              */
             // @ts-ignore
-            readonly GENERIC: org.bukkit.TreeSpecies
+            public static readonly GENERIC: org.bukkit.TreeSpecies
             /**
              * Represents the darker barked/leaved tree species.
              */
             // @ts-ignore
-            readonly REDWOOD: org.bukkit.TreeSpecies
+            public static readonly REDWOOD: org.bukkit.TreeSpecies
             /**
              * Represents birches.
              */
             // @ts-ignore
-            readonly BIRCH: org.bukkit.TreeSpecies
+            public static readonly BIRCH: org.bukkit.TreeSpecies
             /**
              * Represents jungle trees.
              */
             // @ts-ignore
-            readonly JUNGLE: org.bukkit.TreeSpecies
+            public static readonly JUNGLE: org.bukkit.TreeSpecies
             /**
              * Represents acacia trees.
              */
             // @ts-ignore
-            readonly ACACIA: org.bukkit.TreeSpecies
+            public static readonly ACACIA: org.bukkit.TreeSpecies
             /**
              * Represents dark oak trees.
              */
             // @ts-ignore
-            readonly DARK_OAK: org.bukkit.TreeSpecies
+            public static readonly DARK_OAK: org.bukkit.TreeSpecies
             // @ts-ignore
-            values(): org.bukkit.TreeSpecies[]
+            public static values(): org.bukkit.TreeSpecies[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.TreeSpecies
+            public static valueOf(name: java.lang.String | string): org.bukkit.TreeSpecies
             /**
              * Gets the associated data value representing this species
              * @return A byte containing the data value of this tree species
              * @deprecated Magic value
              */
             // @ts-ignore
-            getData(): number /*byte*/
+            public getData(): number /*byte*/
             /**
              * Gets the TreeSpecies with the given data value
              * @param data Data value to fetch
@@ -54,7 +54,7 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getByData(data: number /*byte*/): org.bukkit.TreeSpecies
+            public static getByData(data: number /*byte*/): org.bukkit.TreeSpecies
         }
     }
 }

@@ -6,19 +6,19 @@ declare namespace javax {
         // @ts-ignore
         class DispatcherType extends java.lang.Enum<javax.servlet.DispatcherType> {
             // @ts-ignore
-            readonly FORWARD: javax.servlet.DispatcherType
+            public static readonly FORWARD: javax.servlet.DispatcherType
             // @ts-ignore
-            readonly INCLUDE: javax.servlet.DispatcherType
+            public static readonly INCLUDE: javax.servlet.DispatcherType
             // @ts-ignore
-            readonly REQUEST: javax.servlet.DispatcherType
+            public static readonly REQUEST: javax.servlet.DispatcherType
             // @ts-ignore
-            readonly ASYNC: javax.servlet.DispatcherType
+            public static readonly ASYNC: javax.servlet.DispatcherType
             // @ts-ignore
-            readonly ERROR: javax.servlet.DispatcherType
+            public static readonly ERROR: javax.servlet.DispatcherType
             // @ts-ignore
-            values(): javax.servlet.DispatcherType[]
+            public static values(): javax.servlet.DispatcherType[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): javax.servlet.DispatcherType
+            public static valueOf(name: java.lang.String | string): javax.servlet.DispatcherType
         }
     }
 }

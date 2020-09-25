@@ -13,71 +13,71 @@ declare namespace cn {
                  * Represents an empty vehicle.
                  */
                 // @ts-ignore
-                readonly MINECART_EMPTY: cn.nukkit.utils.MinecartType
+                public static readonly MINECART_EMPTY: cn.nukkit.utils.MinecartType
                 /**
                  * Represents a chest holder.
                  */
                 // @ts-ignore
-                readonly MINECART_CHEST: cn.nukkit.utils.MinecartType
+                public static readonly MINECART_CHEST: cn.nukkit.utils.MinecartType
                 /**
                  * Represents a furnace minecart.
                  */
                 // @ts-ignore
-                readonly MINECART_FURNACE: cn.nukkit.utils.MinecartType
+                public static readonly MINECART_FURNACE: cn.nukkit.utils.MinecartType
                 /**
                  * Represents a TNT minecart.
                  */
                 // @ts-ignore
-                readonly MINECART_TNT: cn.nukkit.utils.MinecartType
+                public static readonly MINECART_TNT: cn.nukkit.utils.MinecartType
                 /**
                  * Represents a mob spawner minecart.
                  */
                 // @ts-ignore
-                readonly MINECART_MOB_SPAWNER: cn.nukkit.utils.MinecartType
+                public static readonly MINECART_MOB_SPAWNER: cn.nukkit.utils.MinecartType
                 /**
                  * Represents a hopper minecart.
                  */
                 // @ts-ignore
-                readonly MINECART_HOPPER: cn.nukkit.utils.MinecartType
+                public static readonly MINECART_HOPPER: cn.nukkit.utils.MinecartType
                 /**
                  * Represents a command block minecart.
                  */
                 // @ts-ignore
-                readonly MINECART_COMMAND_BLOCK: cn.nukkit.utils.MinecartType
+                public static readonly MINECART_COMMAND_BLOCK: cn.nukkit.utils.MinecartType
                 /**
                  * Represents an unknown minecart.
                  */
                 // @ts-ignore
-                readonly MINECART_UNKNOWN: cn.nukkit.utils.MinecartType
+                public static readonly MINECART_UNKNOWN: cn.nukkit.utils.MinecartType
                 // @ts-ignore
-                values(): cn.nukkit.utils.MinecartType[]
+                public static values(): cn.nukkit.utils.MinecartType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): cn.nukkit.utils.MinecartType
+                public static valueOf(name: java.lang.String | string): cn.nukkit.utils.MinecartType
                 /**
                  * Get the variants of the current minecart
                  * @return Integer
                  */
                 // @ts-ignore
-                getId(): number /*int*/
+                public getId(): number /*int*/
                 /**
                  * Get the name of the minecart variants
                  * @return String
                  */
                 // @ts-ignore
-                getName(): string
+                public getName(): string
                 /**
                  * Gets if the minecart contains block
                  * @return Boolean
                  */
                 // @ts-ignore
-                hasBlockInside(): boolean
+                public hasBlockInside(): boolean
                 /**
                  * Returns of an instance of Minecart-variants
                  * @param types The number of minecart
                  * @return Integer
                  */
                 // @ts-ignore
-                valueOf(types: number /*int*/): cn.nukkit.utils.MinecartType
+                public static valueOf(types: number /*int*/): cn.nukkit.utils.MinecartType
             }
         }
     }

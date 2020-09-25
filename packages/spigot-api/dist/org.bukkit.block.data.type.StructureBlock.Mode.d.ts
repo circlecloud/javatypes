@@ -13,27 +13,27 @@ declare namespace org {
                              * Allows selection and saving of a structure.
                              */
                             // @ts-ignore
-                            readonly SAVE: org.bukkit.block.data.type.StructureBlock.Mode
+                            public static readonly SAVE: org.bukkit.block.data.type.StructureBlock.Mode
                             /**
                              * Allows loading of a structure.
                              */
                             // @ts-ignore
-                            readonly LOAD: org.bukkit.block.data.type.StructureBlock.Mode
+                            public static readonly LOAD: org.bukkit.block.data.type.StructureBlock.Mode
                             /**
                              * Used for detection of two opposite corners of a structure.
                              */
                             // @ts-ignore
-                            readonly CORNER: org.bukkit.block.data.type.StructureBlock.Mode
+                            public static readonly CORNER: org.bukkit.block.data.type.StructureBlock.Mode
                             /**
                              * Dummy block used to run a custom function during world generation
                              * before being removed.
                              */
                             // @ts-ignore
-                            readonly DATA: org.bukkit.block.data.type.StructureBlock.Mode
+                            public static readonly DATA: org.bukkit.block.data.type.StructureBlock.Mode
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.StructureBlock.Mode[]
+                            public static values(): org.bukkit.block.data.type.StructureBlock.Mode[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.StructureBlock.Mode
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.StructureBlock.Mode
                         }
                     }
                 }

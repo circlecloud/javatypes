@@ -12,28 +12,28 @@ declare namespace org {
                      * is unknown while in this state.
                      */
                     // @ts-ignore
-                    readonly UNLOADED: org.spongepowered.api.world.ChunkState
+                    public static readonly UNLOADED: org.spongepowered.api.world.ChunkState
                     /**
                      * The chunk is loaded but has not yet been generated.
                      */
                     // @ts-ignore
-                    readonly NOT_GENERATED: org.spongepowered.api.world.ChunkState
+                    public static readonly NOT_GENERATED: org.spongepowered.api.world.ChunkState
                     /**
                      * The chunk has been generated (implying that the shape of the terrain has
                      * been formed out of a basic block) but none of the populators or
                      * structures have been applied yet.
                      */
                     // @ts-ignore
-                    readonly NOT_POPULATED: org.spongepowered.api.world.ChunkState
+                    public static readonly NOT_POPULATED: org.spongepowered.api.world.ChunkState
                     /**
                      * The chunk is fully generated and loaded into the world.
                      */
                     // @ts-ignore
-                    readonly LOADED: org.spongepowered.api.world.ChunkState
+                    public static readonly LOADED: org.spongepowered.api.world.ChunkState
                     // @ts-ignore
-                    values(): org.spongepowered.api.world.ChunkState[]
+                    public static values(): org.spongepowered.api.world.ChunkState[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.spongepowered.api.world.ChunkState
+                    public static valueOf(name: java.lang.String | string): org.spongepowered.api.world.ChunkState
                 }
             }
         }

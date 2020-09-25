@@ -11,12 +11,12 @@ declare namespace java {
                  * Open for read access.
                  */
                 // @ts-ignore
-                readonly READ: java.nio.file.StandardOpenOption
+                public static readonly READ: java.nio.file.StandardOpenOption
                 /**
                  * Open for write access.
                  */
                 // @ts-ignore
-                readonly WRITE: java.nio.file.StandardOpenOption
+                public static readonly WRITE: java.nio.file.StandardOpenOption
                 /**
                  * If the file is opened for {@link #WRITE} access then bytes will be written
                  * to the end of the file rather than the beginning.
@@ -24,14 +24,14 @@ declare namespace java {
                  * is file system specific if writing to the end of the file is atomic.
                  */
                 // @ts-ignore
-                readonly APPEND: java.nio.file.StandardOpenOption
+                public static readonly APPEND: java.nio.file.StandardOpenOption
                 /**
                  * If the file already exists and it is opened for {@link #WRITE}
                  * access, then its length is truncated to 0. This option is ignored
                  * if the file is opened only for {@link #READ} access.
                  */
                 // @ts-ignore
-                readonly TRUNCATE_EXISTING: java.nio.file.StandardOpenOption
+                public static readonly TRUNCATE_EXISTING: java.nio.file.StandardOpenOption
                 /**
                  * Create a new file if it does not exist.
                  * This option is ignored if the {@link #CREATE_NEW} option is also set.
@@ -40,7 +40,7 @@ declare namespace java {
                  * operations.
                  */
                 // @ts-ignore
-                readonly CREATE: java.nio.file.StandardOpenOption
+                public static readonly CREATE: java.nio.file.StandardOpenOption
                 /**
                  * Create a new file, failing if the file already exists.
                  * The check for the existence of the file and the creation of the file
@@ -48,7 +48,7 @@ declare namespace java {
                  * operations.
                  */
                 // @ts-ignore
-                readonly CREATE_NEW: java.nio.file.StandardOpenOption
+                public static readonly CREATE_NEW: java.nio.file.StandardOpenOption
                 /**
                  * Delete on close. When this option is present then the implementation
                  * makes a <em>best effort</em> attempt to delete the file when closed
@@ -71,7 +71,7 @@ declare namespace java {
                  * (by throwing {@link java.io.IOException}).
                  */
                 // @ts-ignore
-                readonly DELETE_ON_CLOSE: java.nio.file.StandardOpenOption
+                public static readonly DELETE_ON_CLOSE: java.nio.file.StandardOpenOption
                 /**
                  * Sparse file. When used with the {@link #CREATE_NEW} option then this
                  * option provides a <em>hint</em> that the new file will be sparse. The
@@ -79,25 +79,25 @@ declare namespace java {
                  * sparse files.
                  */
                 // @ts-ignore
-                readonly SPARSE: java.nio.file.StandardOpenOption
+                public static readonly SPARSE: java.nio.file.StandardOpenOption
                 /**
                  * Requires that every update to the file's content or metadata be written
                  * synchronously to the underlying storage device.
                  * @see <a href="package-summary.html#integrity">Synchronized I/O file integrity</a>
                  */
                 // @ts-ignore
-                readonly SYNC: java.nio.file.StandardOpenOption
+                public static readonly SYNC: java.nio.file.StandardOpenOption
                 /**
                  * Requires that every update to the file's content be written
                  * synchronously to the underlying storage device.
                  * @see <a href="package-summary.html#integrity">Synchronized I/O file integrity</a>
                  */
                 // @ts-ignore
-                readonly DSYNC: java.nio.file.StandardOpenOption
+                public static readonly DSYNC: java.nio.file.StandardOpenOption
                 // @ts-ignore
-                values(): java.nio.file.StandardOpenOption[]
+                public static values(): java.nio.file.StandardOpenOption[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.nio.file.StandardOpenOption
+                public static valueOf(name: java.lang.String | string): java.nio.file.StandardOpenOption
             }
         }
     }

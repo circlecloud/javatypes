@@ -7,17 +7,17 @@ declare namespace org {
                         // @ts-ignore
                         class AcceptorState extends java.lang.Enum<org.apache.tomcat.util.net.Acceptor.AcceptorState> {
                             // @ts-ignore
-                            readonly NEW: org.apache.tomcat.util.net.Acceptor.AcceptorState
+                            public static readonly NEW: org.apache.tomcat.util.net.Acceptor.AcceptorState
                             // @ts-ignore
-                            readonly RUNNING: org.apache.tomcat.util.net.Acceptor.AcceptorState
+                            public static readonly RUNNING: org.apache.tomcat.util.net.Acceptor.AcceptorState
                             // @ts-ignore
-                            readonly PAUSED: org.apache.tomcat.util.net.Acceptor.AcceptorState
+                            public static readonly PAUSED: org.apache.tomcat.util.net.Acceptor.AcceptorState
                             // @ts-ignore
-                            readonly ENDED: org.apache.tomcat.util.net.Acceptor.AcceptorState
+                            public static readonly ENDED: org.apache.tomcat.util.net.Acceptor.AcceptorState
                             // @ts-ignore
-                            values(): org.apache.tomcat.util.net.Acceptor.AcceptorState[]
+                            public static values(): org.apache.tomcat.util.net.Acceptor.AcceptorState[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.Acceptor.AcceptorState
+                            public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.Acceptor.AcceptorState
                         }
                     }
                 }

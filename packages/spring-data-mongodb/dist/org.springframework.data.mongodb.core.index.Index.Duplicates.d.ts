@@ -11,11 +11,11 @@ declare namespace org {
                             // @ts-ignore
                             class Duplicates extends java.lang.Enum<org.springframework.data.mongodb.core.index.Index.Duplicates> {
                                 // @ts-ignore
-                                readonly RETAIN: org.springframework.data.mongodb.core.index.Index.Duplicates
+                                public static readonly RETAIN: org.springframework.data.mongodb.core.index.Index.Duplicates
                                 // @ts-ignore
-                                values(): org.springframework.data.mongodb.core.index.Index.Duplicates[]
+                                public static values(): org.springframework.data.mongodb.core.index.Index.Duplicates[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.index.Index.Duplicates
+                                public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.index.Index.Duplicates
                             }
                         }
                     }

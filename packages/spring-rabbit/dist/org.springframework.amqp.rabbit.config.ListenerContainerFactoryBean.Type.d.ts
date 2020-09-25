@@ -13,16 +13,16 @@ declare namespace org {
                              * {@link SimpleMessageListenerContainer}.
                              */
                             // @ts-ignore
-                            readonly simple: org.springframework.amqp.rabbit.config.ListenerContainerFactoryBean.Type
+                            public static readonly simple: org.springframework.amqp.rabbit.config.ListenerContainerFactoryBean.Type
                             /**
                              * {@link DirectMessageListenerContainer}.
                              */
                             // @ts-ignore
-                            readonly direct: org.springframework.amqp.rabbit.config.ListenerContainerFactoryBean.Type
+                            public static readonly direct: org.springframework.amqp.rabbit.config.ListenerContainerFactoryBean.Type
                             // @ts-ignore
-                            values(): org.springframework.amqp.rabbit.config.ListenerContainerFactoryBean.Type[]
+                            public static values(): org.springframework.amqp.rabbit.config.ListenerContainerFactoryBean.Type[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.springframework.amqp.rabbit.config.ListenerContainerFactoryBean.Type
+                            public static valueOf(name: java.lang.String | string): org.springframework.amqp.rabbit.config.ListenerContainerFactoryBean.Type
                         }
                     }
                 }

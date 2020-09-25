@@ -9,7 +9,7 @@ declare namespace org {
                          * @author Oliver Gierke
                          */
                         // @ts-ignore
-                        class MongoRepositoryFactoryBean<T extends <any>, S, ID extends java.io.Serializable> extends java.lang.Object {
+                        class MongoRepositoryFactoryBean<T extends object, S, ID extends java.io.Serializable> extends java.lang.Object {
                             /**
                              * Creates a new {@link MongoRepositoryFactoryBean} for the given repository interface.
                              * @param repositoryInterface must not be {#literal null}.

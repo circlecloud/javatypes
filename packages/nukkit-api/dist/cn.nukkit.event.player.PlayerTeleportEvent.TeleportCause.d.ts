@@ -6,21 +6,21 @@ declare namespace cn {
                     // @ts-ignore
                     class TeleportCause extends java.lang.Enum<cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause> {
                         // @ts-ignore
-                        readonly COMMAND: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
+                        public static readonly COMMAND: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
                         // @ts-ignore
-                        readonly PLUGIN: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
+                        public static readonly PLUGIN: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
                         // @ts-ignore
-                        readonly NETHER_PORTAL: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
+                        public static readonly NETHER_PORTAL: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
                         // @ts-ignore
-                        readonly ENDER_PEARL: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
+                        public static readonly ENDER_PEARL: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
                         // @ts-ignore
-                        readonly CHORUS_FRUIT: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
+                        public static readonly CHORUS_FRUIT: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
                         // @ts-ignore
-                        readonly UNKNOWN: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
+                        public static readonly UNKNOWN: cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
                         // @ts-ignore
-                        values(): cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause[]
+                        public static values(): cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
+                        public static valueOf(name: java.lang.String | string): cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause
                     }
                 }
             }

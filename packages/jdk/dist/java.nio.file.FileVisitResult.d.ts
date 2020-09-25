@@ -14,12 +14,12 @@ declare namespace java {
                  * be visited.
                  */
                 // @ts-ignore
-                readonly CONTINUE: java.nio.file.FileVisitResult
+                public static readonly CONTINUE: java.nio.file.FileVisitResult
                 /**
                  * Terminate.
                  */
                 // @ts-ignore
-                readonly TERMINATE: java.nio.file.FileVisitResult
+                public static readonly TERMINATE: java.nio.file.FileVisitResult
                 /**
                  * Continue without visiting the entries in this directory. This result
                  * is only meaningful when returned from the {@link
@@ -27,7 +27,7 @@ declare namespace java {
                  * this result type is the same as returning {@link #CONTINUE}.
                  */
                 // @ts-ignore
-                readonly SKIP_SUBTREE: java.nio.file.FileVisitResult
+                public static readonly SKIP_SUBTREE: java.nio.file.FileVisitResult
                 /**
                  * Continue without visiting the <em>siblings</em> of this file or directory.
                  * If returned from the {@link FileVisitor#preVisitDirectory
@@ -36,11 +36,11 @@ declare namespace java {
                  * method is not invoked.
                  */
                 // @ts-ignore
-                readonly SKIP_SIBLINGS: java.nio.file.FileVisitResult
+                public static readonly SKIP_SIBLINGS: java.nio.file.FileVisitResult
                 // @ts-ignore
-                values(): java.nio.file.FileVisitResult[]
+                public static values(): java.nio.file.FileVisitResult[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.nio.file.FileVisitResult
+                public static valueOf(name: java.lang.String | string): java.nio.file.FileVisitResult
             }
         }
     }

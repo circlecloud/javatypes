@@ -5,13 +5,13 @@ declare namespace javax {
                 // @ts-ignore
                 class Style extends java.lang.Enum<javax.jws.soap.SOAPBinding.Style> {
                     // @ts-ignore
-                    readonly DOCUMENT: javax.jws.soap.SOAPBinding.Style
+                    public static readonly DOCUMENT: javax.jws.soap.SOAPBinding.Style
                     // @ts-ignore
-                    readonly RPC: javax.jws.soap.SOAPBinding.Style
+                    public static readonly RPC: javax.jws.soap.SOAPBinding.Style
                     // @ts-ignore
-                    values(): javax.jws.soap.SOAPBinding.Style[]
+                    public static values(): javax.jws.soap.SOAPBinding.Style[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.jws.soap.SOAPBinding.Style
+                    public static valueOf(name: java.lang.String | string): javax.jws.soap.SOAPBinding.Style
                 }
             }
         }

@@ -12,47 +12,47 @@ declare namespace org {
                          * When a player is fishing, ie casting the line out.
                          */
                         // @ts-ignore
-                        readonly FISHING: org.bukkit.event.player.PlayerFishEvent.State
+                        public static readonly FISHING: org.bukkit.event.player.PlayerFishEvent.State
                         /**
                          * When a player has successfully caught a fish and is reeling it in. In
                          * this instance, a "fish" is any item retrieved from water as a result
                          * of fishing, ie an item, but not necessarily a fish.
                          */
                         // @ts-ignore
-                        readonly CAUGHT_FISH: org.bukkit.event.player.PlayerFishEvent.State
+                        public static readonly CAUGHT_FISH: org.bukkit.event.player.PlayerFishEvent.State
                         /**
                          * When a player has successfully caught an entity. This refers to any
                          * already spawned entity in the world that has been hooked directly by
                          * the rod.
                          */
                         // @ts-ignore
-                        readonly CAUGHT_ENTITY: org.bukkit.event.player.PlayerFishEvent.State
+                        public static readonly CAUGHT_ENTITY: org.bukkit.event.player.PlayerFishEvent.State
                         /**
                          * When a bobber is stuck in the ground.
                          */
                         // @ts-ignore
-                        readonly IN_GROUND: org.bukkit.event.player.PlayerFishEvent.State
+                        public static readonly IN_GROUND: org.bukkit.event.player.PlayerFishEvent.State
                         /**
                          * When a player fails to catch a bite while fishing usually due to
                          * poor timing.
                          */
                         // @ts-ignore
-                        readonly FAILED_ATTEMPT: org.bukkit.event.player.PlayerFishEvent.State
+                        public static readonly FAILED_ATTEMPT: org.bukkit.event.player.PlayerFishEvent.State
                         /**
                          * When a player reels in their hook without receiving any bites.
                          */
                         // @ts-ignore
-                        readonly REEL_IN: org.bukkit.event.player.PlayerFishEvent.State
+                        public static readonly REEL_IN: org.bukkit.event.player.PlayerFishEvent.State
                         /**
                          * Called when there is a bite on the hook and it is ready to be reeled
                          * in.
                          */
                         // @ts-ignore
-                        readonly BITE: org.bukkit.event.player.PlayerFishEvent.State
+                        public static readonly BITE: org.bukkit.event.player.PlayerFishEvent.State
                         // @ts-ignore
-                        values(): org.bukkit.event.player.PlayerFishEvent.State[]
+                        public static values(): org.bukkit.event.player.PlayerFishEvent.State[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.player.PlayerFishEvent.State
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.player.PlayerFishEvent.State
                     }
                 }
             }

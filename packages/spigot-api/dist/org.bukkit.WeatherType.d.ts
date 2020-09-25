@@ -9,16 +9,16 @@ declare namespace org {
              * Raining or snowing depending on biome.
              */
             // @ts-ignore
-            readonly DOWNFALL: org.bukkit.WeatherType
+            public static readonly DOWNFALL: org.bukkit.WeatherType
             /**
              * Clear weather, clouds but no rain.
              */
             // @ts-ignore
-            readonly CLEAR: org.bukkit.WeatherType
+            public static readonly CLEAR: org.bukkit.WeatherType
             // @ts-ignore
-            values(): org.bukkit.WeatherType[]
+            public static values(): org.bukkit.WeatherType[]
             // @ts-ignore
-            valueOf(name: java.lang.String | string): org.bukkit.WeatherType
+            public static valueOf(name: java.lang.String | string): org.bukkit.WeatherType
         }
     }
 }

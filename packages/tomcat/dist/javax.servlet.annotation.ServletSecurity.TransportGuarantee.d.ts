@@ -11,16 +11,16 @@ declare namespace javax {
                      * User data must not be encrypted by the container during transport
                      */
                     // @ts-ignore
-                    readonly NONE: javax.servlet.annotation.ServletSecurity.TransportGuarantee
+                    public static readonly NONE: javax.servlet.annotation.ServletSecurity.TransportGuarantee
                     /**
                      * The container MUST encrypt user data during transport
                      */
                     // @ts-ignore
-                    readonly CONFIDENTIAL: javax.servlet.annotation.ServletSecurity.TransportGuarantee
+                    public static readonly CONFIDENTIAL: javax.servlet.annotation.ServletSecurity.TransportGuarantee
                     // @ts-ignore
-                    values(): javax.servlet.annotation.ServletSecurity.TransportGuarantee[]
+                    public static values(): javax.servlet.annotation.ServletSecurity.TransportGuarantee[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.servlet.annotation.ServletSecurity.TransportGuarantee
+                    public static valueOf(name: java.lang.String | string): javax.servlet.annotation.ServletSecurity.TransportGuarantee
                 }
             }
         }

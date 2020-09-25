@@ -26,59 +26,59 @@ declare namespace java {
                  * For example, day-of-week Monday might output "Monday".
                  */
                 // @ts-ignore
-                readonly FULL: java.time.format.TextStyle
+                public static readonly FULL: java.time.format.TextStyle
                 /**
                  * Full text for stand-alone use, typically the full description.
                  * For example, day-of-week Monday might output "Monday".
                  */
                 // @ts-ignore
-                readonly FULL_STANDALONE: java.time.format.TextStyle
+                public static readonly FULL_STANDALONE: java.time.format.TextStyle
                 /**
                  * Short text, typically an abbreviation.
                  * For example, day-of-week Monday might output "Mon".
                  */
                 // @ts-ignore
-                readonly SHORT: java.time.format.TextStyle
+                public static readonly SHORT: java.time.format.TextStyle
                 /**
                  * Short text for stand-alone use, typically an abbreviation.
                  * For example, day-of-week Monday might output "Mon".
                  */
                 // @ts-ignore
-                readonly SHORT_STANDALONE: java.time.format.TextStyle
+                public static readonly SHORT_STANDALONE: java.time.format.TextStyle
                 /**
                  * Narrow text, typically a single letter.
                  * For example, day-of-week Monday might output "M".
                  */
                 // @ts-ignore
-                readonly NARROW: java.time.format.TextStyle
+                public static readonly NARROW: java.time.format.TextStyle
                 /**
                  * Narrow text for stand-alone use, typically a single letter.
                  * For example, day-of-week Monday might output "M".
                  */
                 // @ts-ignore
-                readonly NARROW_STANDALONE: java.time.format.TextStyle
+                public static readonly NARROW_STANDALONE: java.time.format.TextStyle
                 // @ts-ignore
-                values(): java.time.format.TextStyle[]
+                public static values(): java.time.format.TextStyle[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.time.format.TextStyle
+                public static valueOf(name: java.lang.String | string): java.time.format.TextStyle
                 /**
                  * Returns true if the Style is a stand-alone style.
                  * @return true if the style is a stand-alone style.
                  */
                 // @ts-ignore
-                isStandalone(): boolean
+                public isStandalone(): boolean
                 /**
                  * Returns the stand-alone style with the same size.
                  * @return the stand-alone style with the same size
                  */
                 // @ts-ignore
-                asStandalone(): java.time.format.TextStyle
+                public asStandalone(): java.time.format.TextStyle
                 /**
                  * Returns the normal style with the same size.
                  * @return the normal style with the same size
                  */
                 // @ts-ignore
-                asNormal(): java.time.format.TextStyle
+                public asNormal(): java.time.format.TextStyle
             }
         }
     }

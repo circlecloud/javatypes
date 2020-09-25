@@ -12,15 +12,29 @@ declare namespace org {
                     // @ts-ignore
                     public static readonly HOME: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
                     // @ts-ignore
-                    public static readonly MEETING_POINT: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
+                    public static readonly POTENTIAL_JOB_SITE: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
                     // @ts-ignore
                     public static readonly JOB_SITE: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
+                    // @ts-ignore
+                    public static readonly MEETING_POINT: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
+                    // @ts-ignore
+                    public static readonly GOLEM_DETECTED_RECENTLY: org.bukkit.entity.memory.MemoryKey<java.lang.Boolean>
                     // @ts-ignore
                     public static readonly LAST_SLEPT: org.bukkit.entity.memory.MemoryKey<java.lang.Long | number>
                     // @ts-ignore
                     public static readonly LAST_WOKEN: org.bukkit.entity.memory.MemoryKey<java.lang.Long | number>
                     // @ts-ignore
                     public static readonly LAST_WORKED_AT_POI: org.bukkit.entity.memory.MemoryKey<java.lang.Long | number>
+                    // @ts-ignore
+                    public static readonly UNIVERSAL_ANGER: org.bukkit.entity.memory.MemoryKey<java.lang.Boolean>
+                    // @ts-ignore
+                    public static readonly ANGRY_AT: org.bukkit.entity.memory.MemoryKey<java.util.UUID>
+                    // @ts-ignore
+                    public static readonly ADMIRING_ITEM: org.bukkit.entity.memory.MemoryKey<java.lang.Boolean>
+                    // @ts-ignore
+                    public static readonly ADMIRING_DISABLED: org.bukkit.entity.memory.MemoryKey<java.lang.Boolean>
+                    // @ts-ignore
+                    public static readonly HUNTED_RECENTLY: org.bukkit.entity.memory.MemoryKey<java.lang.Boolean>
                     // @ts-ignore
                     public getKey(): org.bukkit.NamespacedKey
                     /**

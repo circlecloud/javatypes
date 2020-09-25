@@ -13,21 +13,21 @@ declare namespace org {
                              * The slab occupies the upper y half of the block.
                              */
                             // @ts-ignore
-                            readonly TOP: org.bukkit.block.data.type.Slab.Type
+                            public static readonly TOP: org.bukkit.block.data.type.Slab.Type
                             /**
                              * The slab occupies the lower y half of the block.
                              */
                             // @ts-ignore
-                            readonly BOTTOM: org.bukkit.block.data.type.Slab.Type
+                            public static readonly BOTTOM: org.bukkit.block.data.type.Slab.Type
                             /**
                              * The slab occupies the entire block.
                              */
                             // @ts-ignore
-                            readonly DOUBLE: org.bukkit.block.data.type.Slab.Type
+                            public static readonly DOUBLE: org.bukkit.block.data.type.Slab.Type
                             // @ts-ignore
-                            values(): org.bukkit.block.data.type.Slab.Type[]
+                            public static values(): org.bukkit.block.data.type.Slab.Type[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Slab.Type
+                            public static valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Slab.Type
                         }
                     }
                 }

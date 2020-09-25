@@ -12,21 +12,21 @@ declare namespace org {
                          * The switch is mounted to the floor and pointing upwards.
                          */
                         // @ts-ignore
-                        readonly FLOOR: org.bukkit.block.data.FaceAttachable.AttachedFace
+                        public static readonly FLOOR: org.bukkit.block.data.FaceAttachable.AttachedFace
                         /**
                          * The switch is mounted to the wall.
                          */
                         // @ts-ignore
-                        readonly WALL: org.bukkit.block.data.FaceAttachable.AttachedFace
+                        public static readonly WALL: org.bukkit.block.data.FaceAttachable.AttachedFace
                         /**
                          * The switch is mounted to the ceiling and pointing dowanrds.
                          */
                         // @ts-ignore
-                        readonly CEILING: org.bukkit.block.data.FaceAttachable.AttachedFace
+                        public static readonly CEILING: org.bukkit.block.data.FaceAttachable.AttachedFace
                         // @ts-ignore
-                        values(): org.bukkit.block.data.FaceAttachable.AttachedFace[]
+                        public static values(): org.bukkit.block.data.FaceAttachable.AttachedFace[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.block.data.FaceAttachable.AttachedFace
+                        public static valueOf(name: java.lang.String | string): org.bukkit.block.data.FaceAttachable.AttachedFace
                     }
                 }
             }

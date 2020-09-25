@@ -16,16 +16,16 @@ declare namespace org {
                      * registering a MongoDB specific {@link org.springframework.transaction.support.ResourceHolderSynchronization}.
                      */
                     // @ts-ignore
-                    readonly ALWAYS: org.springframework.data.mongodb.SessionSynchronization
+                    public static readonly ALWAYS: org.springframework.data.mongodb.SessionSynchronization
                     /**
                      * Synchronize with native MongoDB transactions initiated via {@link MongoTransactionManager}.
                      */
                     // @ts-ignore
-                    readonly ON_ACTUAL_TRANSACTION: org.springframework.data.mongodb.SessionSynchronization
+                    public static readonly ON_ACTUAL_TRANSACTION: org.springframework.data.mongodb.SessionSynchronization
                     // @ts-ignore
-                    values(): org.springframework.data.mongodb.SessionSynchronization[]
+                    public static values(): org.springframework.data.mongodb.SessionSynchronization[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.springframework.data.mongodb.SessionSynchronization
+                    public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.SessionSynchronization
                 }
             }
         }

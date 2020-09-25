@@ -13,26 +13,26 @@ declare namespace org {
                          * client.
                          */
                         // @ts-ignore
-                        readonly SUCCESSFULLY_LOADED: org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
+                        public static readonly SUCCESSFULLY_LOADED: org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
                         /**
                          * The client refused to accept the resource pack.
                          */
                         // @ts-ignore
-                        readonly DECLINED: org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
+                        public static readonly DECLINED: org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
                         /**
                          * The client accepted the pack, but download failed.
                          */
                         // @ts-ignore
-                        readonly FAILED_DOWNLOAD: org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
+                        public static readonly FAILED_DOWNLOAD: org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
                         /**
                          * The client accepted the pack and is beginning a download of it.
                          */
                         // @ts-ignore
-                        readonly ACCEPTED: org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
+                        public static readonly ACCEPTED: org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
                         // @ts-ignore
-                        values(): org.bukkit.event.player.PlayerResourcePackStatusEvent.Status[]
+                        public static values(): org.bukkit.event.player.PlayerResourcePackStatusEvent.Status[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
                     }
                 }
             }

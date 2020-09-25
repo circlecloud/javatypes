@@ -12,16 +12,16 @@ declare namespace org {
                          * Queue destination.
                          */
                         // @ts-ignore
-                        readonly QUEUE: org.springframework.amqp.core.Binding.DestinationType
+                        public static readonly QUEUE: org.springframework.amqp.core.Binding.DestinationType
                         /**
                          * Exchange destination.
                          */
                         // @ts-ignore
-                        readonly EXCHANGE: org.springframework.amqp.core.Binding.DestinationType
+                        public static readonly EXCHANGE: org.springframework.amqp.core.Binding.DestinationType
                         // @ts-ignore
-                        values(): org.springframework.amqp.core.Binding.DestinationType[]
+                        public static values(): org.springframework.amqp.core.Binding.DestinationType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.amqp.core.Binding.DestinationType
+                        public static valueOf(name: java.lang.String | string): org.springframework.amqp.core.Binding.DestinationType
                     }
                 }
             }

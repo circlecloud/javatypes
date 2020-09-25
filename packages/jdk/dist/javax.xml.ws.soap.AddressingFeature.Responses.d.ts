@@ -33,7 +33,7 @@ declare namespace javax {
                          * 3.1.2 AnonymousResponses Assertion</a> in the generated WSDL.
                          */
                         // @ts-ignore
-                        readonly ANONYMOUS: javax.xml.ws.soap.AddressingFeature.Responses
+                        public static readonly ANONYMOUS: javax.xml.ws.soap.AddressingFeature.Responses
                         /**
                          * Specifies the use of only non-anonymous
                          * responses. It will result into
@@ -42,16 +42,16 @@ declare namespace javax {
                          * 3.1.3 NonAnonymousResponses Assertion</a> in the generated WSDL.
                          */
                         // @ts-ignore
-                        readonly NON_ANONYMOUS: javax.xml.ws.soap.AddressingFeature.Responses
+                        public static readonly NON_ANONYMOUS: javax.xml.ws.soap.AddressingFeature.Responses
                         /**
                          * Supports all response types and this is the default
                          */
                         // @ts-ignore
-                        readonly ALL: javax.xml.ws.soap.AddressingFeature.Responses
+                        public static readonly ALL: javax.xml.ws.soap.AddressingFeature.Responses
                         // @ts-ignore
-                        values(): javax.xml.ws.soap.AddressingFeature.Responses[]
+                        public static values(): javax.xml.ws.soap.AddressingFeature.Responses[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): javax.xml.ws.soap.AddressingFeature.Responses
+                        public static valueOf(name: java.lang.String | string): javax.xml.ws.soap.AddressingFeature.Responses
                     }
                 }
             }

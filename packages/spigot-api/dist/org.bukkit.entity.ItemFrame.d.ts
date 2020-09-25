@@ -38,6 +38,36 @@ declare namespace org {
                  */
                 // @ts-ignore
                 setRotation(rotation: org.bukkit.Rotation): void
+                /**
+                 * Returns whether the item frame is be visible or not.
+                 * @return whether the item frame is visible or not
+                 */
+                // @ts-ignore
+                isVisible(): boolean
+                /**
+                 * Sets whether the item frame should be visible or not.
+                 * @param visible whether the item frame is visible or not
+                 */
+                // @ts-ignore
+                setVisible(visible: boolean): void
+                /**
+                 * Returns whether the item frame is "fixed" or not.
+                 * When true it's not possible to destroy/move the frame (e.g. by damage,
+                 * interaction, pistons, or missing supporting blocks), rotate the item or
+                 * place/remove items.
+                 * @return whether the item frame is fixed or not
+                 */
+                // @ts-ignore
+                isFixed(): boolean
+                /**
+                 * Sets whether the item frame should be fixed or not.
+                 * When set to true it's not possible to destroy/move the frame (e.g. by
+                 * damage, interaction, pistons, or missing supporting blocks), rotate the
+                 * item or place/remove items.
+                 * @param visible whether the item frame is fixed or not
+                 */
+                // @ts-ignore
+                setFixed(visible: boolean): void
             }
         }
     }

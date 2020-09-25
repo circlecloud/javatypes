@@ -14,39 +14,39 @@ declare namespace org {
                      * The platform of a Minecraft CLIENT is expected.
                      */
                     // @ts-ignore
-                    readonly CLIENT: org.spongepowered.api.Platform.Type
+                    public static readonly CLIENT: org.spongepowered.api.Platform.Type
                     /**
                      * The platform of a Minecraft SERVER is expected.
                      */
                     // @ts-ignore
-                    readonly SERVER: org.spongepowered.api.Platform.Type
+                    public static readonly SERVER: org.spongepowered.api.Platform.Type
                     /**
                      * It is unknown what platform the game is running on.
                      */
                     // @ts-ignore
-                    readonly UNKNOWN: org.spongepowered.api.Platform.Type
+                    public static readonly UNKNOWN: org.spongepowered.api.Platform.Type
                     // @ts-ignore
-                    values(): org.spongepowered.api.Platform.Type[]
+                    public static values(): org.spongepowered.api.Platform.Type[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.spongepowered.api.Platform.Type
+                    public static valueOf(name: java.lang.String | string): org.spongepowered.api.Platform.Type
                     /**
                      * Checks for whether the platform is {@link #SERVER}.
                      * @return True if the platform is {#link #SERVER}, false otherwise
                      */
                     // @ts-ignore
-                    isServer(): boolean
+                    public isServer(): boolean
                     /**
                      * Checks for whether the platform is {@link #CLIENT}.
                      * @return True if the platform is {#link #CLIENT}, false otherwise
                      */
                     // @ts-ignore
-                    isClient(): boolean
+                    public isClient(): boolean
                     /**
                      * Checks for whether the platform is known.
                      * @return False if the platform is {#link #UNKNOWN}, true otherwise
                      */
                     // @ts-ignore
-                    isKnown(): boolean
+                    public isKnown(): boolean
                 }
             }
         }

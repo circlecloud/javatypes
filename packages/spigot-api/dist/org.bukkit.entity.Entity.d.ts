@@ -60,6 +60,7 @@ declare namespace org {
                  * state updated by the server and is not recalculated unless the entity
                  * moves.
                  * @return True if entity is on ground.
+                 * @see Player#isOnGround()
                  */
                 // @ts-ignore
                 isOnGround(): boolean
@@ -188,7 +189,6 @@ declare namespace org {
                  * {@link LivingEntity#setRemoveWhenFarAway(boolean)} which controls
                  * despawning of living entities. </b>
                  * @return true if this entity is persistent
-                 * @deprecated draft API
                  */
                 // @ts-ignore
                 isPersistent(): boolean
@@ -196,7 +196,6 @@ declare namespace org {
                  * Sets whether or not the entity gets persisted.
                  * @param persistent the persistence status
                  * @see #isPersistent()
-                 * @deprecated draft API
                  */
                 // @ts-ignore
                 setPersistent(persistent: boolean): void

@@ -12,13 +12,13 @@ declare namespace org {
                          * The player will enter the bed.
                          */
                         // @ts-ignore
-                        readonly OK: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
+                        public static readonly OK: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
                         /**
                          * The world doesn't allow sleeping (ex. Nether or The End). Entering
                          * the bed is prevented and the bed explodes.
                          */
                         // @ts-ignore
-                        readonly NOT_POSSIBLE_HERE: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
+                        public static readonly NOT_POSSIBLE_HERE: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
                         /**
                          * Entering the bed is prevented due to it not being night nor
                          * thundering currently.
@@ -28,26 +28,26 @@ declare namespace org {
                          * thrown out again.
                          */
                         // @ts-ignore
-                        readonly NOT_POSSIBLE_NOW: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
+                        public static readonly NOT_POSSIBLE_NOW: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
                         /**
                          * Entering the bed is prevented due to the player being too far away.
                          */
                         // @ts-ignore
-                        readonly TOO_FAR_AWAY: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
+                        public static readonly TOO_FAR_AWAY: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
                         /**
                          * Entering the bed is prevented due to there being monsters nearby.
                          */
                         // @ts-ignore
-                        readonly NOT_SAFE: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
+                        public static readonly NOT_SAFE: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
                         /**
                          * Entering the bed is prevented due to there being some other problem.
                          */
                         // @ts-ignore
-                        readonly OTHER_PROBLEM: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
+                        public static readonly OTHER_PROBLEM: org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
                         // @ts-ignore
-                        values(): org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult[]
+                        public static values(): org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
+                        public static valueOf(name: java.lang.String | string): org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
                     }
                 }
             }

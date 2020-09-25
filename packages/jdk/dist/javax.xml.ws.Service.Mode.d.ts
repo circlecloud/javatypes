@@ -10,13 +10,13 @@ declare namespace javax {
                 // @ts-ignore
                 class Mode extends java.lang.Enum<javax.xml.ws.Service.Mode> {
                     // @ts-ignore
-                    readonly MESSAGE: javax.xml.ws.Service.Mode
+                    public static readonly MESSAGE: javax.xml.ws.Service.Mode
                     // @ts-ignore
-                    readonly PAYLOAD: javax.xml.ws.Service.Mode
+                    public static readonly PAYLOAD: javax.xml.ws.Service.Mode
                     // @ts-ignore
-                    values(): javax.xml.ws.Service.Mode[]
+                    public static values(): javax.xml.ws.Service.Mode[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): javax.xml.ws.Service.Mode
+                    public static valueOf(name: java.lang.String | string): javax.xml.ws.Service.Mode
                 }
             }
         }

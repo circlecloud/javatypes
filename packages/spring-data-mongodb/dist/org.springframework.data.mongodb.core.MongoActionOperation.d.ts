@@ -13,21 +13,21 @@ declare namespace org {
                     // @ts-ignore
                     class MongoActionOperation extends java.lang.Enum<org.springframework.data.mongodb.core.MongoActionOperation> {
                         // @ts-ignore
-                        readonly REMOVE: org.springframework.data.mongodb.core.MongoActionOperation
+                        public static readonly REMOVE: org.springframework.data.mongodb.core.MongoActionOperation
                         // @ts-ignore
-                        readonly UPDATE: org.springframework.data.mongodb.core.MongoActionOperation
+                        public static readonly UPDATE: org.springframework.data.mongodb.core.MongoActionOperation
                         // @ts-ignore
-                        readonly INSERT: org.springframework.data.mongodb.core.MongoActionOperation
+                        public static readonly INSERT: org.springframework.data.mongodb.core.MongoActionOperation
                         // @ts-ignore
-                        readonly INSERT_LIST: org.springframework.data.mongodb.core.MongoActionOperation
+                        public static readonly INSERT_LIST: org.springframework.data.mongodb.core.MongoActionOperation
                         // @ts-ignore
-                        readonly SAVE: org.springframework.data.mongodb.core.MongoActionOperation
+                        public static readonly SAVE: org.springframework.data.mongodb.core.MongoActionOperation
                         // @ts-ignore
-                        readonly BULK: org.springframework.data.mongodb.core.MongoActionOperation
+                        public static readonly BULK: org.springframework.data.mongodb.core.MongoActionOperation
                         // @ts-ignore
-                        values(): org.springframework.data.mongodb.core.MongoActionOperation[]
+                        public static values(): org.springframework.data.mongodb.core.MongoActionOperation[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.MongoActionOperation
+                        public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.MongoActionOperation
                     }
                 }
             }

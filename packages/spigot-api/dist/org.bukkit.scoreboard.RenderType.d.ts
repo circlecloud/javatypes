@@ -10,16 +10,16 @@ declare namespace org {
                  * Display integer value.
                  */
                 // @ts-ignore
-                readonly INTEGER: org.bukkit.scoreboard.RenderType
+                public static readonly INTEGER: org.bukkit.scoreboard.RenderType
                 /**
                  * Display number of hearts corresponding to value.
                  */
                 // @ts-ignore
-                readonly HEARTS: org.bukkit.scoreboard.RenderType
+                public static readonly HEARTS: org.bukkit.scoreboard.RenderType
                 // @ts-ignore
-                values(): org.bukkit.scoreboard.RenderType[]
+                public static values(): org.bukkit.scoreboard.RenderType[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): org.bukkit.scoreboard.RenderType
+                public static valueOf(name: java.lang.String | string): org.bukkit.scoreboard.RenderType
             }
         }
     }

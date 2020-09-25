@@ -11,22 +11,22 @@ declare namespace org {
                              * the operation will return CompletionState.NOT_DONE.
                              */
                             // @ts-ignore
-                            readonly NON_BLOCK: org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode
+                            public static readonly NON_BLOCK: org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode
                             /**
                              * The operation will block until pending operations are completed, but
                              * will not block after performing it.
                              */
                             // @ts-ignore
-                            readonly SEMI_BLOCK: org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode
+                            public static readonly SEMI_BLOCK: org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode
                             /**
                              * The operation will block until completed.
                              */
                             // @ts-ignore
-                            readonly BLOCK: org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode
+                            public static readonly BLOCK: org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode
                             // @ts-ignore
-                            values(): org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode[]
+                            public static values(): org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode
+                            public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SocketWrapperBase.BlockingMode
                         }
                     }
                 }

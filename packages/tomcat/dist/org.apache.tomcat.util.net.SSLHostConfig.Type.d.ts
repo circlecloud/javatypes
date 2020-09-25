@@ -7,15 +7,15 @@ declare namespace org {
                         // @ts-ignore
                         class Type extends java.lang.Enum<org.apache.tomcat.util.net.SSLHostConfig.Type> {
                             // @ts-ignore
-                            readonly JSSE: org.apache.tomcat.util.net.SSLHostConfig.Type
+                            public static readonly JSSE: org.apache.tomcat.util.net.SSLHostConfig.Type
                             // @ts-ignore
-                            readonly OPENSSL: org.apache.tomcat.util.net.SSLHostConfig.Type
+                            public static readonly OPENSSL: org.apache.tomcat.util.net.SSLHostConfig.Type
                             // @ts-ignore
-                            readonly EITHER: org.apache.tomcat.util.net.SSLHostConfig.Type
+                            public static readonly EITHER: org.apache.tomcat.util.net.SSLHostConfig.Type
                             // @ts-ignore
-                            values(): org.apache.tomcat.util.net.SSLHostConfig.Type[]
+                            public static values(): org.apache.tomcat.util.net.SSLHostConfig.Type[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SSLHostConfig.Type
+                            public static valueOf(name: java.lang.String | string): org.apache.tomcat.util.net.SSLHostConfig.Type
                         }
                     }
                 }

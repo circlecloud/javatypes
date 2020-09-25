@@ -7,13 +7,13 @@ declare namespace net {
                         // @ts-ignore
                         class MainHand extends java.lang.Enum<net.md_5.bungee.api.connection.ProxiedPlayer.MainHand> {
                             // @ts-ignore
-                            readonly LEFT: net.md_5.bungee.api.connection.ProxiedPlayer.MainHand
+                            public static readonly LEFT: net.md_5.bungee.api.connection.ProxiedPlayer.MainHand
                             // @ts-ignore
-                            readonly RIGHT: net.md_5.bungee.api.connection.ProxiedPlayer.MainHand
+                            public static readonly RIGHT: net.md_5.bungee.api.connection.ProxiedPlayer.MainHand
                             // @ts-ignore
-                            values(): net.md_5.bungee.api.connection.ProxiedPlayer.MainHand[]
+                            public static values(): net.md_5.bungee.api.connection.ProxiedPlayer.MainHand[]
                             // @ts-ignore
-                            valueOf(name: java.lang.String | string): net.md_5.bungee.api.connection.ProxiedPlayer.MainHand
+                            public static valueOf(name: java.lang.String | string): net.md_5.bungee.api.connection.ProxiedPlayer.MainHand
                         }
                     }
                 }

@@ -6,13 +6,13 @@ declare namespace cn {
                     // @ts-ignore
                     class PortalType extends java.lang.Enum<cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType> {
                         // @ts-ignore
-                        readonly NETHER: cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType
+                        public static readonly NETHER: cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType
                         // @ts-ignore
-                        readonly END: cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType
+                        public static readonly END: cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType
                         // @ts-ignore
-                        values(): cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType[]
+                        public static values(): cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType
+                        public static valueOf(name: java.lang.String | string): cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType
                     }
                 }
             }

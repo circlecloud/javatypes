@@ -11,16 +11,16 @@ declare namespace org {
                      * The plugin channel is being sent to the server from a client.
                      */
                     // @ts-ignore
-                    readonly INCOMING: org.bukkit.plugin.messaging.PluginChannelDirection
+                    public static readonly INCOMING: org.bukkit.plugin.messaging.PluginChannelDirection
                     /**
                      * The plugin channel is being sent to a client from the server.
                      */
                     // @ts-ignore
-                    readonly OUTGOING: org.bukkit.plugin.messaging.PluginChannelDirection
+                    public static readonly OUTGOING: org.bukkit.plugin.messaging.PluginChannelDirection
                     // @ts-ignore
-                    values(): org.bukkit.plugin.messaging.PluginChannelDirection[]
+                    public static values(): org.bukkit.plugin.messaging.PluginChannelDirection[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): org.bukkit.plugin.messaging.PluginChannelDirection
+                    public static valueOf(name: java.lang.String | string): org.bukkit.plugin.messaging.PluginChannelDirection
                 }
             }
         }

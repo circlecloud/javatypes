@@ -12,13 +12,13 @@ declare namespace org {
                             // @ts-ignore
                             class LowercaseIndexValueTransformer extends java.lang.Enum<org.springframework.data.redis.core.index.RedisIndexDefinition.LowercaseIndexValueTransformer> implements org.springframework.data.redis.core.index.IndexValueTransformer {
                                 // @ts-ignore
-                                readonly INSTANCE: org.springframework.data.redis.core.index.RedisIndexDefinition.LowercaseIndexValueTransformer
+                                public static readonly INSTANCE: org.springframework.data.redis.core.index.RedisIndexDefinition.LowercaseIndexValueTransformer
                                 // @ts-ignore
-                                values(): org.springframework.data.redis.core.index.RedisIndexDefinition.LowercaseIndexValueTransformer[]
+                                public static values(): org.springframework.data.redis.core.index.RedisIndexDefinition.LowercaseIndexValueTransformer[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.springframework.data.redis.core.index.RedisIndexDefinition.LowercaseIndexValueTransformer
+                                public static valueOf(name: java.lang.String | string): org.springframework.data.redis.core.index.RedisIndexDefinition.LowercaseIndexValueTransformer
                                 // @ts-ignore
-                                convert(source: java.lang.Object | any): any
+                                public convert(source: java.lang.Object | any): any
                             }
                         }
                     }

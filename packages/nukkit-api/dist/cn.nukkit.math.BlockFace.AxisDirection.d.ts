@@ -5,17 +5,17 @@ declare namespace cn {
                 // @ts-ignore
                 class AxisDirection extends java.lang.Enum<cn.nukkit.math.BlockFace.AxisDirection> {
                     // @ts-ignore
-                    readonly POSITIVE: cn.nukkit.math.BlockFace.AxisDirection
+                    public static readonly POSITIVE: cn.nukkit.math.BlockFace.AxisDirection
                     // @ts-ignore
-                    readonly NEGATIVE: cn.nukkit.math.BlockFace.AxisDirection
+                    public static readonly NEGATIVE: cn.nukkit.math.BlockFace.AxisDirection
                     // @ts-ignore
-                    values(): cn.nukkit.math.BlockFace.AxisDirection[]
+                    public static values(): cn.nukkit.math.BlockFace.AxisDirection[]
                     // @ts-ignore
-                    valueOf(name: java.lang.String | string): cn.nukkit.math.BlockFace.AxisDirection
+                    public static valueOf(name: java.lang.String | string): cn.nukkit.math.BlockFace.AxisDirection
                     // @ts-ignore
-                    getOffset(): number /*int*/
+                    public getOffset(): number /*int*/
                     // @ts-ignore
-                    toString(): string
+                    public toString(): string
                 }
             }
         }

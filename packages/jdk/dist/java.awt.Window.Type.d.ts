@@ -22,7 +22,7 @@ declare namespace java {
                  * its descendants. Use this type for regular top-level windows.
                  */
                 // @ts-ignore
-                readonly NORMAL: java.awt.Window.Type
+                public static readonly NORMAL: java.awt.Window.Type
                 /**
                  * Represents a <i>utility</i> window.
                  * A utility window is usually a small window such as a toolbar or a
@@ -31,7 +31,7 @@ declare namespace java {
                  * Dialog} object, and if it has its decorations enabled.
                  */
                 // @ts-ignore
-                readonly UTILITY: java.awt.Window.Type
+                public static readonly UTILITY: java.awt.Window.Type
                 /**
                  * Represents a <i>popup</i> window.
                  * A popup window is a temporary window such as a drop-down menu or a
@@ -40,11 +40,11 @@ declare namespace java {
                  * {@code Dialog} class, and have decorations enabled.
                  */
                 // @ts-ignore
-                readonly POPUP: java.awt.Window.Type
+                public static readonly POPUP: java.awt.Window.Type
                 // @ts-ignore
-                values(): java.awt.Window.Type[]
+                public static values(): java.awt.Window.Type[]
                 // @ts-ignore
-                valueOf(name: java.lang.String | string): java.awt.Window.Type
+                public static valueOf(name: java.lang.String | string): java.awt.Window.Type
             }
         }
     }

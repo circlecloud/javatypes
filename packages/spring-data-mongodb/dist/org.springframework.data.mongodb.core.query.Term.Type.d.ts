@@ -8,13 +8,13 @@ declare namespace org {
                             // @ts-ignore
                             class Type extends java.lang.Enum<org.springframework.data.mongodb.core.query.Term.Type> {
                                 // @ts-ignore
-                                readonly WORD: org.springframework.data.mongodb.core.query.Term.Type
+                                public static readonly WORD: org.springframework.data.mongodb.core.query.Term.Type
                                 // @ts-ignore
-                                readonly PHRASE: org.springframework.data.mongodb.core.query.Term.Type
+                                public static readonly PHRASE: org.springframework.data.mongodb.core.query.Term.Type
                                 // @ts-ignore
-                                values(): org.springframework.data.mongodb.core.query.Term.Type[]
+                                public static values(): org.springframework.data.mongodb.core.query.Term.Type[]
                                 // @ts-ignore
-                                valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.query.Term.Type
+                                public static valueOf(name: java.lang.String | string): org.springframework.data.mongodb.core.query.Term.Type
                             }
                         }
                     }

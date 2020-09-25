@@ -15,7 +15,7 @@ declare namespace org {
                          * class will not be added.
                          */
                         // @ts-ignore
-                        readonly PARSE_CONFIGURATION: org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase
+                        public static readonly PARSE_CONFIGURATION: org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase
                         /**
                          * The {@link Condition} should be evaluated when adding a regular
                          * (non {@code @Configuration}) bean. The condition will not prevent
@@ -24,11 +24,11 @@ declare namespace org {
                          * will have been parsed.
                          */
                         // @ts-ignore
-                        readonly REGISTER_BEAN: org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase
+                        public static readonly REGISTER_BEAN: org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase
                         // @ts-ignore
-                        values(): org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase[]
+                        public static values(): org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase[]
                         // @ts-ignore
-                        valueOf(name: java.lang.String | string): org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase
+                        public static valueOf(name: java.lang.String | string): org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase
                     }
                 }
             }
